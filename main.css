@@ -1,3 +1,13 @@
+body {
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+    padding: 8px;
+}
+
+em:lang(ja) {
+    font-style: normal;
+    color: red;
+}
+
 .explanation {
     text-decoration-line: underline;
     text-decoration-style: dotted;
