@@ -1,6 +1,9 @@
 body {
     font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
     padding: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 em:lang(ja) {
