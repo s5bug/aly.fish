@@ -16,3 +16,19 @@ em:lang(ja) {
     text-decoration-style: dotted;
     cursor: help;
 }
+
+figure {
+    break-before: auto;
+    break-after: auto;
+    break-inside: avoid;
+}
+
+figure > img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+}
+
+footer > ol > li > cite + a {
+    word-break: break-all;
+}
