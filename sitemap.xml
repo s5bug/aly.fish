@@ -17,12 +17,20 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://aly.fish/ja/"/>
     </url>
     <url>
-        <loc>https://aly.fish/2022h-nhbk/kotsu.html</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kotsu.html"/>
+        <loc>https://aly.fish/2022h-nhbk/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h/nhbk/"/>
     </url>
     <url>
-        <loc>https://aly.fish/en/2022h-nhbk/kotsu.html</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kotsu.html"/>
+        <loc>https://aly.fish/en/2022h-nhbk/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h/nhbk/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/bungaku-eiga.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/bungaku-eiga.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/bungaku-eiga.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/bungaku-eiga.html"/>
     </url>
     <url>
         <loc>https://aly.fish/2022h-nhbk/bunkateki-haikei.html</loc>
@@ -31,5 +39,45 @@
     <url>
         <loc>https://aly.fish/en/2022h-nhbk/bunkateki-haikei.html</loc>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/bunkateki-haikei.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/kankomeisho.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kankomeisho.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/kankomeisho.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kankomeisho.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/kotsu.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kotsu.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/kotsu.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kotsu.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/ryoko.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/ryoko.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/ryoko.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/ryoko.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/samurai-eiga.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/samurai-eiga.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/samurai-eiga.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/samurai-eiga.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/shinbun.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/shinbun.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/shinbun.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/shinbun.html"/>
     </url>
 </urlset>
