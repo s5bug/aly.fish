@@ -81,7 +81,19 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/shinbun.html"/>
     </url>
     <url>
+        <loc>https://aly.fish/2023a-viscom/proposals.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/proposals.html"/>
+    </url>
+    <url>
         <loc>https://aly.fish/en/2023a-viscom/proposals.html</loc>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/proposals.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2023a-viscom/visual-directions.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/visual-directions.html"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2023a-viscom/visual-directions.html</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/visual-directions.html"/>
     </url>
 </urlset>
