@@ -1,5 +1,5 @@
 body {
-    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+    font-family: system-ui, sans-serif;
     padding: 8px;
     max-width: 800px;
     margin-left: auto;
@@ -31,4 +31,27 @@ figure > img {
 
 footer > ol > li > cite + a {
     word-break: break-all;
+}
+
+a.external {
+    background-image: url("./asset/external-link.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 0.8em;
+    padding-right: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #F0F3F6;
+        background: #0A0C10;
+    }
+
+    a {
+        color: #71B7FF;
+    }
+
+    a:visited {
+        color: #B780FF;
+    }
 }
