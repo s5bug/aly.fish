@@ -33,7 +33,7 @@ footer > ol > li > cite + a {
     word-break: break-all;
 }
 
-a.external {
+a[rel~="external"] {
     background-image: url("./asset/external-link.svg");
     background-position: center right;
     background-repeat: no-repeat;
