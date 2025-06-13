@@ -1,0 +1,10 @@
+em:lang(ja) {
+  font-style: normal;
+  color: red;
+}
+
+.explanation {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  cursor: help;
+}

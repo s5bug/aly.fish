@@ -1,0 +1,235 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Figure from "../../../components/Figure.astro";
+import Ae from "../../../components/Ae.astro";
+import Al from "../../../components/Al.astro";
+import Cite from "../../../components/Cite.astro";
+import Bibliography from "../../../components/Bibliography.astro";
+import Reference from "../../../components/Reference.astro";
+
+import fukuokaYataiJpg from "../../../assets/2022h-nhbk/fukuoka-yatai.jpg";
+import shofukujiPathJpg from "../../../assets/2022h-nhbk/shofukuji-path.jpg";
+import canalCityEvangelionPng from "../../../assets/2022h-nhbk/canal-city-evangelion.png";
+import fukuokajoHanamiJpg from "../../../assets/2022h-nhbk/fukuokajo-hanami.jpg";
+import uchikoTakahataSeiichiJpg from "../../../assets/2022h-nhbk/uchiko-takahata-seiichi.jpg";
+import kawanoboriKawamatsuriRaftChainJpg from "../../../assets/2022h-nhbk/kawanobori-kawamatsuri-raft-chain.jpg";
+import shinYamabikoBridgeJpg from "../../../assets/2022h-nhbk/shin-yamabiko-bridge.jpg";
+import okukaneBridgeJpg from "../../../assets/2022h-nhbk/okukane-bridge.jpg";
+import rindoanTeaHouseJpg from "../../../assets/2022h-nhbk/rindoan-tea-house.jpg";
+import aquaMuseumJpg from "../../../assets/2022h-nhbk/aqua-museum.jpg";
+import hokkaidoFlowerFieldJpg from "../../../assets/2022h-nhbk/hokkaido-flower-field.jpg";
+import furanoCheeseFactoryButterTaikenJpg from "../../../assets/2022h-nhbk/furano-cheese-factory-butter-taiken.jpg";
+import furanoCheeseFactoryCheeseTaikenJpg from "../../../assets/2022h-nhbk/furano-cheese-factory-cheese-taiken.jpg";
+import aoiIkeJpg from "../../../assets/2022h-nhbk/aoi-ike.jpg";
+---
+
+<Layout title="Japanese Culture 2022 Spring: Points of Interest" description="Points of Interest in Fukuoka, Uchiko, Kurobe Gorge, Yokohama, and Furano.">
+  <h1>Points of Interest</h1>
+
+  <section>
+    <h2>Fukuoka</h2>
+
+    <p>
+      One of Fukuoka's most famous attractions are the nightly food stands called <i>Yatai</i>. The <i>Yatai</i> offer many different types of Japanese foods, including ramen, oden, gyōza, yakitori, and tempura. They're scattered throughout downtown Fukuoka. A map and list of food stands is available from YOKANAVI, a Fukuoka tourism website.<Cite id="yokanavi-yatai" />
+    </p>
+
+    <Figure src={fukuokaYataiJpg} formats={['jpg']} alt="A photo of Yatai in Fukuoka. It's late at night, and the signs of many food stands illuminate the sidewalk. There's many patrons at each stand.">
+      Yatai in Fukuoka (<Ae href="https://aumo.jp/articles/29028">aumo</Ae>)
+    </Figure>
+
+    <p>
+      Fukuoka also lays claim to the oldest Zen Buddhist temple in
+      Japan.<Cite id="shofukuji-history"/> While you're not allowed to step foot inside the
+      buildings of Shōfukuji Temple, you can still take in the scenic temple
+      grounds.<Cite id="japan-guide-shofukuji"/>
+    </p>
+
+    <Figure src={shofukujiPathJpg} formats={['jpg']} alt="A photo of a path inside the Shofukuji temple grounds. The foliage is very green and well-kept. To the left is a belfry.">
+      A path with a belfry in the Shofukuji temple grounds (<Ae href="https://www.japan-guide.com/e/e4804.html">Japan Guide</Ae>)
+    </Figure>
+
+    <p>
+      The third main point of interest in Fukuoka would be the Canal City shopping complex. Canal City Hakata provides "about 250 shops, cafes and restaurants, a theater, game center, cinemas, two hotels and a canal running through the complex".<Cite id="japan-guide-canal-city-hakata" /> If you're feeling a bit homesick, Canal City has plenty of shops for brands that you would find in the US. However, Canal City also boasts a large amount of Japanese stores, including its 5th "Ramen Stadium" floor which is entirely dedicated to different kinds of ramen.<Cite id="canal-city-floor-map"/>
+    </p>
+
+    <Figure src={canalCityEvangelionPng} formats={['png']} alt="A photo taken on a bridge between two parts of Canal City towards a display of Evangelion characters. Shown are Shinji, Asuka, Rei, and a fourth character I don't know the identity of because I've never watched Evangelion. Hexagonal signs saying HAKATA are displayed in the style of Evangelion's EMERGENCY warnings.">
+      A collection of hanging cutouts advertising Canal City's Evangelion display on the floor below (<Ae href="https://www.google.com/maps/@33.5896185,130.4114213,2a,38.2y,171.02h,95.32t/data=!3m6!1e1!3m4!1stYBF5rbyB3UJXvdSOq6Kug!2e0!7i16384!8i8192">Google Maps</Ae>)
+    </Figure>
+
+    <p>
+      And finally, another historical location to visit in Fukuoka would be the ruins of its once-famous castle. The best time to visit is near the beginning of April, as the park around the castle is a prime spot for cherry-blossom viewing.
+    </p>
+
+    <Figure src={fukuokajoHanamiJpg} formats={['jpg']} alt="A photo of Fukuoka Castle ruins with pink cherry-blossom trees in the background.">
+      Fukuoka Castle ruins, with cherry-blossom trees in the background (<Ae href="https://www.japan-guide.com/e/e4806.html">Japan Guide</Ae>)
+    </Figure>
+  </section>
+
+  <section>
+    <h2>Uchiko</h2>
+
+    <p>
+      Uchiko is quite like a time capsule for Japan: it is known for its preservation and restoration projects. The two main attractions here, the Yōkaichi Old Town and the Kamihaga Residence, are discussed in <Al href="2022h-nhbk/bunkateki-haikei">Cultural Backgrounds</Al>. The Kamihaga Residence is available to tour with a tour guide, which is recommended.<Cite id="we-love-uchiko-kamihaga"/>
+    </p>
+
+    <p>
+      The Uchiko History Museum, offering more in-depth explorations into the lives of Uchiko residents of the 19th and 20th centuries, lies just outside Yōkaichi Old Town. Most of the written material is in Japanese, and tour guides do not seem to be available.
+    </p>
+
+    <Figure src={uchikoTakahataSeiichiJpg} formats={['jpg']} alt="A museum plaque of a picture and short biography of Seiichi Takahata from the Uchiko History Museum, with no English text at all.">
+      An Uchiko History Museum plaque containing a short biography of Seiichi Takahata, a late Japanese businessman who was born in Uchiko (<Ae href="https://www.suzukishoten-museum.com/footstep/area/ehime/post-47.php">Suzukishoten Museum</Ae>)
+    </Figure>
+
+    <p>
+      Every year during the 4th Sunday of April, Uchiko holds its Kawanobori River Festival, in which residents recreate the experience of the rafting once used for the transport of logs.<Cite id="we-love-uchiko-kawanoborikawamatsuri"/>
+    </p>
+
+    <Figure src={kawanoboriKawamatsuriRaftChainJpg} formats={['jpg']} alt="A chain of 16 rafts, with a Japanese person standing on 10 of them. Almost everyone is wearing a kasa. They are paddling down a river using some sort of long stick.">
+      A photo of the raft floating event (<Ae href="https://www.we-love-uchiko.jp/event_top/event1/">Uchiko Sanpo</Ae>)
+    </Figure>
+  </section>
+
+  <section>
+    <h2>Kurobe Gorge</h2>
+
+    <p>
+      As the Kurobe Gorge Railway is mainly a tourist attraction nowadays, there's plenty of stops and things to see. At the first station, Unazuki Station, which you will depart from on the railway, there's many things you can explore beforehand. Of historical interest may be the Kurobe River Electric Memorial Hall, detailing the importance of the Kurobe Dam in Japan's industrialization efforts. Additionally, the Yamabiko Walkway offers a nice view of the Shin Yamabiko Bridge.
+    </p>
+
+    <Figure src={shinYamabikoBridgeJpg} formats={['jpg']} alt="A red bridge is running over a blue river. Steep hills, not a single spot without tall, lush trees, line the area. A tourism trolley runs along the tracks on the bridge.">
+      A photo of the Shin Yamabiko Bridge (<Ae href="https://foreign.info-toyama.com/en/photo/?library_id=60&ret_list_p=4">Toyama Tourism</Ae>)
+    </Figure>
+
+    <p>
+      The second station, Kuronagi Station features a bridge, Atobiki Bridge, and an onsen, Kuronagi Onsen. The third station, Kanetsuri Station, is connected to an observation deck that allows one to observe the Mannen Yuki, or Ten Thousand Year Snow.
+    </p>
+
+    <p>
+      The final station of the Kurobe Gorge Railway, Keyakidara Station, features a large pedestrian bridge, Okukane Bridge, leading to Babadani Onsen and Meiken Onsen, which are both also ryokan (Japanese-style inns).
+    </p>
+
+    <Figure src={okukaneBridgeJpg} formats={['jpg']} alt="A photo taken on one end of a red bridge crossing a gorge with a flowing river underneath. On both sides of the gorge there are beautiful green trees.">
+      A photo of the Okukane Bridge (<Ae href="https://tabi-mag.jp/ty0244/">Japan Trip Magazine</Ae>)
+    </Figure>
+  </section>
+
+  <section>
+    <h2>Yokohama</h2>
+
+    <p>
+      Yokohama is one of the most populated cities in Japan, second to Tokyo. As such, there's plenty to do. Yokohama is equipped with the largest of Japan's three Chinatowns, popular for its unique mixing of Chinese dishes into a Japanese style.
+    </p>
+
+    <p>
+      If you're looking for a more low-energy experience, Sankeien Garden is a Japanese-style garden featuring traditional Japanese buildings. Of course, it's a garden, so there's not much to "do": you are meant to relax, explore, and take in the scenery.
+    </p>
+
+    <Figure src={rindoanTeaHouseJpg} formats={['jpg']} alt="A Japanese tea house partially obscured by trees. The stones in front of the house are visibly wet from rain.">
+      The Rindōan Tea House inside the Sankeien Outer Garden (<Ae href="https://www.sankeien.or.jp/facilities/outer_garden/rindouan/">Sankeien Garden</Ae>)
+    </Figure>
+
+    <p>
+      Yokohama is also home to Hakkeijima Sea Paradise, an amusement park with a few aquariums. Entrance into the park itself is free, as it is lined with various shops and restaurants, but the areas with rides or aquariums have entrance fees.
+    </p>
+
+    <p>
+      The set of three aquariums, Aqua Resorts, consists of the Aqua Museum, Dolphin Fantasy, and the Fureai Lagoon. In the Fureai Lagoon, one is allowed to touch some of the animals, and for an extra fee, can sign up for a guided tour where even more interaction, such as feeding, is allowed.
+    </p>
+
+    <Figure src={aquaMuseumJpg} formats={['jpg']} alt="A view from an underground aquarium into many many schools of fish, and some rays.">
+      A part of the Aqua Museum (<Ae href="https://www.japan-guide.com/e/e3213.html">Japan Guide</Ae>)
+    </Figure>
+  </section>
+
+  <section>
+    <h2>Furano</h2>
+
+    <p>
+      Furano's most famous attraction is its flower fields. One of the most popular places to get a good look at flower fields would be Farm Tomita. Most of the flowers enter full-bloom around June and July, but many fields will be flowering by May.<Cite id="farm-tomita-flower-guide"/>
+    </p>
+
+    <Figure src={hokkaidoFlowerFieldJpg} formats={['jpg']} alt="A flower field in Hokkaido. Closest to the photographer are yellow flowers with long petals, and behind those are purple flowers with short petals. Far away are white, pink, and red flowers.">
+      A photo of a flower field in Hokkaido (<Ae href="https://kunisan.jp/">Kunihisa Ogawa</Ae>, requested via Twitter)
+    </Figure>
+
+    <p>
+      Another one of Furano's attractions is its cheese factory. The factory, which also sells ice milk ("ice milk" and "ice cream" are <em>by law</em> different in Japan due to dairy content<Cite id="jfftc-icecream"/>) and bread, offers workshops for making various dairy products. You should call in beforehand to reserve, and make sure that you reserve on a day when enough people will be attending. Furano Cheese Factory offers menus in both Japanese and English on which prices and requirements are listed.<Cite id="furano-cheese-factory-taiken"/>
+    </p>
+
+    <Figure src={furanoCheeseFactoryButterTaikenJpg} formats={['jpg']} alt="Four people taking part in a butter-making workshop. Three are shaking jars with dairy inside to create butter, and the fourth has a lump of butter on a wooden block in one hand and a butter paddle in the other.">
+      A photo taken during one of Furano Cheese Factory's butter-making workshops (<Ae href="http://www.furano-cheese.jp/">Furano Cheese Factory</Ae>, requested via email)
+    </Figure>
+
+    <Figure src={furanoCheeseFactoryCheeseTaikenJpg} formats={['jpg']} alt="Five or six (unclear) people taking part in a cheese-making workshop. At the present moment, they're pouring some milk-like product into some machine.">
+      A photo taken during one of Furano Cheese Factory's cheese-making workshops (<Ae href="http://www.furano-cheese.jp/">Furano Cheese Factory</Ae>, requested via email)
+    </Figure>
+
+    <p>
+      Finally, if you're willing to go out of your way, a good sight-seeing location would be the Blue Pond about a 2 hour bike-ride from Farm Tomita. You are not allowed to enter the pond, much less drink the pond water, but the intent is for it to be a good resting or tourism spot.<Cite id="biei-sightseeing-blue-pond"/>
+    </p>
+
+    <Figure src={aoiIkeJpg} formats={['jpg']} alt="A photo of the Blue Pond near Shirogane Onsen. The photographer is on a muddy path, facing slightly towards the pond. The pond is a stunning, bright teal blue. The surrounding trees, and the trees in the pond, are tall and thin.">
+      A photo of the Blue Pond (<Ae href="https://www.japan-guide.com/e/e6832.html">Japan Guide</Ae>)
+    </Figure>
+  </section>
+
+  <footer slot="after-main">
+    <Bibliography>
+      <Reference slot="yokanavi-yatai">
+        YOKANAVI, <cite>福岡屋台</cite>,
+        <Ae href="https://yokanavi.com/yatai/">https://yokanavi.com/yatai/</Ae>
+        (Accessed 2022-05-13: <Ae href="https://web.archive.org/web/20220514075158/https://yokanavi.com/yatai/">Archive</Ae>)
+      </Reference>
+      <Reference slot="shofukuji-history">
+        聖福寺, <cite>聖福寺の歴史</cite>,
+        <Ae href="http://shofukuji.or.jp/wp/about-2/">http://shofukuji.or.jp/wp/about-2/</Ae>
+        (Accessed 2022-05-14: <Ae href="https://web.archive.org/web/20220514095503/http://shofukuji.or.jp/wp/about-2/">Archive</Ae>)
+      </Reference>
+      <Reference slot="japan-guide-shofukuji">
+        Japan Guide, <cite>Shofukuji Temple</cite>,
+        <Ae href="https://www.japan-guide.com/e/e4804.html">https://www.japan-guide.com/e/e4804.html</Ae>
+        (Accessed 2022-05-14: <Ae href="https://web.archive.org/web/20220514095643/https://www.japan-guide.com/e/e4804.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="japan-guide-canal-city-hakata">
+        Japan Guide, <cite>Canal City Hakata</cite>,
+        <Ae href="https://www.japan-guide.com/e/e4800.html">https://www.japan-guide.com/e/e4800.html</Ae>
+        (Accessed 2022-05-14: <Ae href="https://web.archive.org/web/20220514123553/https://www.japan-guide.com/e/e4800.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="canal-city-floor-map">
+        Canal City, <cite>フロアマップ</cite>,
+        <Ae href="https://canalcity.co.jp/files/floormap.pdf">https://canalcity.co.jp/files/floormap.pdf</Ae>
+        (Accessed 2022-05-14: <Ae href="https://web.archive.org/web/20220514123138/https://canalcity.co.jp/files/floormap.pdf">Archive</Ae>)
+      </Reference>
+      <Reference slot="we-love-uchiko-kamihaga">
+        内子町公式観光サイト「内子さんぽ」, <cite>木蠟資料館 上芳我邸（重要文化財 上芳我家住宅）</cite>,
+        <Ae href="https://www.we-love-uchiko.jp/spot_center/spot_c3/">https://www.we-love-uchiko.jp/spot_center/spot_c3/</Ae>
+        (Accessed 2022-05-14: <Ae href="https://web.archive.org/web/20220515001746/https://www.we-love-uchiko.jp/spot_center/spot_c3/">Archive</Ae>)
+      </Reference>
+      <Reference slot="we-love-uchiko-kawanoborikawamatsuri">
+        内子町公式観光サイト「内子さんぽ」, <cite>川登川まつり・筏流し</cite>,
+        <Ae href="https://www.we-love-uchiko.jp/event_top/event1/">https://www.we-love-uchiko.jp/event_top/event1/</Ae>
+        (Accessed 2022-05-18: <Ae href="https://web.archive.org/web/20220518093752/https://www.we-love-uchiko.jp/event_top/event1/">Archive</Ae>)
+      </Reference>
+      <Reference slot="farm-tomita-flower-guide">
+        Farm Tomita, <cite>花畑の紹介</cite>,
+        <Ae href="https://www.farm-tomita.co.jp/farm/flower_guide.asp">https://www.farm-tomita.co.jp/farm/flower_guide.asp</Ae>
+        (Accessed 2022-05-15: <Ae href="https://web.archive.org/web/20220516070155/https://www.farm-tomita.co.jp/farm/flower_guide.asp">Archive</Ae>)
+      </Reference>
+      <Reference slot="jfftc-icecream">
+        Federation of Fair Trade Conferences, <cite>アイスクリーム類及び氷菓の表示に関する公正競争規約・公正競争規約施行規則</cite>,
+        <Ae href="https://www.jfftc.org/rule_kiyaku/pdf_kiyaku_hyouji/icecream.pdf">https://www.jfftc.org/rule_kiyaku/pdf_kiyaku_hyouji/icecream.pdf</Ae>
+        (Accessed 2022-05-16: <Ae href="https://web.archive.org/web/20220516080056/https://www.jfftc.org/rule_kiyaku/pdf_kiyaku_hyouji/icecream.pdf">Archive</Ae>)
+      </Reference>
+      <Reference slot="furano-cheese-factory-taiken">
+        Furano Cheese Factory, <cite>手作り体験工房について</cite>,
+        <Ae href="http://www.furano-cheese.jp/html/taiken.html">http://www.furano-cheese.jp/html/taiken.html</Ae>
+        (Accessed 2022-05-16: <Ae href="https://web.archive.org/web/20220516073540/http://www.furano-cheese.jp/html/taiken.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="biei-sightseeing-blue-pond">
+        Biei Tourist Association, <cite>白金青い池</cite>,
+        <Ae href="https://www.biei-hokkaido.jp/ja/sightseeing/shirogane-blue-pond/">https://www.biei-hokkaido.jp/ja/sightseeing/shirogane-blue-pond/</Ae>
+        (Accessed 2022-05-16: <Ae href="https://web.archive.org/web/20220516084727/https://www.biei-hokkaido.jp/ja/sightseeing/shirogane-blue-pond/">Archive</Ae>)
+      </Reference>
+    </Bibliography>
+  </footer>
+</Layout>

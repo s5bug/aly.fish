@@ -1,0 +1,9 @@
+---
+import type {ImageMetadata} from "astro";
+interface Props {
+  href: ImageMetadata;
+}
+
+const { href } = Astro.props;
+---
+<a href={href.src} target="_blank"><slot/></a>

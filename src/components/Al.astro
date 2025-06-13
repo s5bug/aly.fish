@@ -1,0 +1,24 @@
+---
+import {getRelativeLocaleUrl} from "astro:i18n";
+import {i18n} from 'astro:config/server';
+
+interface Props {
+  href: string;
+}
+const { href } = Astro.props;
+
+const pattern = Astro.routePattern
+const locales = i18n!.locales as string[]
+
+let ourLocale: string | undefined;
+for (const locale of locales) {
+  if (pattern.startsWith("/" + locale + "/") || pattern === "/" + locale) {
+    // we are a page with a locale and should generate a nav
+    ourLocale = locale;
+  }
+}
+if(ourLocale === undefined) {
+  throw new Error(`Page ${pattern} using Al component not localized to one of ${locales}`)
+}
+---
+<a href={getRelativeLocaleUrl(ourLocale, href)}><slot/></a>

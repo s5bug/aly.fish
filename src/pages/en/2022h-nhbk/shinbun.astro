@@ -1,0 +1,45 @@
+---
+import Ae from "../../../components/Ae.astro";
+import Layout from "../../../layouts/Layout.astro";
+import Cite from "../../../components/Cite.astro";
+import Bibliography from "../../../components/Bibliography.astro";
+import Reference from "../../../components/Reference.astro";
+---
+<Layout title="Japanese Culture 2022 Spring: News Report" description="Japan in the Press Freedom Index, 2022-05-04.">
+  <h1>News Report</h1>
+
+  <section>
+    <h2><Ae href="https://www.japantimes.co.jp/news/2022/05/04/national/press-freedom-index-japan-fall/">Japan falls to 71st in world press freedom rankings</Ae></h2>
+
+    <p>
+      This article by Japan Times briefly touches on recent rating changes of prominent countries with regard to how restricted the press is, according to the Reporters Without Borders (RSF) organization. The first interesting detail is Japan's placement: Japan ranks significantly lower (about 10%) compared to its neighbors Australia and South Korea. Additionally, Japan's ranking is lowered from 2021, suggesting a decrease in journalistic integrity. Japan Times cites the RSF as attributing the decrease in freedom to the increased social influence of industrial groups.
+    </p>
+
+    <p>
+      Over recent years, Japan has been losing points due to political pressures. In 2015 and 2016, certain let-gos implied that Japanese news sources would strongly rather not face the consequences for criticizing the government.<Cite id="foreign-policy-shinzo-abe-media"/> Because newscasters and writers strongly feel obligated to please their superiors, and government officials have close ties with media executives, material contradictory to the government's own messaging is not produced.
+    </p>
+
+    <p>
+      Digging into the RSF report itself, we can find that this has been a long-standing issue. There are restrictions on which agencies and reporters can attend government events or speak with government officials. Combined with the nationalist climate of the government, news agencies must avoid showing Japan or the administration in a bad light, or else they may face hostility from politicians and nationalist groups as well as risk being disallowed from first-hand reporting of government activities.<Cite id="rsf-japan"/>
+    </p>
+
+    <p>
+      While not as harmful as the news climate leading up to World War II, there are visible signs of nationalism in the press. Reporters who express criticism of the government are let go, agencies who express criticism of the government are not allowed to attend government events, and journalists who express criticism of the government can face harassment from nationalist groups.
+    </p>
+  </section>
+
+  <footer slot="after-main">
+    <Bibliography>
+      <Reference slot="foreign-policy-shinzo-abe-media">
+        Foreign Policy, <cite>The Silencing of Japan’s Free Press</cite>,
+        <Ae href="https://foreignpolicy.com/2016/05/27/the-silencing-of-japans-free-press-shinzo-abe-media/">https://foreignpolicy.com/2016/05/27/the-silencing-of-japans-free-press-shinzo-abe-media/</Ae>
+        (Accessed 2022-05-04: <Ae href="https://web.archive.org/web/20220505120842/https://foreignpolicy.com/2016/05/27/the-silencing-of-japans-free-press-shinzo-abe-media/">Archive</Ae>)
+      </Reference>
+      <Reference slot="rsf-japan">
+        Reporters Without Borders, <cite>Japan</cite>,
+        <Ae href="https://rsf.org/en/country/japan">https://rsf.org/en/country/japan</Ae>
+        (Accessed 2022-05-05: <Ae href="https://web.archive.org/web/20220506055424/https://rsf.org/en/country/japan">Archive</Ae>)
+      </Reference>
+    </Bibliography>
+  </footer>
+</Layout>

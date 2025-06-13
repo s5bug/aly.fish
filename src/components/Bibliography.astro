@@ -1,0 +1,14 @@
+---
+import BibliographyFragments from "./internal/BibliographyFragments.astro";
+
+let renderContent = false;
+let fragments: [string, string][] = [];
+
+if(Astro.locals.alyfish_citations) {
+  renderContent = true;
+
+  const renders = Astro.locals.alyfish_citations.map(id => Astro.slots.render(id).then<[string, string]>(frag => [id, frag]));
+  fragments = await Promise.all(renders);
+}
+---
+{ renderContent && <BibliographyFragments fragments={fragments}/> }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://aly.fish/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://aly.fish/ja/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://aly.fish/ja/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/ja/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://aly.fish/ja/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/bungaku-eiga/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/bungaku-eiga/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/bungaku-eiga/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/bungaku-eiga/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/bunkateki-haikei/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/bunkateki-haikei/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/bunkateki-haikei/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/bunkateki-haikei/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/kankomeisho/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kankomeisho/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/kankomeisho/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kankomeisho/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/kotsu/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kotsu/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/kotsu/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/kotsu/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/ryoko/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/ryoko/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/ryoko/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/ryoko/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/samurai-eiga/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/samurai-eiga/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/samurai-eiga/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/samurai-eiga/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2022h-nhbk/shinbun/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/shinbun/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2022h-nhbk/shinbun/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022h-nhbk/shinbun/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2023a-viscom/proposals/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/proposals/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2023a-viscom/proposals/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/proposals/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/2023a-viscom/visual-directions/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/visual-directions/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/2023a-viscom/visual-directions/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2023a-viscom/visual-directions/"/>
+    </url>
+</urlset>

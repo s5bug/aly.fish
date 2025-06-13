@@ -1,0 +1,65 @@
+---
+import {getRelativeLocaleUrl} from "astro:i18n";
+import Layout from "../../../layouts/Layout.astro";
+import Figure from "../../../components/Figure.astro";
+import Ab from "../../../components/Ab.astro";
+import Ae from "../../../components/Ae.astro";
+import Al from "../../../components/Al.astro";
+
+import fukuokaUchikoTransitPng from '../../../assets/2022h-nhbk/fukuoka-uchiko-transit.png';
+import uchikoKurobegorgeTransitPng from '../../../assets/2022h-nhbk/uchiko-kurobegorge-transit.png';
+import kurobegorgeYokohamaTransitPng from '../../../assets/2022h-nhbk/kurobegorge-yokohama-transit.png';
+import yokohamaFuranoTransitPng from '../../../assets/2022h-nhbk/yokohama-furano-transit.png';
+---
+
+<Layout title="Japanese Culture 2022 Spring: Trip Around Japan" description="Getting between Fukuoka, Uchiko, Kurobe Gorge, Yokohama, and Furano.">
+  <h1>Trip Around Japan</h1>
+
+  <section>
+    <h2>Preparation</h2>
+
+    <p>
+      This trip would best be taken in late spring or early summer, due to the available sightseeing opportunities as well as other tourist attractions. If you want to get the maximum out of sightseeing, you should prepare to bring a bike, for the locations such as Furano where there are more footpaths or bike trails (more about this in <Al href="2022h-nhbk/kotsu">Japanese Culture 2022 Spring: Getting Around</Al>).
+    </p>
+
+    <h2>Fukuoka to Uchiko</h2>
+
+    <p>
+      There are two options you could take in this journey: a quicker route that travels across the water but is a slight bit more costly, and a fully train-based journey.
+    </p>
+
+    <Figure src={fukuokaUchikoTransitPng} formats={['png']} alt="A Google Maps route between Fukuoka and Uchiko that travels across the water.">
+      A Google Maps route between Fukuoka and Uchiko that travels across the water (<Ab href={fukuokaUchikoTransitPng}>Full Size</Ab>, <Ae href="https://goo.gl/maps/Hr9iFbgjD3v5uAzq5">Google Maps</Ae>)
+    </Figure>
+
+    <h2>Uchiko to Kurobe Gorge</h2>
+
+    <p>
+      Uchiko is equidistant to Kurobe Gorge and Yokohama, but the routes from Uchiko to Furano have transfers near to Yokohama, so it would be a waste to stop at Yokohama first. The train route between Uchiko and Kurobe Gorge is incredibly long. However, it stops along some major cities which will be good spots to spend days at if you don't want to spend 10 straight hours in transit.
+    </p>
+
+    <Figure src={uchikoKurobegorgeTransitPng} formats={['png']} alt="A Google Maps route between Uchiko and Kurobe Gorge.">
+      A Google Maps route between Uchiko and Kurobe Gorge (<Ab href={uchikoKurobegorgeTransitPng}>Full Size</Ab>, <Ae href="https://goo.gl/maps/QYViRgzjF3J2cG4q7">Google Maps</Ae>)
+    </Figure>
+
+    <h2>Kurobe Gorge to Yokohama</h2>
+
+    <p>
+      Kurobe Gorge to Yokohama is a relatively short few train rides, with a transfer in the heart of Tokyo.
+    </p>
+
+    <Figure src={kurobegorgeYokohamaTransitPng} formats={['png']} alt="A Google Maps route between Kurobe Gorge and Yokohama.">
+      A Google Maps route between Kurobe Gorge and Yokohama (<Ab href={kurobegorgeYokohamaTransitPng}>Full Size</Ab>, <Ae href="https://goo.gl/maps/4FkJhdDHb6i9AXnBA">Google Maps</Ae>)
+    </Figure>
+
+    <h2>Yokohama to Furano</h2>
+
+    <p>
+      The trip from Yokohama to Furano is by far the longest of the 4. Even if you make a rest day at Aomori, that leaves you with an almost 7-hour segment from Aomori to Furano.
+    </p>
+
+    <Figure src={yokohamaFuranoTransitPng} formats={['png']} alt="A Google Maps route between Yokohama and Furano.">
+      A Google Maps route between Yokohama and Furano (<Ab href={yokohamaFuranoTransitPng}>Full Size</Ab>, <Ae href="https://goo.gl/maps/vCkrKBfrwobbp3xP7">Google Maps</Ae>)
+    </Figure>
+  </section>
+</Layout>

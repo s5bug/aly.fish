@@ -1,0 +1,44 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Figure from "../../../components/Figure.astro";
+
+import visualDirectionNeonPng from "../../../assets/2023a-viscom/visual-direction-neon.png";
+import visualDirectionDsPng from "../../../assets/2023a-viscom/visual-direction-ds.png";
+---
+<Layout title="Visual Communication and Interaction: Visual Directions" description="A set of visual directions for the previously proposed card-game Flowgram.">
+  <h1>Visual Directions for Flowgram</h1>
+
+  <section>
+    <h2>Neon / Modern</h2>
+
+    <p>
+      My first idea for Flowgram was one inspired by my own programming experience, where neon color schemes like Rainbowdrops give off the energetic, head-to-head feeling I want out of the game. I didn't have much of an idea about how to well connect the cards, other than putting pseudocode in the center. Special characters are used for the connections as to not be confused with regular numbers.
+    </p>
+
+    <Figure src={visualDirectionNeonPng} formats={['png']} alt="Neon style visuals for Flowgram. The blank card is greyscale, with a very dark border and a slightly dark background. To the right is a card representing the if-then-else control flow, with the top, right, and bottom lines being green control flow lines, and the left line being a magenta boolean line. In the center of the card is text describing how the card should be interpreted. Additionally, offense, assist, and defense cards are displayed, with the offense card having a red background and a white upwards arrow, the assist card having a green background with a white plus, and the defense card having a blue background with a white wedge.">
+      Neon style for Flowgram. The design for the back of the cards is not present.
+    </Figure>
+
+    <p>
+      The back of the card is not shown, as I wasn't able to convey my idea into Illustrator. I want the back of the card to look like those fake circuit schematics: green lines, branching off at 90 degree angles every so often, with single segments ending in large dots. Searching for "circuit clipart" gives a close approximation of the desired pattern. I have attempted to generate the pattern using both Wave Function Collapse and a custom random-walk method, but neither have shown promise so far.
+    </p>
+
+    <h2>Ancient / Nintendo DS</h2>
+
+    <p>
+      The second idea I had was one that might match the general style of Nintendo DS puzzle games. The game that most comes to mind is Logic Machines (2010) which was a game I spent many hours playing with as a child. It brings to mind a parchment feel, with flows built out of slightly-rusted metal pipes, and moving parts made of more sturdy, modern metals.
+    </p>
+
+    <Figure src={visualDirectionDsPng} formats={['png']} alt="Ancient style visuals for Flowgram. The blank card this time has a gear in the top right, with the background being the color of old parchment. The three unit cards below are a darker metal color, a lighter metal color, and a bronze color.">
+      Ancient style for Flowgram. The designs are incomplete, lacking most visual elements.
+    </Figure>
+
+    <p>
+      I wanted the instruction cards to look like old parchment, and have gears on the corners for style, akin to menus in Marble Saga: Kororinpa (2009). I additionally wanted the unit cards to appear more metallic, and the symbols on them to look engraved or inset into the metal. The backs of the cards may have looked like leather or some other type of animal skin, to give the impression of the parts being bundled up in a sack of some kind.
+    </p>
+
+    <p>
+      The if-then-else card remains incomplete, but the intended design would have been that of a pipe flowing in for the boolean condition, and some sort of gear or wheel pointing towards the next place of execution. I lack any sort of idea as to how to make this interpretable or scalable to larger data types, though.
+    </p>
+  </section>
+</Layout>

@@ -1,0 +1,87 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Bibliography from "../../../components/Bibliography.astro";
+import Reference from "../../../components/Reference.astro";
+import Cite from "../../../components/Cite.astro";
+import Ae from "../../../components/Ae.astro";
+
+import kurobeGorgeRailwayJpg from "../../../assets/2022h-nhbk/kurobe-gorge-railway.jpg";
+import kamihagaResidenceJpg from "../../../assets/2022h-nhbk/kamihaga-residence.jpg";
+import Figure from "../../../components/Figure.astro";
+---
+
+<Layout title="Japanese Culture 2022 Spring: Cultural Backgrounds" description="Cultural backgrounds of Kurobe Gorge and the town of Uchiko.">
+  <h1>Cultural Backgrounds</h1>
+
+  <section>
+    <h2>Kurobe Gorge</h2>
+
+    <p>
+      The Kurobe Gorge was largely unexplored until the Meiji period.<Cite id="wikipedia-kurobe-gorge"/> In 1919, Toyo Aluminum Company was founded to aid in aluminum refinement using hydropower from the Kurobe River. After falling aluminum demands, and the death of the founder, Takamine Jōkichi, the company was renamed to Kurobe Hydropower Company and sold to Nippon Electric Power Company. Currently, the Kurobe Dam is operated by Kansai Electric Power Company.<Cite id="wikipedia-unadzuki-onsen"/> At the time of its construction, it was an imperative element in providing electricity to Osaka, providing 50% of the electricity demand at the time.
+    </p>
+
+    <Figure src={kurobeGorgeRailwayJpg} formats={['jpg']} alt="A shot of the Kurobe Gorge Railway parallel to the train line. The train is in view as the photo is being taken from one of the back cars.">
+      Kurobe Gorge Railway (<Ae href="https://www.japan-guide.com/e/e7575.html">Japan Guide</Ae>)
+    </Figure>
+
+    <p>
+      Kurobe Gorge had had a rail line to transport materials to assist in construction, but that line was open to locals for free. Due to increasing tourism, Kansai Electric Power Company decided to charge for the line as an attraction.<Cite id="kurotetu-about-kurobe"/> The Kurobe Dam itself is a popular tourist attraction, bringing in about 1.025 million toursits per year, the most popular out of any Japanese hydropower site.<Cite id="milestones-kurobe-river-hydropower-plant"/>
+    </p>
+  </section>
+
+  <section>
+    <h2>Uchiko</h2>
+
+    <p>
+      Since the Meiji period, Uchiko has been known for its wax industry. Because of the wealth in the area, merchants were able to build a number of houses, some of which are preserved today to create the feeling of a Meiji-era Uchiko.<Cite id="japan-guide-yokaichi"/>
+    </p>
+
+    <Figure src={kamihagaResidenceJpg} formats={['jpg']} alt="A photo of a walkway in the Kamihaga Residence. The opening to a traditional Japanese house can be seen in the background.">
+      The Kamihaga Residence (<Ae href="https://www.japan-guide.com/e/e5553.html">Japan Guide</Ae>)
+    </Figure>
+
+    <p>
+      In the late 1960s and early 1970s, Japan's rapid economic growth led to older houses being replaced with more modern ones. In 1982, Uchiko started a formal preservation program, aiming to preserve and restore old buildings.<Cite id="uchiko-matinamihozon"/> Much of the preservation efforts have been spearheaded by residents.<Cite id="uchiko-muranamihozon"/>
+    </p>
+  </section>
+
+  <footer slot="after-main">
+    <Bibliography>
+      <Reference slot="wikipedia-kurobe-gorge">
+        ウィキペディア, <cite>黒部峡谷</cite>,
+        <Ae href="https://ja.wikipedia.org/wiki/%E9%BB%92%E9%83%A8%E5%B3%A1%E8%B0%B7">https://ja.wikipedia.org/wiki/黒部峡谷</Ae>
+        (Accessed 2022-04-24: <Ae href="https://ja.wikipedia.org/w/index.php?title=%E9%BB%92%E9%83%A8%E5%B3%A1%E8%B0%B7&oldid=88281343">Permalink</Ae>)
+      </Reference>
+      <Reference slot="wikipedia-unadzuki-onsen">
+        ウィキペディア, <cite>宇奈月温泉</cite>,
+        <Ae href="https://ja.wikipedia.org/wiki/%E5%AE%87%E5%A5%88%E6%9C%88%E6%B8%A9%E6%B3%89">https://ja.wikipedia.org/wiki/宇奈月温泉</Ae>
+        (Accessed 2022-04-24: <Ae href="https://ja.wikipedia.org/w/index.php?title=%E5%AE%87%E5%A5%88%E6%9C%88%E6%B8%A9%E6%B3%89&oldid=88528832">Permalink</Ae>)
+      </Reference>
+      <Reference slot="kurotetu-about-kurobe">
+        黒部峡谷トロッコ電車, <cite>黒部峡谷とは</cite>,
+        <Ae href="https://www.kurotetu.co.jp/about_kurobe/">https://www.kurotetu.co.jp/about_kurobe/</Ae>
+        (Accessed 2022-04-24: <Ae href="https://web.archive.org/web/20220425050034/https://www.kurotetu.co.jp/about_kurobe/">Archive</Ae>)
+      </Reference>
+      <Reference slot="milestones-kurobe-river-hydropower-plant">
+        IEEE, <cite>Milestones:Kurobe River No. 4 Hydropower Plant</cite>,
+        <Ae href="https://ethw.org/Milestones:Kurobe_River_No._4_Hydropower_Plant,_1956-63">https://ethw.org/Milestones:Kurobe_River_No._4_Hydropower_Plant,_1956-63</Ae>
+        (Accessed 2022-04-24: <Ae href="https://ethw.org/w/index.php?title=Milestones:Kurobe_River_No._4_Hydropower_Plant,_1956-63&oldid=186495">Permalink</Ae>)
+      </Reference>
+      <Reference slot="japan-guide-yokaichi">
+        Japan Guide, <cite>Yokaichi Old Town</cite>,
+        <Ae href="https://www.japan-guide.com/e/e5552.html">https://www.japan-guide.com/e/e5552.html</Ae>
+        (Accessed 2022-04-25: <Ae href="https://web.archive.org/web/20220425083124/https://www.japan-guide.com/e/e5552.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="uchiko-matinamihozon">
+        内子町, <cite>町並み保存</cite>,
+        <Ae href="https://www.town.uchiko.ehime.jp/site/matinogaiyou/matinamihozon.html">https://www.town.uchiko.ehime.jp/site/matinogaiyou/matinamihozon.html</Ae>
+        (Accessed 2022-04-25: <Ae href="https://web.archive.org/web/20220425090824/https://www.town.uchiko.ehime.jp/site/matinogaiyou/matinamihozon.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="uchiko-muranamihozon">
+        内子町, <cite>村並み保存</cite>,
+        <Ae href="https://www.town.uchiko.ehime.jp/site/matinogaiyou/muranamihozon.html">https://www.town.uchiko.ehime.jp/site/matinogaiyou/muranamihozon.html</Ae>
+        (Accessed 2022-04-25: <Ae href="https://web.archive.org/web/20220425093800/https://www.town.uchiko.ehime.jp/site/matinogaiyou/muranamihozon.html">Archive</Ae>)
+      </Reference>
+    </Bibliography>
+  </footer>
+</Layout>

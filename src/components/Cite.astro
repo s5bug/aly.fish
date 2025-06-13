@@ -1,0 +1,24 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+// If we haven't cited anything yet, then initialize a citations array
+if(Astro.locals.alyfish_citations === undefined) {
+  Astro.locals.alyfish_citations = [];
+}
+
+const idx = Astro.locals.alyfish_citations.indexOf(id);
+let humanIdx: number;
+if(idx === -1) {
+  Astro.locals.alyfish_citations.push(id);
+  humanIdx = Astro.locals.alyfish_citations.length;
+} else {
+  humanIdx = idx + 1;
+}
+
+const href = `#cite-${id}`
+---
+<sup><a href={href}>{humanIdx}</a></sup>

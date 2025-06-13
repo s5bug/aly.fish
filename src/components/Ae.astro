@@ -1,0 +1,15 @@
+---
+interface Props {
+  href: string;
+}
+const { href } = Astro.props;
+---
+<a rel="external" href={href}><slot/></a><style>
+  a {
+    background-image: url("/assets/external-link.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 0.8em;
+    padding-right: 1em;
+  }
+</style>

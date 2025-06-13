@@ -1,0 +1,70 @@
+---
+import 'modern-normalize/modern-normalize.css';
+import './layout.css';
+import An from "../components/An.astro";
+import {getAbsoluteLocaleUrl} from "astro:i18n";
+import language_names from "../lib/language_names";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const {
+  title,
+  description
+} = Astro.props;
+---
+
+<html lang={Astro.locals.alyfish_here_locale}>
+<head>
+  <meta charset="UTF-8"/>
+  <title>{title}</title>
+  <meta name="description" lang={Astro.locals.alyfish_here_locale} content={description}>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content={Astro.generator} />
+  <link rel="canonical" hreflang={Astro.locals.alyfish_here_locale} href={getAbsoluteLocaleUrl(Astro.locals.alyfish_here_locale!, Astro.locals.alyfish_here_url_stripped)} />
+  { Astro.locals.alyfish_here_alternates.map(locale => {
+    const linkLocation = getAbsoluteLocaleUrl(locale, Astro.locals.alyfish_here_url_stripped)
+    return <link rel="alternate" hreflang={locale} href={linkLocation} title={language_names[locale]} />
+  }) }
+</head>
+
+<body>
+{ (Astro.locals.alyfish_here_alternates && Astro.locals.alyfish_here_alternates.length > 0) && <nav>
+  {Astro.locals.alyfish_here_alternates.map(locale => <An locale={locale}/>)}
+</nav>}
+
+<main>
+  <slot/>
+</main>
+
+<slot name="after-main" />
+</body>
+
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    padding: 8px;
+    max-width: 816px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #F0F3F6;
+      background: #0A0C10;
+    }
+
+    :global(a) {
+      color: #71B7FF;
+    }
+
+    :global(a:visited) {
+      color: #B780FF;
+    }
+  }
+</style>
+
+</html>

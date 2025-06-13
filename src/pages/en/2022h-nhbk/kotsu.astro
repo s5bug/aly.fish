@@ -1,0 +1,92 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Bibliography from "../../../components/Bibliography.astro";
+import Cite from "../../../components/Cite.astro";
+import Reference from "../../../components/Reference.astro";
+import Ae from "../../../components/Ae.astro";
+---
+<Layout title="Japanese Culture 2022 Spring: Getting Around" description="Getting around in the cities of Furano, Yokohama, and Fukuoka.">
+  <h1>Getting Around</h1>
+
+  <section>
+    <h2>Furano</h2>
+
+    <p>
+      The sights around Furano are not easily reachable via public transportation.<Cite id="japan-guide-furano-kotsu"/> One can get around on rental bicycles. If arriving via air, a bicycle can be rented over multiple days from Fuji Shoukai in Asahikawa.<Cite id="fuji-shoukai"/> If you arrive by train in Furano, it's possible to rent an electric bike from the Furano Nature Club, but it seems one must rent on a day-by-day basis.<Cite id="furano-nature-club" /> However, it may be best to just bring one's own bike and pay the fees to transport it via the train.<Cite id="japan-guide-jitensha"/>
+    </p>
+
+    <p>
+      If you do not want to bike, then the sightseeing buses are an option. However, the buses mainly only run during summer months, and are not a serious exploration option.
+    </p>
+  </section>
+
+  <section>
+    <h2>Yokohama</h2>
+
+    <p>
+      Yokohama has a very complete transit system. While central Yokohama can easily be explored on foot, there are two buses that loop around central Yokohama: the Bayside Blue Bus with an endpoint at Yokohama Station, and the Akaikutsu Bus with an endpoint at Sakuragicho Station.<Cite id="japan-guide-yokohama-kotsu"/>
+    </p>
+
+    <p>
+      If you fancy sightseeing, then you have the option of a voyage along Yokohama's bay area via the Sea Bass (wordplay on "Sea Bus"<Cite id="yokohama-cruising-seabass"/>). It has a stop at each peninsula, as well as one near Yokohama Station.<Cite id="yokohama-visitors-guide-seabass"/>
+    </p>
+  </section>
+
+  <section>
+    <h2>Fukuoka</h2>
+
+    <p>
+      Fukuoka has a subway that connects most major locations, including Hakata Station, the city's main station, and Fukuoka Airport.<Cite id="japan-guide-fukuoka-kotsu"/> A cheaper option will be the Nishitetsu bus lines, with a route map<Cite id="nishitetsu-bus-route-map"/> so comprehensive that many computers will struggle to render it.
+    </p>
+  </section>
+
+  <footer slot="after-main">
+    <Bibliography>
+      <Reference slot="japan-guide-furano-kotsu">
+        Japan Guide, <cite>Furano: Getting there and around</cite>,
+        <Ae href="https://www.japan-guide.com/e/e6829.html">https://www.japan-guide.com/e/e6829.html</Ae>
+        (Accessed 2022-03-19: <Ae href="https://web.archive.org/web/20220320040644/https://www.japan-guide.com/e/e6829.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="fuji-shoukai">
+        Fuji Shoukai, <cite>サイクルショップ富士商会</cite>,
+        <Ae href="https://www.fujishoukai.com/">https://www.fujishoukai.com/</Ae>
+        (Accessed 2022-03-19: <Ae href="https://web.archive.org/web/20220320044140/https://www.fujishoukai.com/">Archive</Ae>)
+      </Reference>
+      <Reference slot="furano-nature-club">
+        富良野ネイチャークラブ, <cite>北海道富良野でレンタルサイクル</cite>,
+        <Ae href="https://alpn.co.jp/e-bike/">https://alpn.co.jp/e-bike/</Ae>
+        (Accessed 2022-03-19: <Ae href="https://web.archive.org/web/20220320050442/https://alpn.co.jp/e-bike/">Archive</Ae>)
+      </Reference>
+      <Reference slot="japan-guide-jitensha">
+        Japan Guide, <cite>Bicycles</cite>,
+        <Ae href="https://www.japan-guide.com/e/e2210.html">https://www.japan-guide.com/e/e2210.html</Ae>
+        (Accessed 2022-03-19: <Ae href="https://web.archive.org/web/20220320052101/https://www.japan-guide.com/e/e2210.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="japan-guide-yokohama-kotsu">
+        Japan Guide, <cite>Yokohama: Getting there and around</cite>,
+        <Ae href="https://www.japan-guide.com/e/e2360.html">https://www.japan-guide.com/e/e2360.html</Ae>
+        (Accessed 2022-03-21: <Ae href="https://web.archive.org/web/20220321081229/https://www.japan-guide.com/e/e2360.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="yokohama-cruising-seabass">
+        横浜クルージング, <cite>シーバス運航時刻・料金・のりばのご案内</cite>,
+        <Ae href="https://www.yokohama-cruising.jp/contents/seabass.html">https://www.yokohama-cruising.jp/contents/seabass.html</Ae>
+        (Accessed 2022-03-21: <Ae href="https://web.archive.org/web/20220321083749/https://www.yokohama-cruising.jp/contents/seabass.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="yokohama-visitors-guide-seabass">
+        横浜観光情報, <cite>水上バスの紹介</cite>,
+        <Ae href="https://www.welcome.city.yokohama.jp/ride/ride3.php">https://www.welcome.city.yokohama.jp/ride/ride3.php</Ae>
+        (Accessed 2022-03-21: <Ae href="https://web.archive.org/web/20220321084245/https://www.welcome.city.yokohama.jp/ride/ride3.php">Archive</Ae>)
+      </Reference>
+      <Reference slot="japan-guide-fukuoka-kotsu">
+        Japan Guide, <cite>Fukuoka: Getting there and around</cite>,
+        <Ae href="https://www.japan-guide.com/e/e4802.html">https://www.japan-guide.com/e/e4802.html</Ae>
+        (Accessed 2022-03-21: <Ae href="https://web.archive.org/web/20220321091036/https://www.japan-guide.com/e/e4802.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="nishitetsu-bus-route-map">
+        西鉄バス, <cite>福岡都市圏の路線図</cite>,
+        <Ae href="https://www.nishitetsu.jp/bus/rosen/rosenmap/">https://www.nishitetsu.jp/bus/rosen/rosenmap/</Ae>
+        (Accessed 2022-03-21: <Ae href="https://web.archive.org/web/20220321092434/https://www.nishitetsu.jp/bus/rosen/rosenmap/">Archive</Ae>)
+      </Reference>
+    </Bibliography>
+  </footer>
+</Layout>

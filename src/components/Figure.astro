@@ -1,0 +1,29 @@
+---
+import Picture from 'astro/components/Picture.astro';
+import type {ImageMetadata, ImageOutputFormat} from "astro";
+
+interface Props {
+  src: ImageMetadata;
+  formats: ImageOutputFormat[];
+  alt: string;
+}
+const { src, formats, alt } = Astro.props;
+---
+<figure>
+  <Picture src={src} formats={formats} alt={alt} />
+  <figcaption>
+    <slot/>
+  </figcaption>
+</figure><style>
+  figure {
+    break-before: auto;
+    break-after: auto;
+    break-inside: avoid;
+  }
+
+  figure > picture > img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
