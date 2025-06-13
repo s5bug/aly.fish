@@ -5,7 +5,7 @@ import {i18n} from 'astro:config/server';
 const apiContextRoutesSymbol = Symbol.for('context.routes');
 
 export const userMiddleware = defineMiddleware(async (ctx, next) => {
-  if(ctx.locals.alyfish_middleware_nest) return next();
+  if(ctx.locals.alyfish_middleware_nest || ctx.request.method === "HEAD") return next();
   else ctx.locals.alyfish_middleware_nest = false;
 
   const locales = i18n!.locales as string[]
@@ -39,13 +39,18 @@ export const userMiddleware = defineMiddleware(async (ctx, next) => {
     let exists = false;
     try {
       const relativeUrl = getRelativeLocaleUrl(locale, stripLocaleUrl);
-      // Introducing `any` here because I don't believe I have access to Pipeline type
-      const pipeline: any = Reflect.get(ctx, apiContextRoutesSymbol);
-      const {routeData} = await pipeline.tryRewrite(
-        relativeUrl,
-        ctx.request,
-      );
-      if (routeData.prerender) exists = true;
+      if(ctx.isPrerendered) {
+        // Introducing `any` here because I don't believe I have access to Pipeline type
+        const pipeline: any = Reflect.get(ctx, apiContextRoutesSymbol);
+        const {routeData} = await pipeline.tryRewrite(
+          relativeUrl,
+          ctx.request,
+        );
+        if (routeData.prerender) exists = true;
+      } else {
+        const result = await fetch(new URL(relativeUrl, ctx.url), { method: "HEAD" });
+        if(result.ok) exists = true;
+      }
     } catch (e) {
       // ignore
     }

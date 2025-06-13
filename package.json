@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "alyfish",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "wrangler types && astro dev",
+    "build": "wrangler types && astro check && astro build",
+    "preview": "wrangler types && astro preview",
     "astro": "astro"
   },
   "dependencies": {
@@ -17,5 +17,9 @@
     "modern-normalize": "^3.0.1",
     "sharp": "^0.34.2",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "wrangler": "^4.20.0"
   }
 }
