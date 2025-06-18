@@ -1,10 +1,21 @@
 ---
 interface Props {
   href: string;
+  lang?: string;
+  hreflang?: string;
 }
-const { href } = Astro.props;
+const { href, lang, hreflang } = Astro.props;
+
+let langAttrs = {}
+if(lang) {
+  langAttrs["lang"] = lang;
+  langAttrs["hreflang"] = lang;
+}
+if(hreflang) {
+  langAttrs["hreflang"] = hreflang;
+}
 ---
-<a rel="external" href={href}><slot/></a><style>
+<a rel="external" href={href} {...langAttrs}><slot/></a><style>
   a {
     background-image: url("/assets/external-link.svg");
     background-position: center right;

@@ -3,6 +3,18 @@ em:lang(ja) {
   color: red;
 }
 
+cite:lang(ja) {
+  font-style: normal;
+}
+
+cite:lang(ja):before {
+  content: "『";
+}
+
+cite:lang(ja):after {
+  content: "』";
+}
+
 .explanation {
   text-decoration-line: underline;
   text-decoration-style: dotted;

@@ -2,53 +2,65 @@
 import Layout from "../../layouts/Layout.astro";
 import Ae from "../../components/Ae.astro";
 ---
-<Layout title="アリー・セルッティ" description="aly.fish (日本語)">
-  <h1>アリー・セルッティ</h1>
+<Layout title="余渝" description="aly.fish (日本語)">
+  <h1><ruby>余<rp>【</rp><rt>あまり</rt><rp>】</rp>渝<rp>【</rp><rt>ユイ</rt><rp>】</rp></ruby></h1>
+  <aside>
+    <p>
+      これを中国語で「<span lang="zh-CN">余渝</span>」に当てます。サンタクルーズ校の中国語の先生と日本語の先生のご協力のもと、名字は訓読みで「あまり」。中国語の先生がつけてくださった下の名前は、<Ae href="https://eed3si9n.com" lang="en">Eugene Yokota</Ae>さんのおすすめで「ゆい」の読み方を自分でつけました。英語での名前の読みは「アリー・セルッティ」。
+    </p>
+  </aside>
 
   <section>
     <h2>自己紹介</h2>
-    <p>私はカリフォルニア大学サンタクルーズ校のコンピューターサイエンス学部学生です。</p>
-
-    <h3>ソフトウェア・プログラミング言語論</h3>
     <p>
-      長年の興味の一つなのは、<Ae href="https://fs2.io/">fs2</Ae>や<Ae href="https://typelevel.org/cats-effect/">cats-effect</Ae>にあるような関数型でストリーミングというパラダイムです。或る時、ユーザー空間の協調的マルチタスクとカーネル空間のプリエンプティブマルチタスクの相互作用をもっと深く研究したいです。
-    </p>
-    <p>
-      最近、<Ae href="https://fallingcolors.github.io/HexMod/">Hexcasting</Ae>のパターンを出力するOCamlのような言語のコンパイラーを設計してみています。Hexcastingはスタック指向で<Ae href="https://www.concatenative.org/wiki/view/Concatenative%20language">連結型言語</Ae>なので再帰的な値や束縛をコンパイルすることは複雑になります。ただ今、私の言語の動作に関する正式なドキュメントをまだ書いていませんが、考えなどを経時的に記録する<Ae href="https://gist.github.com/s5bug/5f453c9c159fb77bad9dff1a8954fb3b">メモ</Ae>を公開しています。
-    </p>
-    <p>
-      もう一つの長年のプロジェクトなのは<Ae href="https://www.fancade.com/">Fancade</Ae>のレベルへのコンパイラーです。Fancadeの制御構造にコンパイルすることが難しいので現在後回しにしています。
-    </p>
-    <h3>ハードウェア</h3>
-    <p>
-      長い間、CPUはクロックパルスを待って次のパイプラインステージへ続ける代わりに入手可能になり次第データを処理する「クロックレスコンピューティング」に私は興味があります。例えば、エネルギー効率のために作ったクロックレスコンピューターを開発する<Ae href="https://www.greenarraychips.com/">GreenArrays</Ae>など、このようなデザインを検討している会社はすでにあります。
-    </p>
-    <p>
-      エネルギー効率に関して、他の感化なのは太陽光だけで電力を供給する<Ae href="https://solar.lowtechmagazine.com/about.html">Low-tech Magazine</Ae>です。或る時、このサイト(それとも、サイトの部分)を自分の再生可能エネルギーだけでホストしたいです。
-    </p>
-    <h3>プログラミング経験</h3>
-    <p>
-      私は今主に<Ae href="https://scala-lang.org/">Scala</Ae>を使って、Javaも得意です。他の簡単にプログラムできる言語はC、C++、C#、Rust、Kotlinです。TypeScript・JavaScript、Python、F#、<Ae href="https://crystal-lang.org/">Crystal</Ae>、Lua、Haskellを使ったこともあります。GitHubは<Ae href="https://github.com/s5bug">s5bug</Ae>ですが、多くのプロジェクトは公開していません。
+      私はカルガリー大学のコンピューターサイエンスの大学院生で、以前はカリフォルニア大学サンタクルーズ校のコンピューターサイエンス学部学生です。今の修士課程はアセンブリ言語で手書きされた昔のビデオゲームをリバースエンジニアリングしてその時代での人間の習慣やパターンの分析に関しています。
     </p>
 
-    <h3>音楽</h3>
+    <h2>研究関心</h2>
     <p>
-      ピアノを始めた2008年から音楽しています。2013年からフルート練習していて、2019年と2020年では高校のマーチングバンドの一位フルートでした。それ以来、焦点は主にEWIに移っています。今の趣味の一つは好きな曲を書き写すことですし、援助のためにピアノを習い直したくて太鼓も習いたいです。
+      私の研究関心は主に「プログラムのレベルの違い」に関しています。例えば、コンパイラ、逆コンパイラ、リバースエンジニアリングのツール、ハードウェア・ソフトウェア相互作用です。高水準と低水準のモデルの間で変換することを理解したいし、この理解を用いてMODのAPIや既存のプログラムにもたらす仕組みを作るのが楽しいと思っています。プログラムのモデルの違いを詮索したり洞察を得たりするために前述のツールがわかる必要があると思っています。
+    </p>
+    <h3>プログラミング言語・コンパイラ</h3>
+    <p>
+      最近、<Ae href="https://fallingcolors.github.io/HexMod/" hreflang="en">Hexcasting</Ae>のパターンを出力するOCamlのような言語のコンパイラーを設計してみています。Hexcastingはスタック指向で<Ae href="https://www.concatenative.org/wiki/view/Concatenative%20language" hreflang="en">連結型言語</Ae>なので再帰的な値や束縛をコンパイルすることは複雑になります。ただ今、私の言語の動作に関する正式なドキュメントをまだ書いていませんが、考えなどを経時的に記録する<Ae href="https://gist.github.com/s5bug/5f453c9c159fb77bad9dff1a8954fb3b" hreflang="en">メモ</Ae>を公開しています。
+    </p>
+    <h3>リバースエンジニアリング</h3>
+    <p>
+      子供の頃からゲーム(その他のソフトウェアも含む)をリバースエンジニアリングとかMODとか行っています。最近、<Ae href="https://ja.wikipedia.org/wiki/Ever_Oasis_%E7%B2%BE%E9%9C%8A%E3%81%A8%E3%82%BF%E3%83%8D%E3%83%93%E3%83%88%E3%81%AE%E8%9C%83%E6%B0%97%E6%A5%BC" hreflang="ja"><cite><ruby>Ever Oasis<rp>【</rp><rt>エヴァーオアシス</rt><rp>】</rp></ruby> 精霊とタネビトの<ruby>蜃気楼<rp>【</rp><rt>ミラージュ</rt><rp>】</rp></ruby></cite></Ae>にあるスクリプトをリバースエンジニアリングしてみており、後は<cite>Ever Oasis</cite>のエンジンをリバースエンジニアリングするつもりです。<cite>Ever Oasis</cite>は内部で<Ae href="http://squirrel-lang.org/" hreflang="en">Squirrel</Ae>のスクリプトを使用しています。これはValveがVScriptと読んでいる言語と同じものですが、Valveはプレーンテキスト形式だけで使うのに対し、<cite>Ever Oasis</cite>はSquirrelをバイトコードのBLOBとして配布しています。初めに、既存のバイトコードのリバースエンジニアリングツールはなさそうでしたから、自分で<Ae href="https://s5bug.github.io/squirrel-explorer/" hreflang="en">squirrel-explorer</Ae>というツールを作りました。squirrel-explorerはWebAssemblyと<Ae href="https://www.scala-js.org/" hreflang="en">Scala.js</Ae>を組み合わせ、Squirrelコンパイラをユーザーのコードに対して実行し、アップロードされたファイルを逆アセンブルし、ユーザーが一致させられるようになるために両方のアセンブリコードを比較します。
+    </p>
+    <h3>ハードウェア・ソフトウェア相互作用</h3>
+    <p>
+      長い間、CPUはクロックパルスを待って次のパイプラインステージへ続ける代わりに入手可能になり次第データを処理する「クロックレスコンピューティング」に私は興味があります。例えば、エネルギー効率のために作ったクロックレスコンピューターを開発する<Ae href="https://www.greenarraychips.com/" hreflang="en">GreenArrays</Ae>など、このようなデザインを検討している会社はすでにあります。長年の興味の一つなのは<Ae href="https://fs2.io/" hreflang="en">fs2</Ae>や<Ae href="https://typelevel.org/cats-effect/" hreflang="en">cats-effect</Ae>にあるような関数型でストリーミングというパラダイムで、こういうパラダイムから着想を得ることで、リアクティブコンピューティングへのより一体的されたアプローチが可能かどうか検討したいと思います。
     </p>
 
-    <h3>ゲーミング</h3>
+    <h2>プログラミング経験</h2>
     <p>
-      私はいたちごっこの化身です。何百時間ジオメトリーダッシュをして何百時間もセレステをしたのは私の性格を証明します。他の大好きなゲームはゼルダの伝説:時のオカリナ、コロリンパ2:アンソニーと金色ひまわりのタネ、ホッローナイト、グランブルーファンタジー・ヴァーサス・ライジングです。
+      私は今主に<Ae href="https://scala-lang.org/" hreflang="en">Scala</Ae>を使って、Javaも得意です。他の簡単にプログラムできる言語はC、C++、C#、Rust、Kotlinです。TypeScript・JavaScript、Python、F#、<Ae href="https://crystal-lang.org/" hreflang="en">Crystal</Ae>、Lua、Haskellを使ったこともあります。今のGitHubは<Ae href="https://github.com/s5bug">s5bug</Ae>です。
+    </p>
+
+    <h2>ゲーミング</h2>
+    <p>
+      お気に入りゲームトップ5：
+    </p>
+    <ol>
+      <li><cite>Ever Oasis 精霊とタネビトの蜃気楼</cite></li>
+      <li><cite>コロリンパ2 アンソニーと金色ひまわりのタネ</cite></li>
+      <li><cite>RABBIT &amp; STEEL</cite></li>
+      <li><cite>セレステ</cite></li>
+      <li><cite>ゼルダの伝説 時のオカリナ</cite></li>
+    </ol>
+    <p>
+      私はいたちごっこの化身です。何百時間<cite>ジオメトリーダッシュ</cite>をして何百時間も<cite>セレステ</cite>をしたのは私の性格を証明します。<cite>Ever Oasis</cite>もやり込み要素の多いエンドゲームがあり、メインのセーブデータではまだ100%クリアを目指してプレイ中です。
     </p>
     <p>
-      ファイナルファンタジーXIVは2ヶ月だけで一番プレイしたゲームになり、今は2000時間以上(二番プレイしたゲームの6倍)のプレイ時間です。<Ae href="https://jp.finalfantasyxiv.com/lodestone/character/43918131/">Lodestoneページ</Ae>にパラメータとアチーブメントが見えます。主に漁師、モンク、黒魔道士としてプレイします。私は未予習攻略やレイドレースを楽しむので、いたちごっこのマインドがある固定を参加したいです。
+      前に<cite>ファイナルファンタジーXIV</cite>をやって、2ヶ月だけで一番プレイしたゲームになって、2000時間以上(二番プレイしたゲームの6倍)のプレイ時間があるのに今はやっていません。主に漁師、モンク、黒魔道士としてプレイし、未予習攻略やレイドレースを楽しみました。<cite>黄金の<ruby>遺産<rp>【</rp><rt>レガシー</rt><rp>】</rp></ruby></cite>でモンクと黒魔道士がジョブ簡単化されて、私は止めてピクトマンサーを使い始めましたが、ジョブとスキル回しが簡単になり続けて楽しめないようになってしまいました。代わりに、4.3のいわゆる「<ruby>闘魂<rp>【</rp><rt>とうこん</rt><rp>】</rp>旋風<rp>【</rp><rt>せんぷう</rt><rp>】</rp>脚<rp>【</rp><rt>きゃく</rt><rp>】</rp></ruby>モンク」をマインクラフトMOD(<Ae href="https://github.com/s5bug/alymod" hreflang="en">alymod</Ae>)として再現しました。
     </p>
   </section>
 
   <section>
     <h2>学校のプロジェクト</h2>
     <p>
-      学校のためにポートフォリオを作らなくてはいけないとウェブページを作ります。辞書式順序を保つために、特別な数体系を使います。
+      他のツールを使うよりこのサイトを拡張する方がいい場合もあります。辞書式順序を保つために、特別な数体系を使います。
     </p>
 
     <dl>
@@ -79,7 +91,7 @@ import Ae from "../../components/Ae.astro";
   <section>
     <h2>このウェブサイトについて</h2>
     <p>
-      私はCSSやJavaScriptやカスタムなフォントを使わずに<code>aly.fish</code>を閲覧しやすいように工夫してみています。でも、サイトの一致のために、CSSとフォントは使われますしユーザーさんのブラウザがダウンロードするでしょう。URLで言語がないページでは(例えば、このページは<code>/ja/</code>があります)、ユーザーさんの言語にリダイレクトするためにJavaScriptがダウンロードされます。JavaScriptが無効になったら、そのページの言語リストが表示されます。
+      私はCSSやJavaScriptやカスタムなフォントを使わずに<code>aly.fish</code>を閲覧しやすいように工夫してみています。でも、サイトの一致のために、CSSとフォントは使われますしユーザーさんのブラウザがダウンロードするでしょう。ソースコードはGitHub(<Ae href="https://github.com/s5bug/aly.fish">s5bug/aly.fish</Ae>)にあります。このサイトは<Ae href="https://astro.build/" lang="en">{Astro.generator}</Ae>で生成され、Cloudflare Pagesでホスティングされています。
     </p>
   </section>
 </Layout>

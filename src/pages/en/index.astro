@@ -10,49 +10,54 @@ import Ae from "../../components/Ae.astro";
   <section>
     <h2>About Me</h2>
     <p>
-      I am an undergraduate student of Computer Science, currently at the University of California Santa Cruz.
+      I am a graduate student of Computer Science at University of Calgary, formerly a Computer Science undergraduate at University of California Santa Cruz. My current Master’s program involves reverse engineering of old video games that were hand-written in assembly and analyzing the human practices and patterns present in that era of games programming.
     </p>
 
-    <h3>Software/PLT</h3>
+    <h2>Research Interests</h2>
     <p>
-      One of my longstanding interests is functional and streaming paradigms such as those featured in <Ae href="https://fs2.io/">fs2</Ae> and <Ae href="https://typelevel.org/cats-effect/">cats-effect</Ae>. One of the concepts I would like to more deeply investigate at some point is the interactions between userspace applications employing cooperative multithreading and operating system kernels using preemptive scheduling.
+      Many of my interests involve the interaction between “levels of computation”, i.e. compilers, decompilers, reverse engineering tools, and hardware-software interactions. I like to understand the ways we translate between higher- and lower-level models, and I find it fun to use that understanding to create transformative works like modding APIs. I think it’s important to understand these tools to gain more insight on the different ways programs can be modeled.
     </p>
+    <h3>Programming Languages/Compilers</h3>
     <p>
-      I am currently working on designing a compiler for an OCaml-like language that outputs <Ae href="https://fallingcolors.github.io/HexMod/">Hexcasting</Ae> patterns. The unique challenges in this space are that Hexcasting operations are performed entirely on the stack, as well as that Hexcasting is a <Ae href="https://www.concatenative.org/wiki/view/Concatenative%20language">concatenative language</Ae>, meaning recursive bindings and operations become quite complex tasks. At the moment I have yet to write formal documentation on how the language behaves, however I have made available <Ae href="https://gist.github.com/s5bug/5f453c9c159fb77bad9dff1a8954fb3b">notes</Ae> that chronologically document my thinking process.
+      I am currently working on designing a compiler for an OCaml-like language that outputs <Ae href="https://fallingcolors.github.io/HexMod/" hreflang="en">Hexcasting</Ae> patterns. The unique challenges in this space are that Hexcasting operations are performed entirely on the stack, as well as that Hexcasting is a <Ae href="https://www.concatenative.org/wiki/view/Concatenative%20language" hreflang="en">concatenative language</Ae>, meaning recursive bindings and operations become quite complex tasks. At the moment I have yet to write formal documentation on how the language behaves, however I have made available <Ae href="https://gist.github.com/s5bug/5f453c9c159fb77bad9dff1a8954fb3b" hreflang="en">notes</Ae> that chronologically document my thinking process.
     </p>
+    <h3>Reverse Engineering</h3>
     <p>
-      Another one of my longstanding projects that I would like to complete is a compiler into <Ae href="https://www.fancade.com/">Fancade</Ae> levels. It's on the back-burner for now, as compiling into Fancade's execution flow is quite a complex task.
+      I’ve been reverse engineering and modding games (among other software) for a while. Most recently, I’ve been working on reverse engineering the scripts used in <Ae href="https://en.wikipedia.org/wiki/Ever_Oasis" hreflang="en"><cite>Ever Oasis</cite></Ae>, and then I plan to move onto reverse engineering the game engine. <cite>Ever Oasis</cite> uses <Ae href="http://squirrel-lang.org/" hreflang="en">Squirrel</Ae> scripts internally: this is the same language Valve calls VScript, but while Valve stores all scripts in plaintext format, <cite>Ever Oasis</cite> ships blobs of Squirrel bytecode. I couldn’t find any existing tools to aid in the reverse engineering process of Squirrel bytecode, so I made my own tool <Ae href="https://s5bug.github.io/squirrel-explorer/" hreflang="en">squirrel-explorer</Ae> that uses a mix of WebAssembly and <Ae href="https://www.scala-js.org/" hreflang="en">Scala.js</Ae> to run the Squirrel compiler on the user’s code, disassemble an uploaded file, and compare the assembly for the user to try and match.
     </p>
-    <h3>Hardware</h3>
+    <h3>Hardware-Software Interactions</h3>
     <p>
-      For a long time, I have had an interest in clockless computing, where rather than waiting for a clock signal to proceed to the next pipeline stage, CPUs process data and events as they become available. There are already companies exploring this type of design, such as <Ae href="http://www.greenarraychips.com/">GreenArrays</Ae>, who are developing clockless circuits built to be energy-efficient.
-    </p>
-    <p>
-      Regarding energy-efficiency, another inspiration of mine is the <Ae href="https://solar.lowtechmagazine.com/about.html">Low-tech Magazine</Ae>, a blog entirely powered by solar. At some point, I would like to try hosting this site (or a subsection of it) on my own renewable energy.
-    </p>
-    <h3>Programming Experience</h3>
-    <p>
-      I currently mainly program in <Ae href="https://scala-lang.org/">Scala</Ae>, and am very proficient in Java. Other languages I am able to program easily in include C, C++, C#, Rust, and Kotlin. I have experience writing TypeScript/JavaScript, Python, F#, <Ae href="https://crystal-lang.org/">Crystal</Ae>, Lua, and Haskell. My GitHub lies at <Ae href="https://github.com/s5bug">s5bug</Ae>, but many of my projects remain unpublished.
+      For a long time, I have had an interest in clockless computing, where rather than waiting for a clock signal to proceed to the next pipeline stage, CPUs process data and events as they become available. There are already companies exploring this type of design, such as <Ae href="http://www.greenarraychips.com/" hreflang="en">GreenArrays</Ae>, who are developing clockless circuits built to be energy-efficient. One of my longstanding interests is functional and streaming paradigms such as those featured in <Ae href="https://fs2.io/" hreflang="en">fs2</Ae> and <Ae href="https://typelevel.org/cats-effect/" hreflang="en">cats-effect</Ae>, and I would like to see if taking inspiration from these paradigms could lead to a more unified approach to reactive computing.
     </p>
 
-    <h3>Music</h3>
+    <h2>Programming Experience</h2>
     <p>
-      I've been playing music since 2008 when I started piano. Since 2013 I have been practicing the flute, and for the years 2019 and 2020, I was the first-chair flautist in Marching Band. Since, my focus has mainly shifted to EWI. One of my current hobbies is transcribing my favorite songs, and to aid me with the process I would like to learn drum-set and relearn piano.
+      I currently mainly program in <Ae href="https://scala-lang.org/" hreflang="en">Scala</Ae>, and am very proficient in Java. Other languages I am able to program easily in include C, C++, C#, Rust, and Kotlin. I have experience writing TypeScript/JavaScript, Python, F#, <Ae href="https://crystal-lang.org/" hreflang="en">Crystal</Ae>, Lua, and Haskell. My GitHub username is currently <Ae href="https://github.com/s5bug" hreflang="en">s5bug</Ae>.
     </p>
 
-    <h3>Gaming</h3>
+    <h2>Gaming</h2>
     <p>
-      One of my favorite ways to game is to be faced with the same difficult challenge for hours on end and gradually chip away at it. I can back this up with my hundreds of hours in Geometry Dash and hundreds more in Celeste. Other  games among my favorites are The Legend of Zelda: Ocarina of Time, Marble Saga: Kororinpa, Hollow Knight, and Granblue Fantasy Versus: Rising.
+      My all-time top 5 favorite games:
+    </p>
+    <ol>
+      <li><cite>Ever Oasis</cite></li>
+      <li><cite>Marble Saga: Kororinpa</cite></li>
+      <li><cite><Ae href="https://www.minodevgames.com/rabbit-steel" hreflang="en">Rabbit &amp; Steel</Ae></cite></li>
+      <li><cite>Celeste</cite></li>
+      <li><cite>The Legend of Zelda: Ocarina of Time</cite></li>
+    </ol>
+    <p>
+      One of my favorite ways to game is to be faced with the same difficult challenge for hours on end and gradually chip away at it. I can back this up with my hundreds of hours in <cite>Geometry Dash</cite> and hundreds more in <cite>Celeste</cite>. <cite>Ever Oasis</cite> also has a grind-heavy postgame, and I’m still working towards 100% completion on my main savefile.
     </p>
     <p>
-      Final Fantasy XIV, which in only 2 months became my most-played game, is a game I now have spent over 2,000 hours in (6 times my second-most played game). You can see my current status and achievements on <Ae href="https://na.finalfantasyxiv.com/lodestone/character/43918131/">my Lodestone page</Ae>. I mainly play Fisher, Monk, and Black Mage. I very much enjoy blind/world progression, and hope some day I can find a group with my same mindset.
+      I used to play a lot of <cite>Final Fantasy XIV</cite>: in only 2 months it became my most-played game, and it’s a game I now have spent over 2,000 hours in. I mainly played Fisher, Monk, and Black Mage, and enjoyed blind and world progression. When Monk and Black Mage were simplified in Dawntrail, I dropped them to play Pictomancer, but the continued simplification of skill rotations has taken all of the enjoyment out of the game for me. Instead, I recreated 4.3’s “Tornado Kick Monk” entirely in a Minecraft mod (<Ae href="https://github.com/s5bug/alymod" hreflang="en">alymod</Ae>), which is pretty enjoyable.
     </p>
   </section>
 
   <section>
-    <h2>School Projects</h2>
+    <h2>Coursework</h2>
     <p>
-      When I need to make a portfolio for school, I make webpages here. To keep time in lexicographical order, I use a numbering system that places the autumn of one year into the next year.
+      There are times when extending this website is better for coursework than a different tool. To keep time in lexicographical order, I use a numbering system that places the autumn of one year into the next year.
     </p>
 
     <dl>
@@ -84,7 +89,7 @@ import Ae from "../../components/Ae.astro";
   <section>
     <h2>About This Website</h2>
     <p>
-      The entirety of <code>aly.fish</code> is supposed to be easily browsable without JavaScript, CSS, or custom fonts. CSS and custom fonts are used to make the website more consistent, and may be loaded by your browser. On certain links without a language in the URL (for example, this page has <code>/en/</code>), JavaScript will be loaded to redirect to the user's preferred language. If the user has JavaScript disabled, a list of languages that the page is available in will be shown.
+      The entirety of <code>aly.fish</code> is supposed to be easily browsable without JavaScript, CSS, or custom fonts. CSS and custom fonts are used to make the website more consistent, and may be loaded by your browser. The source code is on GitHub (<Ae href="https://github.com/s5bug/aly.fish">s5bug/aly.fish</Ae>). This website was generated with <Ae href="https://astro.build/" lang="en">{Astro.generator}</Ae> and is being hosted via Cloudflare Pages.
     </p>
   </section>
 </Layout>
