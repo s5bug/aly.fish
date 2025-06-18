@@ -1,3 +1,7 @@
+body:lang(ja) {
+  line-height: 1.8rem;
+}
+
 em:lang(ja) {
   font-style: normal;
   color: red;
