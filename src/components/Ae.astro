@@ -6,7 +6,11 @@ interface Props {
 }
 const { href, lang, hreflang } = Astro.props;
 
-let langAttrs = {}
+interface LangAttrs {
+  lang?: string;
+  hreflang?: string;
+}
+let langAttrs: LangAttrs = {}
 if(lang) {
   langAttrs["lang"] = lang;
   langAttrs["hreflang"] = lang;
