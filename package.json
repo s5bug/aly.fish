@@ -19,7 +19,7 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@types/node": "^24.0.3",
+    "@types/node": "^24.0.4",
     "wrangler": "^4.21.2"
   }
 }
