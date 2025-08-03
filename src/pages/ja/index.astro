@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Ae from "../../components/Ae.astro";
+import {Image} from "astro:assets";
 ---
 <Layout title="余渝" description="aly.fish (日本語)">
   <h1><ruby>余<rp>【</rp><rt>あまり</rt><rp>】</rp>渝<rp>【</rp><rt>ユイ</rt><rp>】</rp></ruby></h1>
@@ -93,5 +94,14 @@ import Ae from "../../components/Ae.astro";
     <p>
       私はCSSやJavaScriptやカスタムなフォントを使わずに<code>aly.fish</code>を閲覧しやすいように工夫してみています。でも、サイトの一致のために、CSSとフォントは使われますしユーザーさんのブラウザがダウンロードするでしょう。ソースコードはGitHub(<Ae href="https://github.com/s5bug/aly.fish">s5bug/aly.fish</Ae>)にあります。このサイトは<Ae href="https://astro.build/" lang="en">{Astro.generator}</Ae>で生成され、Cloudflare Pagesでホスティングされています。
     </p>
+    <p>
+      以下の<Ae href="https://www.tekeye.uk/computer_history/powered-by" hreflang="en">88x31</Ae>によってこのサイトへリンクできます:
+    </p>
+    <a href="https://aly.fish/"><Image src="/88x31.svg" width={88} height={31} alt="aly.fishの88x31" /></a>
+    <pre>{`<a href="https://aly.fish/">
+  <img src="https://aly.fish/88x31.svg"
+    width="88" height="31"
+    alt="aly.fishの88x31" />
+</a>`}</pre>
   </section>
 </Layout>

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "../../layouts/Layout.astro";
 import Al from "../../components/Al.astro";
 import Ae from "../../components/Ae.astro";
@@ -91,5 +92,14 @@ import Ae from "../../components/Ae.astro";
     <p>
       The entirety of <code>aly.fish</code> is supposed to be easily browsable without JavaScript, CSS, or custom fonts. CSS and custom fonts are used to make the website more consistent, and may be loaded by your browser. The source code is on GitHub (<Ae href="https://github.com/s5bug/aly.fish">s5bug/aly.fish</Ae>). This website was generated with <Ae href="https://astro.build/" lang="en">{Astro.generator}</Ae> and is being hosted via Cloudflare Pages.
     </p>
+    <p>
+      You can use the following <Ae href="https://www.tekeye.uk/computer_history/powered-by" hreflang="en">88x31</Ae> to link to this website:
+    </p>
+    <a href="https://aly.fish/"><Image src="/88x31.svg" width={88} height={31} alt="88x31 for aly.fish" /></a>
+    <pre>{`<a href="https://aly.fish/">
+  <img src="https://aly.fish/88x31.svg"
+    width="88" height="31"
+    alt="88x31 for aly.fish" />
+</a>`}</pre>
   </section>
 </Layout>
