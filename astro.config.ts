@@ -24,7 +24,10 @@ export default defineConfig({
         "html-minifier-terser": {
           removeAttributeQuotes: false
         }
-      }
+      },
+      Exclude: [
+        "88x31.svg"
+      ]
     }),
   ],
 });
