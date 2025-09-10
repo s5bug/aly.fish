@@ -13,13 +13,13 @@ importers:
         version: 0.9.4(typescript@5.9.2)
       '@astrojs/cloudflare':
         specifier: ^12.6.8
-        version: 12.6.8(@types/node@24.3.1)(astro@5.13.6(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.0)
+        version: 12.6.8(@types/node@24.3.1)(astro@5.13.7(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.0)
       '@astrojs/ts-plugin':
         specifier: ^1.10.4
         version: 1.10.4
       astro:
-        specifier: ^5.13.6
-        version: 5.13.6(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0)
+        specifier: ^5.13.7
+        version: 5.13.7(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0)
       astro-compress:
         specifier: ^2.3.8
         version: 2.3.8(@types/node@24.3.1)(rollup@4.50.1)(typescript@5.9.2)(yaml@2.8.0)
@@ -1084,8 +1084,8 @@ packages:
   astro-compress@2.3.8:
     resolution: {integrity: sha512-XajjEtSTJuVRBOrtZ/Siavd4KcH47SEHo0XoZZeYVRF6BODSBqxVdtlfkqYJKM+F4XRUmLDS5ncVTILnQYvvXw==}
 
-  astro@5.13.6:
-    resolution: {integrity: sha512-chy1J+AO3d4lui4MjUyqusiW1jilfkviCBDz+c2MoXxhIImF96GqoliX+79fGy6KMsnMh5lUn+qwy3yUBJqZqg==}
+  astro@5.13.7:
+    resolution: {integrity: sha512-Of2tST7ErbE4y1dVb4aWDXaQSIRBAfraJ4jDqaA3PzPRJOn6Ina36+tQ+8BezjYqiWwRRJdOEE07PRAJXnsddw==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1427,8 +1427,8 @@ packages:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
-  get-east-asian-width@1.3.1:
-    resolution: {integrity: sha512-R1QfovbPsKmosqTnPoRFiJ7CF9MLRgb53ChvMZm+r4p76/+8yKDy17qLL2PKInORy2RkZZekuK0efYgmzTkXyQ==}
+  get-east-asian-width@1.4.0:
+    resolution: {integrity: sha512-QZjmEOC+IT1uk6Rx0sX22V6uHWVwbdbxf1faPqJ1QhLdGgsRGCZoyaQBm/piRdJy/D2um6hM1UP7ZEeQ4EkP+Q==}
     engines: {node: '>=18'}
 
   github-slugger@2.0.0:
@@ -2583,12 +2583,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@12.6.8(@types/node@24.3.1)(astro@5.13.6(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.0)':
+  '@astrojs/cloudflare@12.6.8(@types/node@24.3.1)(astro@5.13.7(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.2
       '@astrojs/underscore-redirects': 1.0.0
       '@cloudflare/workers-types': 4.20250909.0
-      astro: 5.13.6(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0)
+      astro: 5.13.7(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0)
       tinyglobby: 0.2.15
       vite: 6.3.6(@types/node@24.3.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.0)
       wrangler: 4.33.2(@cloudflare/workers-types@4.20250909.0)
@@ -3424,7 +3424,7 @@ snapshots:
       '@playform/pipe': 0.1.3
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 5.13.6(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0)
+      astro: 5.13.7(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0)
       commander: 13.1.0
       csso: 5.0.5
       deepmerge-ts: 7.1.5
@@ -3469,7 +3469,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.13.6(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0):
+  astro@5.13.7(@types/node@24.3.1)(lightningcss@1.29.3)(rollup@4.50.1)(terser@5.39.0)(typescript@5.9.2)(yaml@2.8.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.2
@@ -3516,7 +3516,6 @@ snapshots:
       rehype: 13.0.2
       semver: 7.7.2
       shiki: 3.12.2
-      simple-swizzle: 0.2.2
       smol-toml: 1.4.2
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
@@ -3535,7 +3534,7 @@ snapshots:
       zod-to-json-schema: 3.24.6(zod@3.25.76)
       zod-to-ts: 1.2.0(typescript@5.9.2)(zod@3.25.76)
     optionalDependencies:
-      sharp: 0.33.5
+      sharp: 0.34.3
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -3918,7 +3917,7 @@ snapshots:
 
   get-caller-file@2.0.5: {}
 
-  get-east-asian-width@1.3.1: {}
+  get-east-asian-width@1.4.0: {}
 
   github-slugger@2.0.0: {}
 
@@ -4885,7 +4884,7 @@ snapshots:
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.5.0
-      get-east-asian-width: 1.3.1
+      get-east-asian-width: 1.4.0
       strip-ansi: 7.1.2
 
   stringify-entities@4.0.4:
