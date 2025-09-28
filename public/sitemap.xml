@@ -96,4 +96,12 @@
         <loc>https://aly.fish/en/2022q4-viscom/visual-directions/</loc>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q4-viscom/visual-directions/"/>
     </url>
+    <url>
+        <loc>https://aly.fish/blog/2025-09-24-llms/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/blog/2025-09-24-llms/"/>
+    </url>
+    <url>
+        <loc>https://aly.fish/en/blog/2025-09-24-llms/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/blog/2025-09-24-llms/"/>
+    </url>
 </urlset>
