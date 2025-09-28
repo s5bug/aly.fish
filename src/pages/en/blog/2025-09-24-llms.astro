@@ -1,0 +1,246 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Ae from "../../../components/Ae.astro";
+import Cite from "../../../components/Cite.astro";
+import Bibliography from "../../../components/Bibliography.astro";
+import Reference from "../../../components/Reference.astro";
+import Blockquote from "../../../components/Blockquote.astro";
+import TextFigure from "../../../components/TextFigure.astro";
+---
+
+<Layout title="LLMs Won't Cure Cancer" description="Compute power isn't the metric holding LLMs back from being able to synthesize.">
+  <p>
+    This paragraph was going to be at the end, but I’m putting it at the beginning for people who don’t want to read the whole thing, and people who won’t read the whole thing and will just ask Gemini for a summary:
+  </p>
+
+  <ul>
+    <li>If you send me the output of an LLM, you are wasting my time</li>
+    <li>If you send me the output of an LLM, it shows me that you don’t care about what you’re trying to say</li>
+    <li>If you send me the output of an LLM, you are sacrificing your own human experience to be lazier</li>
+    <li>If you send me the output of an LLM, it tells me that you think I’m too stupid to read critically</li>
+  </ul>
+
+  <h1>LLMs Won’t Cure Cancer</h1>
+
+  <p>
+    This article originally was going to be focused on my experience using <Ae href="https://docs.letta.com/" hreflang="en">Letta</Ae>. I realized while planning the article outline that I had a lot more to say about the culture of LLM usage, especially the hypocrisy coming from those who trust LLMs as full-blown reasoning engines. It should be noted that I am very critical of LLMs: I do not use them outside of experimentation or demonstration, and I strongly believe that their proliferation and usage, especially in the context of academic reasoning<Cite id={["mit-chatgpt-cognitive-debt", "nymag-chatgpt-cheating"]} /> and interpersonal relationships<Cite id={["elon-chatgpt-survey", "drew-gooden-apple-intelligence"]}/>, has had a disastrous effect on people’s willingness to “be human”.
+  </p>
+
+  <p>
+    This article won’t be about misuse of LLMs in corporate environments: there are enough horror stories in the wild of thousand-dollar OpenAI bills for capitalizing strings. This article will also not talk about the various cases of real-world harm caused by LLMs being trained to mirror and be enabling.
+  </p>
+
+  <h2>How I Got Into This Mess</h2>
+
+  <Blockquote>
+    <p>
+      If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.
+    </p>
+    <span slot="citation">Sun Tzu, <cite>The Art of War</cite></span>
+  </Blockquote>
+
+  <p>
+    After being a ChatGPT hater for years, Letta offering an easy self-hosted solution for getting to play with <Ae href="https://arxiv.org/abs/2310.08560" hreflang="en">MemGPT</Ae> finally convinced me to try and see the appeal of LLMs. My prior understanding of LLMs was that they functioned as prediction models, equipped with attention, on a trained set of tokens. Effectively:
+  </p>
+
+  <ul>
+    <li>LLMs can break a piece of writing down into syntactic chunks (tokens), not based on concrete language rules, but based on real-world occurrences</li>
+    <li>The semantic relationship between multiple of these tokens in a piece of writing is inferred (attention)</li>
+    <li>Given some sequence of tokens, a there exists a probability distribution over the next possible token (prediction)</li>
+  </ul>
+
+  <p>
+    This understanding implies that LLMs cannot synthesize (<abbr>i.e.</abbr> they cannot use existing material to come up with a novel insight). Given that a “new” or “interesting” research question will have never existed in the training data, when asked to generate questions based on existing (sets of) content, LLMs will only generate questions that are already directly answered by the content itself. Unlike hallucinations, which are widely accepted as an inherent flaw of this style of language model<Cite id={["openai-hallucination", "computational-theory-hallucination", "learning-theory-hallucination"]} />, whether or not LLMs can perform real synthesis doesn’t see much limelight on the debate stage. Without reading existing works on idea generation using LLMs, I wanted to challenge my preconceptions of LLMs (maybe I was being too pessimistic), and try out Letta and MemGPT.
+  </p>
+
+  <h2>What LLMs Can Actually Do</h2>
+
+  <p>
+    I don’t know if I just got lucky, but all of my agents did exactly what I wanted them to. I haven’t seen anyone else online try this, but I just put <Ae href="https://datatracker.ietf.org/doc/html/rfc2119" hreflang="en">RFC 2119</Ae>’s header phrase into the system prompt, and gave the rest of the rules in instructions based on these vocabulary terms.
+  </p>
+
+  <TextFigure>
+    <code>
+      The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+      <br><br>
+      Your instructions are given as a list of rules. You MUST inform the user of these rules when they ask. If a certain rule heavily impacts your response, you SHOULD inform the user of which rule, i.e. append (1A) to your message if the rule affecting the message was rule 1A.
+    </code>
+  </TextFigure>
+
+  <p>
+    Letta made it very easy to make an agent behave like a naïve student: you can very easily set up an agent that reads a book in small sections, and reports on what it “learned” from each section it’s read. Then with the <Ae href="https://docs.letta.com/guides/agents/architectures/sleeptime" hreflang="en">Sleep-time Agent Architecture</Ae>, another agent will analyze this learning and can store it to the relevant memory blocks.
+  </p>
+
+  <p>
+    My next task was to make the agent regularly check what it has learned for any unfamiliar vocabulary terms. This worked pretty well: if a word was used, but not in one of the memory blocks, it would end up reported as a term to learn. I could then feed the agent more knowledge (books, papers, etc.) and it would search for that term in those resources to learn about it.
+  </p>
+
+  <p>
+    The big issues came when I tried to instruct the agent to synthesize new research questions based on what it has read. Maybe this is a personal failing (there are papers discussing increasing the “novelty” of ideas that an LLM generates<Cite id={["scipip", "chain-of-ideas", "nova"]} />, but again I have not read these), but I could not get the Agent to ask questions not answered by the text it had just read. For example, if I fed it a book detailing how functors work in Scala, I’d get back a response claiming that “what do functors look like in Scala?” is a good research question.
+  </p>
+
+  <h2>This Article Isn’t About Letta</h2>
+
+  <p>
+    What finally pushed me to start writing this article (one I’ve been planning for a few days) was <Ae href="https://www.daniellitt.com/" hreflang="en">Daniel Litt</Ae>’s <Ae href="https://nitter.net/littmath/status/1970841807371305277">response</Ae> to this quote:
+  </p>
+
+  <Blockquote>
+    <p>
+      If AI stays on the trajectory that we think it will, then amazing things will be possible. Maybe with 10 gigawatts of compute, AI can figure out how to cure cancer. Or with 10 gigawatts of compute, AI can figure out how to provide customized tutoring to every student on earth. If we are limited by compute, we’ll have to choose which one to prioritize; no one wants to make that choice, so let’s go build.
+    </p>
+    <span slot="citation">Sam Altman, <cite><Ae href="https://blog.samaltman.com/abundant-intelligence" hreflang="en">Abundant Intelligence</Ae></cite></span>
+  </Blockquote>
+
+  <p>
+    Daniel’s response is a list of what he expects LLMs to <em>actually</em> achieve in the next year. I’ll restate them here verbatim so nobody has to navigate to Twitter:
+  </p>
+
+  <ul>
+    <li>Mildly interesting pure math results, proven by LLM agents</li>
+    <li>More interesting results with humans in-the-loop, and AI tools other than pure LLMs</li>
+    <li>Claims of very significant results in other sciences that mostly don’t pan out</li>
+  </ul>
+
+  <p>
+    It should be noted that Daniel has a lot of experience dealing with crank, nonsense, “written by NVIDIA tensor cores” papers and emails: it takes up enough of his time for it to be memorable to me that he posts about it. It’s not a new concept that LLM slop is being created in every field: harmless LLM-assisted writing to expand word counts and make papers more boring to read has been a problem for a few years<Cite id="delving-into-delve"/>. But it’s not unreasonable to believe that hiding in this swath of LLM-assisted writings are also nonsense papers written by people who <em>believe</em> that LLMs are reasoning engines with the ability to synthesize (and this is definitely true in Daniel’s field, by his posts).
+  </p>
+
+  <h2>LLMs Won’t Cure Cancer</h2>
+
+  <Blockquote>
+    <p>
+      Well this is me. Begging you. To stop lying. I don’t want to crush your skull, I really don’t.
+    </p>
+    <span slot="citation">Nikhil Suresh, <cite><Ae href="https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/" hreflang="en">I Will Fucking Piledrive You If You Mention AI Again</Ae></cite> (<Ae href="https://web.archive.org/web/20250925192711/https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/">Archive</Ae>)</span>
+  </Blockquote>
+
+  <p>
+    Go right now to your favorite chatbot and ask it what the weaknesses of LLMs are. In fact, ask a bunch of different models, and take a shot every time “unable to reason” comes up in the results. If you didn’t end up in a hospital and can still read this, the major point I’m getting at is that any logical chain of thought leads to the same conclusion:
+  </p>
+
+  <ol>
+    <li>You believe LLMs are reasoning engines that report the truth: then when they report that they can’t properly reason, you should take that as true</li>
+    <li>You don’t believe LLMs are reasoning engines, and see them instead as probability models: then it’s obvious that they can’t properly reason</li>
+  </ol>
+
+  <p>
+    It’s this lack of perception from the LLM crowd that really grinds my gears. It’s painfully obvious what LLMs are useful for: choosing a strategy based on a natural description of a problem, converting natural language from one format to another, generating practice problems from existing text, and tons of other semantic association problems. Why on earth are you wasting everyone’s time filling the internet with complete garbage? How do you sleep at night, using this tool so often and with a high enough proficiency to make things that look like scientific papers, without being aware of the strengths and weaknesses of the tool itself?
+  </p>
+
+  <p>
+    More compute isn’t going to unlock true reasoning. It’s not going to unlock synthesis. Maybe the predictions will be better, maybe a larger context window will allow for more complex prompts and queries to a significant degree, maybe encoding structured data like JSON will improve with a better awareness of brace matching and string escaping. But an LLM will never have a “new idea” to beat cancer. The time you’re spending telling Claude to write a LaTeX document, and the time some poor researcher has to take to read (a little bit of) it, is time that you both could spend learning and <em>actually</em> contributing to what you care about<Cite id="impact-ai-2025" />.
+  </p>
+
+  <p>
+    I’m willing to put aside students cheating on homework and generating essays. I won’t ignore it, and the fact that it’s happening makes me sad, but cheating students are just trying to check boxes. They’re not going <em>out of their way</em> to make someone else’s life harder (even if that ends up being the result). They’re sacrificing their own learning and own futures, in the same way I won’t hate someone who smokes because they’re knowingly sacrificing their lung health. What gets to me is the people who think that what an LLM tells them <em>is</em> important for other people to read: the people who waste everyone’s time<Cite id="death-by-a-thousand-slops"/> because they dump a large text block they didn’t write into a chat room, or pad an email out with “it’s not just X but Y”, or people who’ve never done algebraic geometry and have claimed to solve the Hodge conjecture.
+  </p>
+
+  <p>
+    My experience programming agents has completely validated this view for me. I took a step into the LLM world to try and accomplish even a <em>tiny part</em> of what “AI bros” claim LLMs can do, willing to be surprised and willing to be wrong about the nature of token prediction algorithms. When this article was still going to be about Letta, this didn’t bother me: I went in with a hypothesis, performed experiments, came out with a conclusion. Writing this article now, and realizing that I figured out what I figured out in only a few days, whereas AI bros have been filling the internet with LLM slop for <em>years</em>, fills me with disgust and disappointment.
+  </p>
+
+  <Blockquote>
+    <p>
+      What I just don’t like is the insincerity.
+    </p>
+
+    <p>
+      “I am deeply committed to learning and I have been taking every step possible to ensure that I pass this course”: No you aren’t. You’re not showing up to class.
+    </p>
+
+    <p>
+      “I have been making extensive use of tutoring services and prepared for hours for the exam”: Bruh you got a 20%. You didn’t go to a tutor and you didn’t study.
+    </p>
+
+    <p>
+      “I value your time…”: So you sent me an email you couldn’t bother to write yourself and expect me to read it and do something.
+    </p>
+    <span slot="citation">u/incomparability, <Ae href="https://www.reddit.com/r/Professors/comments/1890lk7/comment/kbo7y7d/" hreflang="en">Reddit</Ae></span>
+  </Blockquote>
+
+  <h2>Postscript</h2>
+
+  <p>
+    A lot of people have already written what I’m talking about here much better than me. The reality is none of these articles, including mine, are going to reach the people they need to reach. If you’re willing to be fooled by a text generator, you’re most likely unwilling to have your opinion swayed by some static text that’s mean to you. I’m just hoping to capture a little bit of the student perspective. I’m someone who wants to learn things and give any perspective a fair shot, and from my experiments I did end up with a better understanding of what tasks LLMs excel at; the lying and misleading from people who should have a better understanding of them than me is what really gets to me.
+  </p>
+
+  <p>
+    <cite>I Will Fucking Piledrive You If You Mention AI Again</cite> is a great article for a lot of reasons (and much better than this article, go read it), but it’s focused mostly on the corporate world and social media. No students were doing blockchain to solve their homework, no cranks were using quantum computing to flood researchers’ inboxes with junk mail. Not to devalue the horrors of workslop<Cite id="workslop"/>, but the way that LLM misuse affects the academic world is different in enough subtle ways that I think it’s also worth getting mad about.
+  </p>
+
+  <p>
+    If by some miracle you’re reading this <em>and</em> you’re one of the people I’m getting mad at in the article, let me offer you an anecdote. A good friend of mine slashed his LLM usage to near-zero a while back, and after a while he said that a lot of thinking tasks became a lot more rewarding. In my opinion, exercising your brain is just like any other form of exercise: going to the gym the first time sucks, but once you’ve been going for a bit it feels great. If you’re a student, this is especially true: write your damn essays, do your damn homework, and suffer through it so you don’t get your ass beat by future courses, job interviews, or—god forbid—graduate programs, where you're expected to have these skills.
+  </p>
+
+  <p>
+    Anyways, hopefully my next blog post isn’t ”Aly gets mad at something for 20-ish paragraphs”.
+  </p>
+
+  <footer slot="after-main">
+    <Bibliography>
+      <Reference slot="mit-chatgpt-cognitive-debt">
+        Nataliya Kosmyna, Eugene Hauptmann, Ye Tong Yuan, Jessica Situ, Xian-Hao Liao, Ashly Vivian Beresnitzky, Iris Braunstein, Pattie Maes, <cite>Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task</cite>,
+        <Ae href="https://arxiv.org/abs/2506.08872" hreflang="en">https://arxiv.org/abs/2506.08872</Ae>
+      </Reference>
+      <Reference slot="elon-chatgpt-survey">
+        Elon University News Bureau, <cite>Survey: 52% of U.S. adults now use AI large language models like ChatGPT</cite>,
+        <Ae href="https://www.elon.edu/u/news/2025/03/12/survey-52-of-u-s-adults-now-use-ai-large-language-models-like-chatgpt/">https://www.elon.edu/u/news/2025/03/12/survey-52-of-u-s-adults-now-use-ai-large-language-models-like-chatgpt/</Ae>
+        (Accessed 2025-09-25: <Ae href="https://web.archive.org/web/20250925071907/https://www.elon.edu/u/news/2025/03/12/survey-52-of-u-s-adults-now-use-ai-large-language-models-like-chatgpt/">Archive</Ae>)
+      </Reference>
+      <Reference slot="drew-gooden-apple-intelligence">
+        Drew Gooden, <cite>YouTube is obsessed with AI</cite>,
+        <Ae href="https://www.youtube.com/watch?v=2ai5NWd8nuo">https://www.youtube.com/watch?v=2ai5NWd8nuo</Ae>
+      </Reference>
+      <Reference slot="openai-hallucination">
+        Adam Tauman Kalai, Ofir Nachum, Santosh S. Vempala, Edwin Zhang, <cite>Why Language Models Hallucinate</cite>,
+        <Ae href="https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf">https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf</Ae>
+        (Accessed 2025-09-25: <Ae href="https://web.archive.org/web/20250925072050/https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf">Archive</Ae>)
+      </Reference>
+      <Reference slot="computational-theory-hallucination">
+        Sourav Banerjee, Ayushi Agarwal, Saloni Singla, <cite>LLMs Will Always Hallucinate, and We Need to Live With This</cite>,
+        <Ae href="https://arxiv.org/abs/2409.05746">https://arxiv.org/abs/2409.05746</Ae>
+      </Reference>
+      <Reference slot="learning-theory-hallucination">
+        Ziwei Xu, Sanjay Jain, Mohan Kankanhalli, <cite>Hallucination is Inevitable: An Innate Limitation of Large Language Models</cite>,
+        <Ae href="https://arxiv.org/abs/2401.11817">https://arxiv.org/abs/2401.11817</Ae>
+      </Reference>
+      <Reference slot="scipip">
+        Wenxiao Wang, Lihui Gu, Liye Zhang, Yunxiang Luo, Yi Dai, Chen Shen, Liang Xie, Binbin Lin, Xiaofei He, Jieping Ye, <cite>SciPIP: An LLM-based Scientific Paper Idea Proposer</cite>,
+        <Ae href="https://arxiv.org/abs/2410.23166">https://arxiv.org/abs/2410.23166</Ae>
+      </Reference>
+      <Reference slot="chain-of-ideas">
+        Long Li, Weiwen Xu, Jiayan Guo, Ruochen Zhao, Xingxuan Li, Yuqian Yuan, Boqiang Zhang, Yuming Jiang, Yifei Xin, Ronghao Dang, Deli Zhao, Yu Rong, Tian Feng, Lidong Bing, <cite>Chain of Ideas: Revolutionizing Research Via Novel Idea Development with LLM Agents</cite>,
+        <Ae href="https://arxiv.org/abs/2410.13185">https://arxiv.org/abs/2410.13185</Ae>
+      </Reference>
+      <Reference slot="nova">
+        Xiang Hu, Hongyu Fu, Jinge Wang, Yifeng Wang, Zhikun Li, Renjun Xu, Yu Lu, Yaochu Jin, Lili Pan, Zhenzhong Lan, <cite>Nova: An Iterative Planning and Search Approach to Enhance Novelty and Diversity of LLM Generated Ideas</cite>,
+        <Ae href="https://arxiv.org/abs/2410.14255">https://arxiv.org/abs/2410.14255</Ae>
+      </Reference>
+      <Reference slot="delving-into-delve">
+        Philip Shapira, <cite>Delving into “delve”</cite>,
+        <Ae href="https://pshapira.net/2024/03/31/delving-into-delve/">https://pshapira.net/2024/03/31/delving-into-delve/</Ae>
+        (Accessed 2025-09-25: <Ae href="https://web.archive.org/web/20250925072657/https://pshapira.net/2024/03/31/delving-into-delve/">Archive</Ae>)
+      </Reference>
+      <Reference slot="nymag-chatgpt-cheating">
+        James D. Walsh, <cite>Everyone Is Cheating Their Way Through College</cite>,
+        <Ae href="https://nymag.com/intelligencer/article/openai-chatgpt-ai-cheating-education-college-students-school.html" hreflang="en">https://nymag.com/intelligencer/article/openai-chatgpt-ai-cheating-education-college-students-school.html</Ae>
+        (Accessed 2025-09-25: <Ae href="https://web.archive.org/web/20250925071554/https://nymag.com/intelligencer/article/openai-chatgpt-ai-cheating-education-college-students-school.html">Archive</Ae>)
+      </Reference>
+      <Reference slot="death-by-a-thousand-slops">
+        Daniel Stenberg, <cite>Death by a thousand slops</cite>,
+        <Ae href="https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/">https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/</Ae>
+        (Accessed 2025-09-25: <Ae href="https://web.archive.org/web/20250925191906/https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/">Archive</Ae>)
+      </Reference>
+      <Reference slot="impact-ai-2025">
+        Joel Becker, Nate Rush, Beth Barnes, David Rein, <cite>Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity</cite>,
+        <Ae href="https://arxiv.org/pdf/2507.09089">https://arxiv.org/pdf/2507.09089</Ae>
+      </Reference>
+      <Reference slot="workslop">
+        Kate Niederhoffer, Gabriella Rosen Kellerman, Angela Lee, Alex Liebscher, Kristina Rapuano and Jeffrey T. Hancock, <cite>AI-Generated “Workslop” Is Destroying Productivity</cite>,
+        <Ae href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity">https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity</Ae>
+        (Paywalled)
+      </Reference>
+    </Bibliography>
+  </footer>
+</Layout>

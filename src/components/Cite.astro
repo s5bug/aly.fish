@@ -1,24 +1,37 @@
 ---
 interface Props {
-  id: string;
+  id: string | [string, ...string[]];
 }
 
-const { id } = Astro.props;
+const { id: idUnchecked } = Astro.props;
+
+let idChecked: [string, ...string[]];
+if(typeof idUnchecked === 'object') {
+  idChecked = idUnchecked
+} else {
+  idChecked = [idUnchecked]
+}
 
 // If we haven't cited anything yet, then initialize a citations array
 if(Astro.locals.alyfish_citations === undefined) {
   Astro.locals.alyfish_citations = [];
 }
 
-const idx = Astro.locals.alyfish_citations.indexOf(id);
-let humanIdx: number;
-if(idx === -1) {
-  Astro.locals.alyfish_citations.push(id);
-  humanIdx = Astro.locals.alyfish_citations.length;
-} else {
-  humanIdx = idx + 1;
-}
+const hrefAndHumanIdxs: [string, number][] = idChecked.map(id => {
+  const idx = Astro.locals.alyfish_citations.indexOf(id);
+  let humanIdx: number;
+  if(idx === -1) {
+    Astro.locals.alyfish_citations.push(id);
+    humanIdx = Astro.locals.alyfish_citations.length;
+  } else {
+    humanIdx = idx + 1;
+  }
 
-const href = `#cite-${id}`
+  const href = `#cite-${id}`
+
+  return [href, humanIdx] as const
+})
 ---
-<sup><a href={href}>{humanIdx}</a></sup>
+<sup><a href={hrefAndHumanIdxs[0][0]}>{hrefAndHumanIdxs[0][1]}</a>{hrefAndHumanIdxs.slice(1).map(
+  ([href, humanIdx]) => [',', <a href={href}>{humanIdx}</a>]
+)}</sup>
