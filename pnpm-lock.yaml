@@ -13,16 +13,16 @@ importers:
         version: 0.9.4(typescript@5.9.3)
       '@astrojs/cloudflare':
         specifier: ^12.6.10
-        version: 12.6.10(@types/node@24.7.2)(astro@5.14.5(@types/node@24.7.2)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
+        version: 12.6.10(@types/node@24.8.1)(astro@5.14.5(@types/node@24.8.1)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
       '@astrojs/ts-plugin':
         specifier: ^1.10.5
         version: 1.10.5
       astro:
         specifier: ^5.14.5
-        version: 5.14.5(@types/node@24.7.2)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1)
+        version: 5.14.5(@types/node@24.8.1)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1)
       astro-compress:
         specifier: ^2.3.8
-        version: 2.3.8(@types/node@24.7.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
+        version: 2.3.8(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1)
       modern-normalize:
         specifier: ^3.0.1
         version: 3.0.1
@@ -34,8 +34,8 @@ importers:
         version: 5.9.3
     devDependencies:
       '@types/node':
-        specifier: ^24.7.2
-        version: 24.7.2
+        specifier: ^24.8.1
+        version: 24.8.1
       wrangler:
         specifier: ^4.43.0
         version: 4.43.0(@cloudflare/workers-types@4.20251008.0)
@@ -995,8 +995,8 @@ packages:
   '@types/node@22.13.14':
     resolution: {integrity: sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==}
 
-  '@types/node@24.7.2':
-    resolution: {integrity: sha512-/NbVmcGTP+lj5oa4yiYxxeBjRivKQ5Ns1eSZeB99ExsEQ6rX5XYU1Zy/gGxY/ilqtD4Etx9mKyrPxZRetiahhA==}
+  '@types/node@24.8.1':
+    resolution: {integrity: sha512-alv65KGRadQVfVcG69MuB4IzdYVpRwMG/mq8KWOaoOdyY617P5ivaDiMCGOFDWD2sAn5Q0mR3mRtUOgm99hL9Q==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -2600,14 +2600,14 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@12.6.10(@types/node@24.7.2)(astro@5.14.5(@types/node@24.7.2)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)':
+  '@astrojs/cloudflare@12.6.10(@types/node@24.8.1)(astro@5.14.5(@types/node@24.8.1)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1))(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.4
       '@astrojs/underscore-redirects': 1.0.0
       '@cloudflare/workers-types': 4.20251008.0
-      astro: 5.14.5(@types/node@24.7.2)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.14.5(@types/node@24.8.1)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1)
       tinyglobby: 0.2.15
-      vite: 6.3.6(@types/node@24.7.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
+      vite: 6.3.6(@types/node@24.8.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
       wrangler: 4.41.0(@cloudflare/workers-types@4.20251008.0)
     transitivePeerDependencies:
       - '@types/node'
@@ -3309,7 +3309,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 24.7.2
+      '@types/node': 24.8.1
 
   '@types/hast@3.0.4':
     dependencies:
@@ -3331,7 +3331,7 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/node@24.7.2':
+  '@types/node@24.8.1':
     dependencies:
       undici-types: 7.14.0
 
@@ -3427,12 +3427,12 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro-compress@2.3.8(@types/node@24.7.2)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1):
+  astro-compress@2.3.8(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@playform/pipe': 0.1.3
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 5.14.5(@types/node@24.7.2)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.14.5(@types/node@24.8.1)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1)
       commander: 13.1.0
       csso: 5.0.5
       deepmerge-ts: 7.1.5
@@ -3476,7 +3476,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.14.5(@types/node@24.7.2)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1):
+  astro@5.14.5(@types/node@24.8.1)(lightningcss@1.29.3)(rollup@4.52.4)(terser@5.39.0)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.4
@@ -3532,8 +3532,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.1
       vfile: 6.0.3
-      vite: 6.3.7(@types/node@24.7.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
-      vitefu: 1.1.1(vite@6.3.7(@types/node@24.7.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1))
+      vite: 6.3.7(@types/node@24.8.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
+      vitefu: 1.1.1(vite@6.3.7(@types/node@24.8.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -5063,7 +5063,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@6.3.6(@types/node@24.7.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1):
+  vite@6.3.6(@types/node@24.8.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5072,13 +5072,13 @@ snapshots:
       rollup: 4.52.4
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.7.2
+      '@types/node': 24.8.1
       fsevents: 2.3.3
       lightningcss: 1.29.3
       terser: 5.39.0
       yaml: 2.8.1
 
-  vite@6.3.7(@types/node@24.7.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1):
+  vite@6.3.7(@types/node@24.8.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5087,15 +5087,15 @@ snapshots:
       rollup: 4.52.4
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.7.2
+      '@types/node': 24.8.1
       fsevents: 2.3.3
       lightningcss: 1.29.3
       terser: 5.39.0
       yaml: 2.8.1
 
-  vitefu@1.1.1(vite@6.3.7(@types/node@24.7.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)):
+  vitefu@1.1.1(vite@6.3.7(@types/node@24.8.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)):
     optionalDependencies:
-      vite: 6.3.7(@types/node@24.7.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
+      vite: 6.3.7(@types/node@24.8.1)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.8.1)
 
   volar-service-css@0.0.62(@volar/language-service@2.4.23):
     dependencies:
