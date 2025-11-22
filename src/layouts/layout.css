@@ -1,3 +1,39 @@
+/* blocked by https://github.com/jonasgeiler/astro-html-minifier-next/issues/7 */
+/*h1, h2, h3, h4, h5, h6 {*/
+/*  text-wrap: balance;*/
+
+/*  &:lang(ja) {*/
+/*    text-wrap: initial;*/
+
+/*    @supports (word-break: auto-phrase) {*/
+/*      word-break: auto-phrase;*/
+/*      text-wrap: balance;*/
+/*    }*/
+/*  }*/
+/*}*/
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance
+}
+
+:is(h1,h2,h3,h4,h5,h6):lang(ja) {
+  text-wrap: initial
+}
+
+@supports (word-break:auto-phrase) {
+  :is(h1,h2,h3,h4,h5,h6):lang(ja) {
+    word-break: auto-phrase;
+    text-wrap: balance
+  }
+}
+
+p {
+  text-align: justify;
+  hyphens: auto;
+  /* text-wrap: pretty; */ /* causes an issue in Chrome where some final lines will stretch to a block */
+  hanging-punctuation: first allow-end last;
+}
+
 body:lang(ja) {
   line-height: 1.8rem;
 }

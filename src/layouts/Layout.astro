@@ -14,9 +14,16 @@ const {
   title,
   description
 } = Astro.props;
+
+const urlToLangMap: Partial<Record<string, string>> = {
+    'en': 'en-US',
+}
+const urlLocale = Astro.locals.alyfish_here_locale;
+
+const htmlLang = urlLocale && (urlToLangMap[urlLocale] ?? urlLocale);
 ---
 
-<html lang={Astro.locals.alyfish_here_locale}>
+<html lang={htmlLang}>
 <head>
   <meta charset="UTF-8"/>
   <title>{title}</title>
@@ -50,9 +57,10 @@ const {
   body {
     font-family: system-ui, sans-serif;
     padding: 8px;
-    max-width: 816px;
+    max-width: 36em;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.5rem;
   }
 </style>
 
