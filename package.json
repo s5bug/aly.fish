@@ -14,7 +14,7 @@
     "@astrojs/ts-plugin": "^1.10.5",
     "astro": "^5.16.0",
     "astro-compress": "^2.3.8",
-    "astro-html-minifier-next": "^2.0.1",
+    "astro-html-minifier-next": "^2.1.0",
     "browserslist": "^4.28.0",
     "lightningcss": "^1.30.2",
     "modern-normalize": "^3.0.1",

@@ -41,6 +41,7 @@ export default defineConfig({
   },
   integrations: [
     htmlMinifierNext({
+      alwaysWriteMinifiedHTML: true,
       caseSensitive: true,
       collapseBooleanAttributes: true,
       collapseInlineTagWhitespace: false,
