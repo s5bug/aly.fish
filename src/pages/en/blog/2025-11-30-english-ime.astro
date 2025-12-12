@@ -1,0 +1,137 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Figure from "../../../components/Figure.astro";
+
+import chineseImeExampleSvg from '../../../assets/blog/2025-11-30-english-ime/chinese-ime-example.svg'
+import japaneseImeKaomojiExampleSvg from '../../../assets/blog/2025-11-30-english-ime/japanese-ime-kaomoji-example.svg'
+import Blockquote from "../../../components/Blockquote.astro";
+import Ae from "../../../components/Ae.astro";
+---
+
+<Layout title="The Case for an English IME" description="Super easy ways to fix issues with typesetting, accessibility, and searching in English text.">
+  <h1>The Case for an English IME</h1>
+
+  <p>
+    Maintaining a website, alongside writing a lot of LaTeX, combined with needing to type in multiple languages (the others being Chinese and Japanese), means I get to experience a lot of nonsense involved with typesetting. If you've ever worked with LaTeX, you'll be familiar with the infamous Stan Dalone and We Bassembly, and various other issues related to automatic hyphenation. If you've written text for the web, then you'll know how awful justification can look with the default word-wrapping settings.
+  </p>
+  <p>
+    Since updating my website to use fully justified text columns, I've spent quite a lot of time thinking about how one might improve the situation of English text input for a bunch of different use-cases (first and foremost being the prettiness of text), and the obvious solution hit me like a truck: make an IME for English.
+  </p>
+
+  <h2>What's an IME?</h2>
+
+  <p>
+    IME stands for "Input Method Editor". It's the thing that handles converting the keys you press into text. Technically, you're already using an IME when typing English: it's just a boring IME that doesn't do anything other than literally convert key presses. When we talk about other languages, things get a lot more interesting.
+  </p>
+
+  <p>
+    As both Japanese and Mandarin become more and more important culturally, learners of either language may wonder: how do native speakers type in these languages? The answer is their IMEs are a lot cooler than ours. In Chinese (mainland China), Latin alphabet keystrokes are interpreted as <i lang="zh-Latn-CN">pīnyīn</i>, and in Japanese, they're interpreted as <i lang="ja-Latn">rōmaji</i>. Both of these are systems essentially are a "rendering" of a native word into the Latin script, so that one familiar with a Latin-based language can understand the basics of sounds.
+  </p>
+
+  <p>
+    Of course, since Chinese and Japanese have multiple symbols mapped to the same sound, an IME seems necessary. Clearly, something is needed between keystrokes and text input that allows for selection of the proper character, so that people who speak languages with more characters than English can talk over standard communication channels. However, these tools actually have a lot more bells and whistles than you might think!
+  </p>
+
+  <Figure src={chineseImeExampleSvg} formats={['svg']} alt="An example of Chinese IME input for the phrase: I want to drink sour plum juice. The input is shortened to only specify the first consonant of each character's pinyin, but the IME retrieves the correct character sequence regardless.">
+    An example of Chinese IME input for “I want to drink sour plum juice”.
+  </Figure>
+
+  <p>
+    This sentence is pronounced <i lang="zh-Latn-CN">wǒ xiǎng hē suānméi tāng</i>, but I was able to select it only by typing <code>wxhsmt</code>, the first consonants of each character. I have typed this exact sentence before, so it's in my history. However, extensive use of this style (<span lang="zh-CN">简拼</span> <i lang="zh-Latn-CN">jiănpīn</i>), such as <code>wm</code> (for <span lang="zh-CN">我们</span> <i lang="zh-Latn-CN">wǒmen</i>) or <code>wsm</code> (for <span lang="zh-CN">为什么</span> <i lang="zh-Latn-CN">wèishénme</i>), is actually quite common in typed Chinese, especially among native speakers.
+  </p>
+
+  <p>
+    The other thing you might notice is that I have a few alternatives in terms of what to select. This makes sense from the point mentioned before, where many symbols share a single sound: the IME could have gotten something wrong in its top guess, so it gives me likely alternatives to choose. For example, <span lang="zh-CN">我喜欢酸梅汤</span> <i lang="zh-Latn-CN">wǒ xǐhuan suānméi tāng</i>, “I like sour plum juice”, is another perfectly valid and likely sentence. Japanese input takes this to the extreme, where you can get whole different categories of input from single phrases.
+  </p>
+
+  <Figure src={japaneseImeKaomojiExampleSvg} formats={['svg']} alt="An example of Japanese IME input for kaomoji. There are 9 options in a column, and 4 total columns. Each column has a different face made out of non-emoji Unicode characters, except for the top-left cell which has art of a fish and the cell below it which says the word kaomoji in Japanese.">
+    An example of Japanese IME input for <i lang="ja-Latn">kaomoji</i>.
+  </Figure>
+
+  <p>
+    You might here be reminded of your phone's keyboard: autocomplete, follow-up emojis, a custom dictionary that adapts to the way you type, etc. And in fact, input for Chinese and Japanese works almost exactly the same between desktop and phone. It's just English that differs a lot here, with desktop input simply being key-to-text. However, there's even some improvements English mobile IMEs are lacking (which Japanese mobile IMEs have) that we could add to all English IMEs, regardless of platform.
+  </p>
+
+  <h2>The Case for an English IME</h2>
+
+  <p>
+    If you're a programmer, or work extensively with older software, you're going to be yelling and screaming and crying throughout a few of these points. I promise you in the next section I will address all of your worries! I don't want smart quotes in my shell scripts or soft hyphens in my variable names either.
+  </p>
+
+  <h3>Exhibit A: Faster Composition</h3>
+
+  <p>
+    This is basically just the stuff I've already shown from the Chinese and Japanese IMEs. The main thing to avoid here is the conversion of <code>omw</code> to "On my way!": that's an Apple default that's caused headaches and complaining for years. What one would want here is simply the ability to save time typing common phrases and sentences, especially ones that use special characters that don't map directly to keyboard keys.
+  </p>
+
+  <p>
+    To give an example, I might want to compose the following phrase:
+  </p>
+
+  <blockquote>
+    <p>
+      Work by Høyer investigates a generalization of a famous family of quantum algorithms: the “Fourier transform, query, inverse Fourier transform, and measure” family, of which both Deutschʼs algorithm and the Bernstein–Vazirani algorithm are members.
+    </p>
+  </blockquote>
+
+  <p>
+    Important characters to note here are <code>ø</code> and <code>–</code> (the en-dash), which aren't available on standard US English keyboards.
+  </p>
+
+  <p>
+    Another thing worth noting is that this phrase involves a lot of long words which are easy to assume from a shortened context:
+  </p>
+
+  <blockquote>
+    <p>
+      Work by Høyer <code>ivtgs</code> a <code>glzn</code> of a…
+    </p>
+  </blockquote>
+
+  <h3>Exhibit B: Smart Quotes That Are Actually Smart</h3>
+
+  <Blockquote>
+    <p>
+      The Unicode committee is very clear that U+2019 (RIGHT SINGLE QUOTATION MARK) should represent the English apostrophe. This is <i>very, very wrong</i>.
+    </p>
+    <Fragment slot="citation">Ted Clancy, <cite><Ae href="https://tedclancy.wordpress.com/2015/06/03/which-unicode-character-should-represent-the-english-apostrophe-and-why-the-unicode-committee-is-very-wrong/" hreflang="en">Which Unicode character should represent the English apostrophe?</Ae></cite></Fragment>
+  </Blockquote>
+
+  <p>
+    The above article is kind of preliminary to this section, but I'll restate the most important thing to save you time: there's an apostrophe character in Unicode, but due to a bunch of people incorrectly using the right quotation mark as an apostrophe, Unicode changed their recommendations to use the right quote for apostrophe instead of the actual apostrophe. We can attribute this failing to the “Smart Quote” feature as implemented by Apple, Google Docs, and Microsoft Word. You might try typing the following phrase:
+  </p>
+
+  <blockquote>
+    <p>
+      “ʼTwas like a ʼ90s commercial. ‘Up and at ʼem, champ!’, said he.”
+    </p>
+  </blockquote>
+
+  <p>
+    These 1:1 keystroke-to-character environments don't have the ability to see vocabulary like "'twas" or "'em" and retroactively adjust the type of quote used. This will lead to open quotes being used instead of apostrophes in these cases! A proper IME would be able to recognize the vocabulary here and adjust the quotes as necessary to fit. If such an IME used the apostrophe character
+  </p>
+
+  <h3>Exhibit C: Automatic Soft Hyphenation</h3>
+
+  <p>
+
+  </p>
+
+  <h3>Exhibit D: Fast Symbol Searching</h3>
+
+  <p>
+
+  </p>
+
+  <h3>Exhibit E: Multilingual Accessibility</h3>
+
+  <p>
+
+  </p>
+
+  <h2>Making It Not Suck</h2>
+
+  <p>
+    If you've used a Japanese IME before, you know that text editing tasks during typing end up taking extra keystrokes. If you're used to Japanese editing, this is fine, but for English typers it would break a lot of muscle memory. Beyond that, the above proposals would insert extra characters into the text that under normal rules wouldn't be seen.
+  </p>
+</Layout>
