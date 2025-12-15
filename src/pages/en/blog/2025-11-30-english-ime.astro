@@ -32,6 +32,7 @@ import Ae from "../../../components/Ae.astro";
     Of course, since Chinese and Japanese have multiple symbols mapped to the same sound, an IME seems necessary. Clearly, something is needed between keystrokes and text input that allows for selection of the proper character, so that people who speak languages with more characters than English can talk over standard communication channels. However, these tools actually have a lot more bells and whistles than you might think!
   </p>
 
+  <!-- TODO fix this svg -->
   <Figure src={chineseImeExampleSvg} formats={['svg']} alt="An example of Chinese IME input for the phrase: I want to drink sour plum juice. The input is shortened to only specify the first consonant of each character's pinyin, but the IME retrieves the correct character sequence regardless.">
     An example of Chinese IME input for “I want to drink sour plum juice”.
   </Figure>
@@ -44,21 +45,36 @@ import Ae from "../../../components/Ae.astro";
     The other thing you might notice is that I have a few alternatives in terms of what to select. This makes sense from the point mentioned before, where many symbols share a single sound: the IME could have gotten something wrong in its top guess, so it gives me likely alternatives to choose. For example, <span lang="zh-CN">我喜欢酸梅汤</span> <i lang="zh-Latn-CN">wǒ xǐhuan suānméi tāng</i>, “I like sour plum juice”, is another perfectly valid and likely sentence. Japanese input takes this to the extreme, where you can get whole different categories of input from single phrases.
   </p>
 
+  <!-- TODO fix this svg -->
   <Figure src={japaneseImeKaomojiExampleSvg} formats={['svg']} alt="An example of Japanese IME input for kaomoji. There are 9 options in a column, and 4 total columns. Each column has a different face made out of non-emoji Unicode characters, except for the top-left cell which has art of a fish and the cell below it which says the word kaomoji in Japanese.">
     An example of Japanese IME input for <i lang="ja-Latn">kaomoji</i>.
   </Figure>
 
-  <p>
-    You might here be reminded of your phone's keyboard: autocomplete, follow-up emojis, a custom dictionary that adapts to the way you type, etc. And in fact, input for Chinese and Japanese works almost exactly the same between desktop and phone. It's just English that differs a lot here, with desktop input simply being key-to-text. However, there's even some improvements English mobile IMEs are lacking (which Japanese mobile IMEs have) that we could add to all English IMEs, regardless of platform.
-  </p>
-
-  <h2>The Case for an English IME</h2>
+  <h2>The State of the English IME</h2>
 
   <p>
-    If you're a programmer, or work extensively with older software, you're going to be yelling and screaming and crying throughout a few of these points. I promise you in the next section I will address all of your worries! I don't want smart quotes in my shell scripts or soft hyphens in my variable names either.
+    From the above, you might be reminded of your phone's keyboard: autocomplete, follow-up emojis, a custom dictionary that adapts to the way you type, etc. And in fact, input for Chinese and Japanese works almost exactly the same between desktop and phone. It's just English that differs a lot here, with desktop input simply being key-to-text.
   </p>
 
-  <h3>Exhibit A: Faster Composition</h3>
+  <p>
+    Let's do a real comparison. There's three common styles of English IMEs:
+  </p>
+
+  <ol>
+    <li>the 1-to-1 keystroke-to-character conversion IME (normal PC use)</li>
+    <li>the contextual 1-to-1 IME ("smart quotes", word processors)</li>
+    <li>the word-based predictive IME (phones)</li>
+  </ol>
+
+  <p>
+    All of these have unique problems, with the second usually being more actively frustrating than helpful! Apple users will be familiar with the plague of "On my way!" that forcefully inserts itself into your speech, and if you've ever tried to make Google Slides with code examples, you'll have experienced your examples getting messed up by smart quotes too often.
+  </p>
+
+  <p>
+    However, beyond the actual hindrances, there's things all of these input methods are missing that would drastically improve not only the experience but also the speed and correctness of English typing.
+  </p>
+
+  <h2>Full-Context Completion and Correction</h2>
 
   <p>
     This is basically just the stuff I've already shown from the Chinese and Japanese IMEs. The main thing to avoid here is the conversion of <code>omw</code> to "On my way!": that's an Apple default that's caused headaches and complaining for years. What one would want here is simply the ability to save time typing common phrases and sentences, especially ones that use special characters that don't map directly to keyboard keys.
@@ -70,16 +86,12 @@ import Ae from "../../../components/Ae.astro";
 
   <blockquote>
     <p>
-      Work by Høyer investigates a generalization of a famous family of quantum algorithms: the “Fourier transform, query, inverse Fourier transform, and measure” family, of which both Deutschʼs algorithm and the Bernstein–Vazirani algorithm are members.
+      Work by Høyer investigates a generalization of a famous family of quantum algorithms: the “Fourier transform, query, measure, and inverse Fourier transform” family, of which both Deutschʼs algorithm and the Bernstein–Vazirani algorithm are members.
     </p>
   </blockquote>
 
   <p>
-    Important characters to note here are <code>ø</code> and <code>–</code> (the en-dash), which aren't available on standard US English keyboards.
-  </p>
-
-  <p>
-    Another thing worth noting is that this phrase involves a lot of long words which are easy to assume from a shortened context:
+    Important characters to note here are <code>ø</code> and <code>–</code> (the en-dash), which aren't available on standard US English keyboards. Another thing worth noting is that this phrase involves a lot of long words which are easy to assume from a shortened context:
   </p>
 
   <blockquote>
@@ -88,13 +100,31 @@ import Ae from "../../../components/Ae.astro";
     </p>
   </blockquote>
 
-  <h3>Exhibit B: Smart Quotes That Are Actually Smart</h3>
+  <p>
+    In a single-word context, it might be difficult for a program to glean the intended word from these shortenings. But, if like the Chinese and Japanese IMEs, we were able to consider whole sentences, there's very obviously words that make more sense than others. Additionally, given a whole-sentence word finding solution, we might be able to eliminate the space bar entirely. The IME could render its interpretation of the text above the typed input like with Chinese, showing where it inserts spaces and how it transforms words.
+  </p>
+
+  <!-- TODO turn this into an SVG -->
+  <blockquote>
+    <p><ruby><code>work</code><rp>(</rp><rt>Work</rt><rp>)</rp>␣<rt></rt><code>by</code><rp>(</rp><rt>by</rt><rp>)</rp><code>ho/yer</code><code>invtgs</code><code>a</code><code>glznofa</code></ruby></p>
+  </blockquote>
+
+  <p>
+    (Converting <code>o/</code> to "ø" is covered later in "Fast Symbol Searching".)
+  </p>
+
+  <h2>Smart Smart Quotes</h2>
+
+  <p>
+    If we can analyze full sentences, then we can distinguish between apostrophes and quotation marks.
+  </p>
 
   <Blockquote>
     <p>
       The Unicode committee is very clear that U+2019 (RIGHT SINGLE QUOTATION MARK) should represent the English apostrophe. This is <i>very, very wrong</i>.
     </p>
     <Fragment slot="citation">Ted Clancy, <cite><Ae href="https://tedclancy.wordpress.com/2015/06/03/which-unicode-character-should-represent-the-english-apostrophe-and-why-the-unicode-committee-is-very-wrong/" hreflang="en">Which Unicode character should represent the English apostrophe?</Ae></cite></Fragment>
+    <!-- TODO archive this -->
   </Blockquote>
 
   <p>
@@ -108,22 +138,44 @@ import Ae from "../../../components/Ae.astro";
   </blockquote>
 
   <p>
-    These 1:1 keystroke-to-character environments don't have the ability to see vocabulary like "'twas" or "'em" and retroactively adjust the type of quote used. This will lead to open quotes being used instead of apostrophes in these cases! A proper IME would be able to recognize the vocabulary here and adjust the quotes as necessary to fit. If such an IME used the apostrophe character
+    These 1:1 keystroke-to-character environments don't have the ability to see vocabulary like "'twas" or "'em" and retroactively adjust the type of quote used. This will lead to open quotes being used instead of apostrophes in these cases! A proper IME would be able to recognize the vocabulary here and adjust the quotes as necessary to fit.
   </p>
 
-  <h3>Exhibit C: Automatic Soft Hyphenation</h3>
+  <p>
+    More than fixing a lot of incorrect typography, as explained in <cite>Which Unicode character should represent the English apostrophe?</cite>, it would also fix a lot of the text processing done by computers.
+  </p>
+
+  <h2>Automatic Soft Hyphenation</h2>
+
+  <p>
+    Now we start to get beyond what mobile IMEs aim for: hyphenation. If you're not familiar with "soft hyphen", here's an example:
+  </p>
+
+  <blockquote>
+    <p style="hyphens: manual;">
+      pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis pneu­mo­noul­tra­mi­cro­scop­ic­sil­i­co­vol­canoco­nio­sis
+    </p>
+  </blockquote>
+
+  <p>
+    You should be able to copy this text to other locations and textboxes (some mobile applications like Discord might not work), or resize your browser window, and see the hyphenation dynamically update. This is because in the word itself I've inserted "soft hyphen" characters in the American English hyphenation points. Basically, they're characters that are normally invisible, but act as hyphens when near a line boundary.
+  </p>
+
+  <p>
+    In justified text, these are pretty much required to keep text that uses long words from looking awful. On the web, you can try <code>hyphens:auto</code>, but you have no way to see where the hyphenation points are, and as such no way to see if the browser is correct! Beyond that, hyphenation could differ from browser to browser (although this isn't noticeably true in practice). Even in LaTeX, the typesetting giant, you have no way to debug hyphenation points.
+  </p>
+
+  <p>
+    If we had soft hyphenation in the IME, we could display hyphenation points while typing where it matters. This means we would no longer have to rely on automatic (and error-prone) hyphenation dictionaries: when I type out <code>WebAssembly</code>, I would be able to directly see that the automatic hyphenation dictionary suggests <code>We•bAssembly</code>, and I can go add a custom word in settings. Perhaps I could skip going to settings entirely, type out <code>Web-As-sem-bly</code>, have the IME render the hyphens as soft hyphens, and have the correct hyphenation automatically occur the next time it's typed.
+  </p>
+
+  <h2>Fast Symbol Searching</h2>
 
   <p>
 
   </p>
 
-  <h3>Exhibit D: Fast Symbol Searching</h3>
-
-  <p>
-
-  </p>
-
-  <h3>Exhibit E: Multilingual Accessibility</h3>
+  <h2>Multilingual Accessibility</h2>
 
   <p>
 
