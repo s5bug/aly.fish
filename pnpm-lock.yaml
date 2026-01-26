@@ -13,19 +13,19 @@ importers:
         version: 0.9.6(prettier@3.7.4)(typescript@5.9.3)
       '@astrojs/cloudflare':
         specifier: ^12.6.12
-        version: 12.6.12(@types/node@25.0.10)(astro@5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2))(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2)
+        version: 12.6.12(@types/node@25.0.10)(astro@5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2))(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2)
       '@astrojs/ts-plugin':
         specifier: ^1.10.6
         version: 1.10.6
       astro:
-        specifier: ^5.16.14
-        version: 5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)
+        specifier: ^5.16.15
+        version: 5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)
       astro-compress:
         specifier: ^2.3.9
         version: 2.3.9(@types/node@25.0.10)(rollup@4.56.0)(typescript@5.9.3)(yaml@2.8.2)
       astro-html-minifier-next:
         specifier: ^2.1.0
-        version: 2.1.0(astro@5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.1.0(astro@5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2))
       browserslist:
         specifier: ^4.28.1
         version: 4.28.1
@@ -1288,8 +1288,8 @@ packages:
     peerDependencies:
       astro: ^5.0.0
 
-  astro@5.16.14:
-    resolution: {integrity: sha512-+XtShBCwsL5IezGvSeJTIHoZl3RGDOiB2u54t5phS+3haa0A5kGWXbZAmh5O/xFIv19/1cxHbDFa2i0Ot16SMw==}
+  astro@5.16.15:
+    resolution: {integrity: sha512-+X1Z0NTi2pa5a0Te6h77Dgc44fYj63j1yx6+39Nvg05lExajxSq7b1Uj/gtY45zoum8fD0+h0nak+DnHighs3A==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1941,8 +1941,8 @@ packages:
   lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
 
-  lru-cache@11.2.4:
-    resolution: {integrity: sha512-B5Y16Jr9LB9dHVkh6ZevG+vAbOsNOYCX+sXvFWFu7B3Iz5mijW3zdbMyhsh8ANd2mSWBYdJgnqi+mL7/LrOPYg==}
+  lru-cache@11.2.5:
+    resolution: {integrity: sha512-vFrFJkWtJvJnD5hg+hJvVE8Lh/TcMzKnTgCWmtBipwI5yLX/iX+5UB2tfuyODF5E7k9xEzMdYgGqaSb1c0c5Yw==}
     engines: {node: 20 || >=22}
 
   magic-string@0.30.21:
@@ -2882,12 +2882,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@12.6.12(@types/node@25.0.10)(astro@5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2))(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2)':
+  '@astrojs/cloudflare@12.6.12(@types/node@25.0.10)(astro@5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2))(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
       '@astrojs/underscore-redirects': 1.0.0
       '@cloudflare/workers-types': 4.20251213.0
-      astro: 5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)
       tinyglobby: 0.2.15
       vite: 6.4.1(@types/node@25.0.10)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2)
       wrangler: 4.50.0(@cloudflare/workers-types@4.20251213.0)
@@ -3855,12 +3855,12 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro-html-minifier-next@2.1.0(astro@5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)):
+  astro-html-minifier-next@2.1.0(astro@5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)):
     dependencies:
-      astro: 5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)
       html-minifier-next: 4.9.2
 
-  astro@5.16.14(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2):
+  astro@5.16.15(@types/node@25.0.10)(lightningcss@1.31.1)(rollup@4.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -4748,7 +4748,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  lru-cache@11.2.4: {}
+  lru-cache@11.2.5: {}
 
   magic-string@0.30.21:
     dependencies:
@@ -5658,7 +5658,7 @@ snapshots:
       chokidar: 5.0.0
       destr: 2.0.5
       h3: 1.15.5
-      lru-cache: 11.2.4
+      lru-cache: 11.2.5
       node-fetch-native: 1.6.7
       ofetch: 1.5.1
       ufo: 1.6.3
