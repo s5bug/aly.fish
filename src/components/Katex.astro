@@ -5,7 +5,7 @@ interface Props {
   displayMode?: boolean
 }
 
-const { displayMode } = Astro.props;
+const { displayMode } = Astro.props
 
 const content = await Astro.slots.render('default')
 const renderedContent = katex.renderToString(content, {

@@ -1,12 +1,15 @@
 ---
-import language_names from "../lib/language_names";
-import {getRelativeLocaleUrl} from "astro:i18n";
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import language_names from '../lib/language_names'
 
 interface Props {
-  locale: string;
+  locale: string
 }
-const {locale} = Astro.props;
+const { locale } = Astro.props
 
-const linkLocation = getRelativeLocaleUrl(locale, Astro.locals.alyfish_here_url_stripped)
+const linkLocation = getRelativeLocaleUrl(
+  locale,
+  Astro.locals.alyfish_here_url_stripped,
+)
 ---
 <a lang={locale} hreflang={locale} href={linkLocation}>{language_names[locale]}</a>

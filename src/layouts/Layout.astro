@@ -1,26 +1,23 @@
 ---
-import 'modern-normalize/modern-normalize.css';
-import './layout.css';
-import An from "../components/An.astro";
-import {getAbsoluteLocaleUrl} from "astro:i18n";
-import language_names from "../lib/language_names";
+import 'modern-normalize/modern-normalize.css'
+import './layout.css'
+import { getAbsoluteLocaleUrl } from 'astro:i18n'
+import An from '../components/An.astro'
+import language_names from '../lib/language_names'
 
 interface Props {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
-const {
-  title,
-  description
-} = Astro.props;
+const { title, description } = Astro.props
 
 const urlToLangMap: Partial<Record<string, string>> = {
-    'en': 'en-US',
+  en: 'en-US',
 }
-const urlLocale = Astro.locals.alyfish_here_locale;
+const urlLocale = Astro.locals.alyfish_here_locale
 
-const htmlLang = urlLocale && (urlToLangMap[urlLocale] ?? urlLocale);
+const htmlLang = urlLocale && (urlToLangMap[urlLocale] ?? urlLocale)
 ---
 
 <html lang={htmlLang}>

@@ -1,13 +1,13 @@
 ---
-import Picture from 'astro/components/Picture.astro';
-import type {ImageMetadata, ImageOutputFormat} from "astro";
+import type { ImageMetadata, ImageOutputFormat } from 'astro'
+import Picture from 'astro/components/Picture.astro'
 
 interface Props {
-  src: ImageMetadata;
-  formats: ImageOutputFormat[];
-  alt: string;
+  src: ImageMetadata
+  formats: ImageOutputFormat[]
+  alt: string
 }
-const { src, formats, alt } = Astro.props;
+const { src, formats, alt } = Astro.props
 ---
 <figure>
   <Picture src={src} formats={formats} alt={alt} />

@@ -12,18 +12,23 @@
 /*  }*/
 /*}*/
 
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
-:is(h1,h2,h3,h4,h5,h6):lang(ja) {
-  text-wrap: initial
+:is(h1, h2, h3, h4, h5, h6):lang(ja) {
+  text-wrap: initial;
 }
 
-@supports (word-break:auto-phrase) {
-  :is(h1,h2,h3,h4,h5,h6):lang(ja) {
+@supports (word-break: auto-phrase) {
+  :is(h1, h2, h3, h4, h5, h6):lang(ja) {
     word-break: auto-phrase;
-    text-wrap: balance
+    text-wrap: balance;
   }
 }
 

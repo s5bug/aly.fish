@@ -1,30 +1,30 @@
 ---
 interface Props {
-  id: string | [string, ...string[]];
+  id: string | [string, ...string[]]
 }
 
-const { id: idUnchecked } = Astro.props;
+const { id: idUnchecked } = Astro.props
 
-let idChecked: [string, ...string[]];
-if(typeof idUnchecked === 'object') {
+let idChecked: [string, ...string[]]
+if (typeof idUnchecked === 'object') {
   idChecked = idUnchecked
 } else {
   idChecked = [idUnchecked]
 }
 
 // If we haven't cited anything yet, then initialize a citations array
-if(Astro.locals.alyfish_citations === undefined) {
-  Astro.locals.alyfish_citations = [];
+if (Astro.locals.alyfish_citations === undefined) {
+  Astro.locals.alyfish_citations = []
 }
 
-const hrefAndHumanIdxs: [string, number][] = idChecked.map(id => {
-  const idx = Astro.locals.alyfish_citations.indexOf(id);
-  let humanIdx: number;
-  if(idx === -1) {
-    Astro.locals.alyfish_citations.push(id);
-    humanIdx = Astro.locals.alyfish_citations.length;
+const hrefAndHumanIdxs: [string, number][] = idChecked.map((id) => {
+  const idx = Astro.locals.alyfish_citations.indexOf(id)
+  let humanIdx: number
+  if (idx === -1) {
+    Astro.locals.alyfish_citations.push(id)
+    humanIdx = Astro.locals.alyfish_citations.length
   } else {
-    humanIdx = idx + 1;
+    humanIdx = idx + 1
   }
 
   const href = `#cite-${id}`
