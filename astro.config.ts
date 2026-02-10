@@ -1,43 +1,39 @@
-import {defineConfig} from 'astro/config';
-
-import cloudflare from '@astrojs/cloudflare';
-
-import compress from "astro-compress";
-
-import htmlMinifierNext from "astro-html-minifier-next";
-
-import browserslist from "browserslist";
-import { browserslistToTargets } from "lightningcss";
+import cloudflare from '@astrojs/cloudflare'
+import { defineConfig } from 'astro/config'
+import compress from 'astro-compress'
+import htmlMinifierNext from 'astro-html-minifier-next'
+import browserslist from 'browserslist'
+import { browserslistToTargets } from 'lightningcss'
 
 const lightningCssOptions = {
   minify: true,
   errorRecovery: false,
-  targets: browserslistToTargets(browserslist("defaults")),
+  targets: browserslistToTargets(browserslist('defaults')),
 }
 
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
     // we handle this with compress()
-    imageService: "passthrough"
+    imageService: 'passthrough',
   }),
 
   i18n: {
-    locales: ["en", "ja"],
-    defaultLocale: "en",
-    routing: "manual"
+    locales: ['en', 'ja'],
+    defaultLocale: 'en',
+    routing: 'manual',
   },
 
-  site: "https://aly.fish",
+  site: 'https://aly.fish',
 
   compressHTML: false,
   vite: {
     build: {
-      cssMinify: "lightningcss"
+      cssMinify: 'lightningcss',
     },
     css: {
-      lightningcss: lightningCssOptions
-    }
+      lightningcss: lightningCssOptions,
+    },
   },
   integrations: [
     htmlMinifierNext({
@@ -78,9 +74,7 @@ export default defineConfig({
         csso: false,
         lightningcss: lightningCssOptions,
       },
-      Exclude: [
-        "88x31.svg"
-      ]
+      Exclude: ['88x31.svg'],
     }),
   ],
-});
+})

@@ -1,22 +1,22 @@
 ---
 interface Props {
-  href: string;
-  lang?: string;
-  hreflang?: string;
+  href: string
+  lang?: string
+  hreflang?: string
 }
-const { href, lang, hreflang } = Astro.props;
+const { href, lang, hreflang } = Astro.props
 
 interface LangAttrs {
-  lang?: string;
-  hreflang?: string;
+  lang?: string
+  hreflang?: string
 }
-let langAttrs: LangAttrs = {}
-if(lang) {
-  langAttrs["lang"] = lang;
-  langAttrs["hreflang"] = lang;
+const langAttrs: LangAttrs = {}
+if (lang) {
+  langAttrs.lang = lang
+  langAttrs.hreflang = lang
 }
-if(hreflang) {
-  langAttrs["hreflang"] = hreflang;
+if (hreflang) {
+  langAttrs.hreflang = hreflang
 }
 ---
 <a rel="external" href={href} {...langAttrs}><slot/></a><style>

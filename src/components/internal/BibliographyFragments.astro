@@ -1,8 +1,8 @@
 ---
 interface Props {
-  fragments: [string, string][];
+  fragments: [string, string][]
 }
-const { fragments } = Astro.props;
+const { fragments } = Astro.props
 ---
 <ol>{fragments.map(([id, frag]) => {
   const citeId = `cite-${id}`
