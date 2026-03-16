@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 .vscode/
 worker-configuration.d.ts
+.wrangler/

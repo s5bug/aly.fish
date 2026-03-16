@@ -1,10 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "alyfish",
-  "main": "./dist/_worker.js/index.js",
+  "main": "@astrojs/cloudflare/entrypoints/server",
   // Update to today's date
-  "compatibility_date": "2025-06-13",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_date": "2026-03-15",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist"
