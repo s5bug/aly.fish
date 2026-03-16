@@ -13,7 +13,7 @@ const lightningCssOptions = {
   targets: browserslistToTargets(browserslist('defaults')),
 }
 
-const locales = ['en', 'ja'] as const
+const locales: ['en', 'ja'] = ['en', 'ja']
 
 const generateCloudflareRoutes: AstroIntegration = {
   name: 'generate-cloudflare-routes',
@@ -51,7 +51,7 @@ export default defineConfig({
   }),
 
   i18n: {
-    locales: ['en', 'ja'],
+    locales,
     defaultLocale: 'en',
     routing: 'manual',
   },

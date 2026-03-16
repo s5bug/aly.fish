@@ -13,9 +13,6 @@
     "binding": "ASSETS"
   },
   "observability": {
-    "enabled": true,
-    "traces": {
-      "enabled": true
-    }
+    "enabled": true
   }
 }
