@@ -13,29 +13,23 @@ const lightningCssOptions = {
   targets: browserslistToTargets(browserslist('defaults')),
 }
 
+const locales = ['en', 'ja'] as const
+
 const generateCloudflareRoutes: AstroIntegration = {
   name: 'generate-cloudflare-routes',
   hooks: {
     'astro:build:done': (result) => {
-      const staticPages = result.pages.map((p) => `/${p.pathname}`)
-      const staticAssets = []
-
-      if (fs.existsSync('public')) {
-        const publicFolder = fs.readdirSync('public', { withFileTypes: true })
-        for (const publicChild of publicFolder) {
-          if (publicChild.isDirectory()) {
-            staticAssets.push(`/${publicChild.name}/*`)
-          } else {
-            staticAssets.push(`/${publicChild.name}`)
+      const noLocalePages: Set<string> = new Set()
+      for (const page of result.pages) {
+        for (const locale of locales) {
+          if (page.pathname.startsWith(locale)) {
+            const pageUrl = page.pathname.slice(locale.length)
+            noLocalePages.add(pageUrl)
           }
         }
       }
 
-      const runWorkerFirst = [
-        '/*',
-        ...staticPages.map((p) => `!${p}`),
-        ...staticAssets.map((p) => `!${p}`),
-      ]
+      const runWorkerFirst = [...noLocalePages]
 
       const wranglerJsonPath = new URL('../server/wrangler.json', result.dir)
       const existingWranglerText = fs.readFileSync(wranglerJsonPath).toString()
