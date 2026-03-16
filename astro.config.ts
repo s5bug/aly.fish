@@ -1,4 +1,6 @@
+import * as fs from 'node:fs'
 import cloudflare from '@astrojs/cloudflare'
+import type { AstroIntegration } from 'astro'
 import { defineConfig } from 'astro/config'
 import compress from 'astro-compress'
 import htmlMinifierNext from 'astro-html-minifier-next'
@@ -9,6 +11,38 @@ const lightningCssOptions = {
   minify: true,
   errorRecovery: false,
   targets: browserslistToTargets(browserslist('defaults')),
+}
+
+const generateCloudflareRoutes: AstroIntegration = {
+  name: 'generate-cloudflare-routes',
+  hooks: {
+    'astro:build:done': (result) => {
+      const staticPages = result.pages.map((p) => `/${p.pathname}`)
+      const staticAssets = []
+
+      if (fs.existsSync('public')) {
+        const publicFolder = fs.readdirSync('public', { withFileTypes: true })
+        for (const publicChild of publicFolder) {
+          if (publicChild.isDirectory()) {
+            staticAssets.push(`/${publicChild.name}/*`)
+          } else {
+            staticAssets.push(`/${publicChild.name}`)
+          }
+        }
+      }
+
+      const routes = {
+        version: 1,
+        include: ['/*'],
+        exclude: ['/_astro/*', ...staticPages, ...staticAssets],
+      }
+
+      fs.writeFileSync(
+        new URL('_routes.json', result.dir),
+        JSON.stringify(routes),
+      )
+    },
+  },
 }
 
 // https://astro.build/config
@@ -76,5 +110,6 @@ export default defineConfig({
       },
       Exclude: ['88x31.svg'],
     }),
+    generateCloudflareRoutes,
   ],
 })
