@@ -1,5 +1,6 @@
 import { i18n } from 'astro:config/server'
 import { getRelativeLocaleUrl } from 'astro:i18n'
+import { env } from 'cloudflare:workers'
 import type { APIRoute } from 'astro'
 
 export const prerender = false
@@ -21,7 +22,7 @@ export const GET: APIRoute = async (ctx) => {
 
     let exists = false
     try {
-      const result = await fetch(new URL(relativeUrl, ctx.url), {
+      const result = await env.ASSETS.fetch(new URL(relativeUrl, ctx.url), {
         method: 'HEAD',
       })
       if (result.ok) exists = true
@@ -51,7 +52,7 @@ export const GET: APIRoute = async (ctx) => {
     )
   }
 
-  const tryFetchDefault = await fetch(
+  const tryFetchDefault = await env.ASSETS.fetch(
     new URL(getRelativeLocaleUrl('en', stripLocaleUrl), ctx.url),
     { method: 'HEAD' },
   )
