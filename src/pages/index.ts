@@ -51,7 +51,27 @@ export const GET: APIRoute = async (ctx) => {
     )
   }
 
-  return new Response(getRelativeLocaleUrl('en', stripLocaleUrl), {
+  const tryFetchDefault = await fetch(
+    new URL(getRelativeLocaleUrl('en', stripLocaleUrl), ctx.url),
+    { method: 'HEAD' },
+  )
+
+  const debugInfo = {
+    locales,
+    enRelUrl: getRelativeLocaleUrl('en', stripLocaleUrl),
+    wholeRelUrl: new URL(
+      getRelativeLocaleUrl('en', stripLocaleUrl),
+      ctx.url,
+    ).toString(),
+    hereAlternates,
+    preferred: ctx.preferredLocaleList,
+    defaultLocale: i18n.defaultLocale,
+    enStatus: tryFetchDefault.status,
+    enOk: tryFetchDefault.ok,
+    enUrl: tryFetchDefault.url,
+  }
+
+  return new Response(JSON.stringify(debugInfo, undefined, 2), {
     status: 404,
     statusText: 'Not found',
     headers: {
