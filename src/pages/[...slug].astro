@@ -1,0 +1,53 @@
+---
+import { i18n } from 'astro:config/server'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+
+export const prerender = false
+
+if (i18n === undefined) {
+  throw new Error('i18n not defined in locale handler middleware')
+}
+
+const locales = i18n.locales as string[]
+const hereAlternates: string[] = []
+
+const stripLocaleUrl: string = Astro.url.pathname
+
+for (const locale of locales) {
+  const relativeUrl = getRelativeLocaleUrl(locale, stripLocaleUrl)
+
+  let exists = false
+  try {
+    const result = await fetch(new URL(relativeUrl, Astro.url), {
+      method: 'HEAD',
+    })
+    if (result.ok) exists = true
+  } catch (_e) {
+    // ignore
+  }
+  if (exists) {
+    hereAlternates.push(locale)
+  }
+}
+
+if (Astro.preferredLocaleList) {
+  for (const preferredLocale of Astro.preferredLocaleList) {
+    if (hereAlternates.includes(preferredLocale)) {
+      return Astro.redirect(
+        getRelativeLocaleUrl(preferredLocale, stripLocaleUrl),
+        302,
+      )
+    }
+  }
+}
+
+if (hereAlternates.includes(i18n.defaultLocale)) {
+  return Astro.redirect(
+    getRelativeLocaleUrl(i18n.defaultLocale, stripLocaleUrl),
+    302,
+  )
+}
+
+Astro.response.status = 404
+Astro.response.statusText = 'Not found'
+---
