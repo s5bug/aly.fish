@@ -16,6 +16,7 @@ export default defineConfig({
   adapter: cloudflare({
     // we handle this with compress()
     imageService: 'passthrough',
+    prerenderEnvironment: 'node',
   }),
 
   i18n: {
