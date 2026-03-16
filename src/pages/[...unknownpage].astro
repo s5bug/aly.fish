@@ -1,0 +1,12 @@
+---
+export const prerender = false
+
+const path = Astro.params.unknownpage
+
+return new Response(path, {
+  status: 200,
+  headers: {
+    'Content-Type': 'application/text',
+  },
+})
+---
