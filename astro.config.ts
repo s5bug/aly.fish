@@ -31,16 +31,19 @@ const generateCloudflareRoutes: AstroIntegration = {
         }
       }
 
-      const routes = {
-        version: 1,
-        include: ['/*'],
-        exclude: ['/_astro/*', ...staticPages, ...staticAssets],
-      }
+      const runWorkerFirst = [
+        '/*',
+        ...staticPages.map((p) => `!${p}`),
+        ...staticAssets.map((p) => `!${p}`),
+      ]
 
-      fs.writeFileSync(
-        new URL('_routes.json', result.dir),
-        JSON.stringify(routes),
-      )
+      const wranglerJsonPath = new URL('../server/wrangler.json', result.dir)
+      const existingWranglerText = fs.readFileSync(wranglerJsonPath).toString()
+      const existingWrangler = JSON.parse(existingWranglerText)
+      // biome-ignore lint/complexity/useLiteralKeys: it's not camelCase lol
+      existingWrangler.assets['run_worker_first'] = runWorkerFirst
+      const newWrangler = JSON.stringify(existingWrangler)
+      fs.writeFileSync(wranglerJsonPath, newWrangler)
     },
   },
 }
