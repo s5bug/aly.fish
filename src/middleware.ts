@@ -65,7 +65,8 @@ export const userMiddleware = defineMiddleware(async (ctx, next) => {
         )
         if (routeData.prerender) exists = true
       } else {
-        const result = await fetch(new URL(relativeUrl, ctx.url), {
+        const { env } = await import('cloudflare:workers')
+        const result = await env.ASSETS.fetch(new URL(relativeUrl, ctx.url), {
           method: 'HEAD',
         })
         if (result.ok) exists = true

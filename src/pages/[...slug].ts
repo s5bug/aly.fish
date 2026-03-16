@@ -5,7 +5,7 @@ import type { APIRoute } from 'astro'
 
 export const prerender = false
 
-export const GET: APIRoute = async (ctx) => {
+export const _GET: APIRoute = async (ctx) => {
   if (ctx.isPrerendered) throw new Error("this route shouldn't be prerendered")
 
   if (i18n === undefined) {
@@ -52,31 +52,29 @@ export const GET: APIRoute = async (ctx) => {
     )
   }
 
-  const tryFetchDefault = await env.ASSETS.fetch(
-    new URL(getRelativeLocaleUrl('en', stripLocaleUrl), ctx.url),
-    { method: 'HEAD' },
-  )
+  // const tryFetchDefault = await env.ASSETS.fetch(
+  //   new URL(getRelativeLocaleUrl('en', stripLocaleUrl), ctx.url),
+  //   { method: 'HEAD' },
+  // )
+  //
+  // const debugInfo = {
+  //   locales,
+  //   enRelUrl: getRelativeLocaleUrl('en', stripLocaleUrl),
+  //   wholeRelUrl: new URL(
+  //     getRelativeLocaleUrl('en', stripLocaleUrl),
+  //     ctx.url,
+  //   ).toString(),
+  //   hereAlternates,
+  //   preferred: ctx.preferredLocaleList,
+  //   defaultLocale: i18n.defaultLocale,
+  //   enStatus: tryFetchDefault.status,
+  //   enOk: tryFetchDefault.ok,
+  //   enUrl: tryFetchDefault.url,
+  // }
+  // JSON.stringify(debugInfo, undefined, 2)
 
-  const debugInfo = {
-    locales,
-    enRelUrl: getRelativeLocaleUrl('en', stripLocaleUrl),
-    wholeRelUrl: new URL(
-      getRelativeLocaleUrl('en', stripLocaleUrl),
-      ctx.url,
-    ).toString(),
-    hereAlternates,
-    preferred: ctx.preferredLocaleList,
-    defaultLocale: i18n.defaultLocale,
-    enStatus: tryFetchDefault.status,
-    enOk: tryFetchDefault.ok,
-    enUrl: tryFetchDefault.url,
-  }
-
-  return new Response(JSON.stringify(debugInfo, undefined, 2), {
+  return new Response(null, {
     status: 404,
     statusText: 'Not found',
-    headers: {
-      'Content-Type': 'text/plain',
-    },
   })
 }
