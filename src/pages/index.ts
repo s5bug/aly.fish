@@ -51,8 +51,11 @@ export const GET: APIRoute = async (ctx) => {
     )
   }
 
-  return new Response(null, {
+  return new Response(getRelativeLocaleUrl('en', stripLocaleUrl), {
     status: 404,
     statusText: 'Not found',
+    headers: {
+      'Content-Type': 'text/plain',
+    },
   })
 }
