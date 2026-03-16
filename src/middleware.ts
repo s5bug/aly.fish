@@ -2,7 +2,7 @@ import { i18n } from 'astro:config/server'
 import { getRelativeLocaleUrl, middleware } from 'astro:i18n'
 import { defineMiddleware, sequence } from 'astro:middleware'
 
-const apiContextRoutesSymbol = Symbol.for('context.routes')
+const pipelineSymbol = Symbol.for('astro.pipeline')
 
 const extantPagesSet: Set<string> = new Set()
 const missingPagesSet: Set<string> = new Set()
@@ -57,7 +57,8 @@ export const userMiddleware = defineMiddleware(async (ctx, next) => {
     try {
       if (ctx.isPrerendered) {
         // biome-ignore lint/suspicious/noExplicitAny: I don't believe I have access to Pipeline type
-        const pipeline: any = Reflect.get(ctx, apiContextRoutesSymbol)
+        const pipeline: any = Reflect.get(ctx, pipelineSymbol)
+
         const { routeData } = await pipeline.tryRewrite(
           relativeUrl,
           ctx.request,
