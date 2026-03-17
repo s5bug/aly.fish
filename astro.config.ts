@@ -1,4 +1,5 @@
 import * as fs from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
 import cloudflare from '@astrojs/cloudflare'
 import type { AstroIntegration } from 'astro'
 import { defineConfig } from 'astro/config'
@@ -76,12 +77,36 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
   }
   const palette = await vibrant.getPalette()
 
-  return {
-    localPath: outUrl,
-    site,
-    // biome-ignore lint/style/noNonNullAssertion: we know the palette generation will succeed here
-    vibrantColorRgb: palette.Vibrant!.rgb,
-  } satisfies DownloadedWebringImage
+  if (sharpFormat === 'gif') {
+    // convert .gifs to lossless .webp
+    const webpUrl = new URL(`webring-${siteId}.webp`, codegenDir)
+
+    try {
+      await fs.access(webpUrl)
+    } catch {
+      const animatedSharp = sharp(imgData, { animated: true })
+      const webpResult = animatedSharp.toFormat('webp', {
+        lossless: true,
+        quality: 100,
+        effort: 6,
+      })
+      await webpResult.toFile(fileURLToPath(webpUrl))
+    }
+
+    return {
+      localPath: webpUrl,
+      site,
+      // biome-ignore lint/style/noNonNullAssertion: we know the palette generation will succeed here
+      vibrantColorRgb: palette.Vibrant!.rgb,
+    } satisfies DownloadedWebringImage
+  } else {
+    return {
+      localPath: outUrl,
+      site,
+      // biome-ignore lint/style/noNonNullAssertion: we know the palette generation will succeed here
+      vibrantColorRgb: palette.Vibrant!.rgb,
+    } satisfies DownloadedWebringImage
+  }
 }
 
 const webringFileFilter = (file: string) => {
