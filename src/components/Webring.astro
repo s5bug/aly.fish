@@ -30,9 +30,10 @@ for (let i = 0; i < distanceMatrix.length; i++) {
     const da = labJ.CIEa - labI.CIEa
     const db = labJ.CIEb - labI.CIEb
     const distSq = dl * dl + da * da + db * db
+    const dist = Math.sqrt(distSq)
 
-    distanceMatrix[i][j] = distSq
-    distanceMatrix[j][i] = distSq
+    distanceMatrix[i][j] = dist
+    distanceMatrix[j][i] = dist
   }
 }
 
