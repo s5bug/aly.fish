@@ -1,0 +1,48 @@
+---
+import { Picture } from 'astro:assets'
+import webringData from 'webring:data'
+import { ColorTranslator } from 'colortranslator'
+import { TSPSolverNN } from 'tsp-solver-nn'
+
+const distanceMatrix: number[][] = new Array(webringData.length)
+for (let i = 0; i < distanceMatrix.length; i++) {
+  distanceMatrix[i] = new Array(webringData.length).fill(0)
+}
+
+for (let i = 0; i < distanceMatrix.length; i++) {
+  const rgbI = webringData[i].vibrantColorRgb
+  const labI = new ColorTranslator({ R: rgbI[0], G: rgbI[1], B: rgbI[2] })
+  for (let j = i + 1; j < distanceMatrix.length; j++) {
+    const rgbJ = webringData[j].vibrantColorRgb
+    const labJ = new ColorTranslator({ R: rgbJ[0], G: rgbJ[1], B: rgbJ[2] })
+
+    const dl = labJ.CIEL - labI.CIEL
+    const da = labJ.CIEa - labI.CIEa
+    const db = labJ.CIEb - labI.CIEb
+    const distSq = dl * dl + da * da + db * db
+
+    distanceMatrix[i][j] = distSq
+    distanceMatrix[j][i] = distSq
+  }
+}
+
+const tspSolver = new TSPSolverNN()
+const path = tspSolver.getPath(distanceMatrix)
+
+const sortedWebringData = path.route.map((idx) => webringData[idx])
+---
+
+<p>
+{sortedWebringData.map(e => <a href={e.site.toString()}><Picture src={e.localPath} alt={`88x31 for ${e.site.toString()}`} width={88} height={31}></Picture></a>)}
+</p>
+
+<style>
+  p {
+    line-height: 0;
+  }
+  a {
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+  }
+</style>
