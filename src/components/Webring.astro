@@ -4,6 +4,16 @@ import webringData from 'webring:data'
 import { ColorTranslator } from 'colortranslator'
 import { TSPSolverNN } from 'tsp-solver-nn'
 
+let formatAlt: (s: string) => string
+switch (Astro.currentLocale) {
+  case 'ja':
+    formatAlt = (s: string) => `${s}の88x31`
+    break
+  case 'en':
+    formatAlt = (s: string) => `88x31 for ${s}`
+    break
+}
+
 const distanceMatrix: number[][] = new Array(webringData.length)
 for (let i = 0; i < distanceMatrix.length; i++) {
   distanceMatrix[i] = new Array(webringData.length).fill(0)
@@ -33,7 +43,7 @@ const sortedWebringData = path.route.map((idx) => webringData[idx])
 ---
 
 <p>
-{sortedWebringData.map(e => <a href={e.site.toString()}><Picture src={e.localPath} alt={`88x31 for ${e.site.toString()}`} width={88} height={31}></Picture></a>)}
+{sortedWebringData.map(e => <a href={e.site.toString()}><Picture src={e.localPath} alt={formatAlt(e.site.toString())} width={88} height={31}></Picture></a>)}
 </p>
 
 <style>
