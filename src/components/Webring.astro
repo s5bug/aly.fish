@@ -43,7 +43,11 @@ const sortedWebringData = path.route.map((idx) => webringData[idx])
 ---
 
 <p>
-{sortedWebringData.map(e => <a href={e.site.toString()}><Picture src={e.localPath} alt={formatAlt(e.site.toString())} width={88} height={31}></Picture></a>)}
+{sortedWebringData.map(e =>
+  <a href={e.site.toString()} style={`background: rgb(${e.vibrantColorRgb[0]}, ${e.vibrantColorRgb[1]}, ${e.vibrantColorRgb[2]});`}>
+    <Picture src={e.localPath} alt={formatAlt(e.site.toString())} width={88} height={31} />
+  </a>
+)}
 </p>
 
 <style>
