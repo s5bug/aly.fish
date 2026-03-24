@@ -24,7 +24,7 @@
     "node-vibrant": "^4.0.4",
     "sharp": "^0.34.5",
     "tsp-solver-nn": "^1.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.8",
@@ -33,7 +33,7 @@
   },
   "pnpm": {
     "overrides": {
-      "vite": "8.0.1"
+      "vite": "^8.0.2"
     }
   }
 }
