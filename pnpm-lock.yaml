@@ -36,8 +36,8 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0
       katex:
-        specifier: ^0.16.43
-        version: 0.16.43
+        specifier: ^0.16.44
+        version: 0.16.44
       lightningcss:
         specifier: ^1.32.0
         version: 1.32.0
@@ -1718,8 +1718,8 @@ packages:
   jsonc-parser@3.3.1:
     resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
 
-  katex@0.16.43:
-    resolution: {integrity: sha512-K7NL5JtGrFEglipOAjY4UYA69CnTuNmjArxeXF6+bw7h2OGySUPv6QWRjfb1gmutJ4Mw/qLeBqiROOEDULp4nA==}
+  katex@0.16.44:
+    resolution: {integrity: sha512-EkxoDTk8ufHqHlf9QxGwcxeLkWRR3iOuYfRpfORgYfqc8s13bgb+YtRY59NK5ZpRaCwq1kqA6a5lpX8C/eLphQ==}
     hasBin: true
 
   kleur@4.1.5:
@@ -4529,7 +4529,7 @@ snapshots:
 
   jsonc-parser@3.3.1: {}
 
-  katex@0.16.43:
+  katex@0.16.44:
     dependencies:
       commander: 8.3.0
 
