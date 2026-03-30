@@ -18,7 +18,7 @@
     "astro-html-minifier-next": "^4.0.2",
     "browserslist": "^4.28.1",
     "colortranslator": "^6.1.0",
-    "katex": "^0.16.43",
+    "katex": "^0.16.44",
     "lightningcss": "^1.32.0",
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
