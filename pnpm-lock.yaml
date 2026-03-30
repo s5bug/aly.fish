@@ -33,8 +33,8 @@ importers:
         specifier: ^4.28.1
         version: 4.28.1
       colortranslator:
-        specifier: ^6.0.1
-        version: 6.0.1
+        specifier: ^6.1.0
+        version: 6.1.0
       katex:
         specifier: ^0.16.43
         version: 0.16.43
@@ -1354,8 +1354,8 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
-  colortranslator@6.0.1:
-    resolution: {integrity: sha512-53HEdWMg8I7rIiewMMCBdg72sJE6XgIU+sJK40cYpiWH04NrNMxmWYKeUc4IfTkLGbK3j/3ZyJ8YiSauxsOmMA==}
+  colortranslator@6.1.0:
+    resolution: {integrity: sha512-Osc1JvdIQP4RVhuF+Z8g6z63HvNMYdZZfuurpJf8L/jtgXEnFxUftVaTWISNelWez3LLXsLNLkQdblf7YmeMoQ==}
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
@@ -4102,7 +4102,7 @@ snapshots:
 
   color-name@1.1.4: {}
 
-  colortranslator@6.0.1: {}
+  colortranslator@6.1.0: {}
 
   comma-separated-tokens@2.0.3: {}
 
