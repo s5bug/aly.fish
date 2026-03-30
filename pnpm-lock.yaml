@@ -27,8 +27,8 @@ importers:
         specifier: ^2.4.0
         version: 2.4.0(@types/node@25.5.0)(rollup@4.59.0)(typescript@6.0.2)(yaml@2.8.3)
       astro-html-minifier-next:
-        specifier: ^4.0.1
-        version: 4.0.1(astro@6.1.1(@types/node@25.5.0)(rollup@4.59.0)(terser@5.46.1)(typescript@6.0.2)(yaml@2.8.3))
+        specifier: ^4.0.2
+        version: 4.0.2(astro@6.1.1(@types/node@25.5.0)(rollup@4.59.0)(terser@5.46.1)(typescript@6.0.2)(yaml@2.8.3))
       browserslist:
         specifier: ^4.28.1
         version: 4.28.1
@@ -1252,8 +1252,8 @@ packages:
   astro-compress@2.4.0:
     resolution: {integrity: sha512-Vmh/HHoufajKORla9pAWToiENe5Ivqh3Dg5jA81qQ84sLfXOXGJcHT+2rz3KW35vL96ym968AUD8taFGrYHthw==}
 
-  astro-html-minifier-next@4.0.1:
-    resolution: {integrity: sha512-JD6aGj+8jRwLqRTbhF+z6c+SDG1Bk8XnsVG9OG/gll3Vjk1wWQh9v4hHEEomMlUSnDYpeFTegx3RwLItvCtkeA==}
+  astro-html-minifier-next@4.0.2:
+    resolution: {integrity: sha512-9EyZGvBqad4hBS9Gj3Gs6Lnb5zF878wYUA3kQ//2p4X43dBmY7qLL95sThFq0+bxuJDWOYDBpstuQcnIvH8/nw==}
     engines: {node: '>=22.13.0'}
     peerDependencies:
       astro: ^6.0.0
@@ -3826,7 +3826,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro-html-minifier-next@4.0.1(astro@6.1.1(@types/node@25.5.0)(rollup@4.59.0)(terser@5.46.1)(typescript@6.0.2)(yaml@2.8.3)):
+  astro-html-minifier-next@4.0.2(astro@6.1.1(@types/node@25.5.0)(rollup@4.59.0)(terser@5.46.1)(typescript@6.0.2)(yaml@2.8.3)):
     dependencies:
       astro: 6.1.1(@types/node@25.5.0)(rollup@4.59.0)(terser@5.46.1)(typescript@6.0.2)(yaml@2.8.3)
       html-minifier-next: 5.2.2
