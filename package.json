@@ -29,7 +29,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.4.10",
     "@types/node": "^25.5.2",
-    "wrangler": "^4.80.0"
+    "wrangler": "^4.81.0"
   },
   "pnpm": {
     "overrides": {
