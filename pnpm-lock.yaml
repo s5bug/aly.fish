@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  vite: ^8.0.5
+  vite: ^8.0.8
 
 importers:
 
@@ -218,7 +218,7 @@ packages:
   '@cloudflare/vite-plugin@1.31.2':
     resolution: {integrity: sha512-6RyoPhqmpuHPB+Zudt7mOUdGzB1+DQtJtPdAxUajhlS2ZUU0+bCn9Cj4g6Z2EvajBrkBTw1yVLqtt4bsUnp1Ng==}
     peerDependencies:
-      vite: ^8.0.5
+      vite: ^8.0.8
       wrangler: ^4.81.1
 
   '@cloudflare/workerd-darwin-64@1.20260409.1':
@@ -2558,7 +2558,7 @@ packages:
   vitefu@1.1.3:
     resolution: {integrity: sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg==}
     peerDependencies:
-      vite: ^8.0.5
+      vite: ^8.0.8
     peerDependenciesMeta:
       vite:
         optional: true
