@@ -1,0 +1,6 @@
+allowBuilds:
+  sharp: true
+  workerd: true
+  esbuild: true
+overrides:
+  "vite": "^8.0.8"
