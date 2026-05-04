@@ -1,6 +1,9 @@
 allowBuilds:
+  esbuild: true
   sharp: true
   workerd: true
-  esbuild: true
 overrides:
-  "vite": "^8.0.10"
+  "astro-compress>astro": "$astro"
+  "astro-html-minifier-next>astro": "$astro"
+  "@astrojs/cloudflare>astro": "$astro"
+  "@astrojs/cloudflare>vite": "$vite"
