@@ -69,9 +69,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/blog/2025-09-24-llms/"/>
     </url>
     <url>
-        <loc>https://aly.fish/2025q4-cryptography/replicated-secret-sharing.pdf</loc>
+        <loc>https://aly.fish/en/2025q4-cryptography/replicated-secret-sharing.pdf</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2025q4-cryptography/replicated-secret-sharing.pdf"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2025q4-cryptography/replicated-secret-sharing.pdf"/>
     </url>
     <url>
         <loc>https://aly.fish/2026q1-research-methods/poster.pdf</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2026q1-research-methods/poster.pdf"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2026q1-research-methods/poster.pdf"/>
     </url>
 </urlset>

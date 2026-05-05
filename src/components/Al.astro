@@ -4,8 +4,9 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
 
 interface Props {
   href: string
+  type?: string
 }
-const { href } = Astro.props
+const { href, ...additional } = Astro.props
 
 if (i18n === undefined) {
   throw new Error('i18n not defined in usage of Al')
@@ -27,4 +28,4 @@ if (ourLocale === undefined) {
   )
 }
 ---
-<a href={getRelativeLocaleUrl(ourLocale, href)}><slot/></a>
+<a href={getRelativeLocaleUrl(ourLocale, href)} {...additional} ><slot/></a>
