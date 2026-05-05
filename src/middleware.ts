@@ -1,6 +1,7 @@
 import { i18n } from 'astro:config/server'
-import { getRelativeLocaleUrl, middleware } from 'astro:i18n'
+import { middleware } from 'astro:i18n'
 import { defineMiddleware, sequence } from 'astro:middleware'
+import { getRelativeLocaleUrl } from './lib/astro_locale_url_fix.ts'
 
 const pipelineSymbol = Symbol.for('astro.pipeline')
 
