@@ -2,106 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://aly.fish/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://aly.fish/ja/"/>
-    </url>
-    <url>
         <loc>https://aly.fish/en/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://aly.fish/ja/"/>
     </url>
     <url>
         <loc>https://aly.fish/ja/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://aly.fish/ja/"/>
     </url>
     <url>
-        <loc>https://aly.fish/2022q2-nhbk/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/"/>
-    </url>
-    <url>
         <loc>https://aly.fish/en/2022q2-nhbk/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/"/>
-    </url>
-    <url>
-        <loc>https://aly.fish/2022q2-nhbk/bungaku-eiga/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/bungaku-eiga/"/>
     </url>
     <url>
         <loc>https://aly.fish/en/2022q2-nhbk/bungaku-eiga/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/bungaku-eiga/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/bungaku-eiga/"/>
     </url>
     <url>
-        <loc>https://aly.fish/2022q2-nhbk/bunkateki-haikei/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/bunkateki-haikei/"/>
-    </url>
-    <url>
         <loc>https://aly.fish/en/2022q2-nhbk/bunkateki-haikei/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/bunkateki-haikei/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/bunkateki-haikei/"/>
-    </url>
-    <url>
-        <loc>https://aly.fish/2022q2-nhbk/kankomeisho/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/kankomeisho/"/>
     </url>
     <url>
         <loc>https://aly.fish/en/2022q2-nhbk/kankomeisho/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/kankomeisho/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/kankomeisho/"/>
     </url>
     <url>
-        <loc>https://aly.fish/2022q2-nhbk/kotsu/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/kotsu/"/>
-    </url>
-    <url>
         <loc>https://aly.fish/en/2022q2-nhbk/kotsu/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/kotsu/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/kotsu/"/>
-    </url>
-    <url>
-        <loc>https://aly.fish/2022q2-nhbk/ryoko/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/ryoko/"/>
     </url>
     <url>
         <loc>https://aly.fish/en/2022q2-nhbk/ryoko/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/ryoko/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/ryoko/"/>
     </url>
     <url>
-        <loc>https://aly.fish/2022q2-nhbk/samurai-eiga/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/samurai-eiga/"/>
-    </url>
-    <url>
         <loc>https://aly.fish/en/2022q2-nhbk/samurai-eiga/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/samurai-eiga/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/samurai-eiga/"/>
-    </url>
-    <url>
-        <loc>https://aly.fish/2022q2-nhbk/shinbun/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/shinbun/"/>
     </url>
     <url>
         <loc>https://aly.fish/en/2022q2-nhbk/shinbun/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q2-nhbk/shinbun/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q2-nhbk/shinbun/"/>
     </url>
     <url>
-        <loc>https://aly.fish/2022q4-viscom/proposals/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q4-viscom/proposals/"/>
-    </url>
-    <url>
         <loc>https://aly.fish/en/2022q4-viscom/proposals/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q4-viscom/proposals/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q4-viscom/proposals/"/>
-    </url>
-    <url>
-        <loc>https://aly.fish/2022q4-viscom/visual-directions/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q4-viscom/visual-directions/"/>
     </url>
     <url>
         <loc>https://aly.fish/en/2022q4-viscom/visual-directions/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/2022q4-viscom/visual-directions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/2022q4-viscom/visual-directions/"/>
     </url>
     <url>
-        <loc>https://aly.fish/blog/2025-09-24-llms/</loc>
+        <loc>https://aly.fish/en/blog/2025-09-24-llms/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://aly.fish/blog/2025-09-24-llms/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/blog/2025-09-24-llms/"/>
     </url>
     <url>
-        <loc>https://aly.fish/en/blog/2025-09-24-llms/</loc>
-        <xhtml:link rel="alternate" hreflang="en" href="https://aly.fish/en/blog/2025-09-24-llms/"/>
+        <loc>https://aly.fish/2025q4-cryptography/replicated-secret-sharing.pdf</loc>
+    </url>
+    <url>
+        <loc>https://aly.fish/2026q1-research-methods/poster.pdf</loc>
     </url>
 </urlset>
