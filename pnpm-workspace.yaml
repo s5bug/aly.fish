@@ -5,13 +5,7 @@ allowBuilds:
 overrides:
   "astro-compress>astro": "$astro"
   "astro-html-minifier-next>astro": "$astro"
-  "astro>vite": "$vite"
 packageExtensions:
-  "@astrojs/cloudflare":
-    dependencies:
-      vite: "-"
-    peerDependencies:
-      vite: "^8.0.8"
   "astro-compress":
     dependencies:
       astro: "-"
