@@ -3,11 +3,4 @@ allowBuilds:
   sharp: true
   workerd: true
 overrides:
-  "astro-compress>astro": "$astro"
   "astro-html-minifier-next>astro": "$astro"
-packageExtensions:
-  "astro-compress":
-    dependencies:
-      astro: "-"
-    peerDependencies:
-      astro: "*"

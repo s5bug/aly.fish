@@ -3,7 +3,6 @@ import { fileURLToPath } from 'node:url'
 import cloudflare from '@astrojs/cloudflare'
 import type { AstroIntegration } from 'astro'
 import { defineConfig } from 'astro/config'
-import compress from 'astro-compress'
 import htmlMinifierNext from 'astro-html-minifier-next'
 import browserslist from 'browserslist'
 import { browserslistToTargets } from 'lightningcss'
@@ -109,7 +108,8 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
   }
 }
 
-const webringFileFilter = (file: string) => {
+// currently unused: if I ever add back an image compression plugin, this excludes the webring images
+const _webringFileFilter = (file: string) => {
   return /\/_astro\/webring-[^/]+$/.test(file)
 }
 
@@ -259,14 +259,6 @@ export default defineConfig({
       sortAttributes: false,
       sortClassNames: false,
       useShortDoctype: true,
-    }),
-    compress({
-      HTML: false,
-      CSS: {
-        csso: false,
-        lightningcss: lightningCssOptions,
-      },
-      Exclude: ['88x31.svg', webringFileFilter],
     }),
     generateCloudflareRoutes,
   ],
