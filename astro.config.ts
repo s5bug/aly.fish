@@ -57,13 +57,30 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
   const outUrl = new URL(`webring-${siteId}${imgExt}`, codegenDir)
 
   let imgData: Buffer<ArrayBuffer>
+  let mtimeUtc: string | undefined
   try {
+    const stat = await fs.stat(outUrl)
+    mtimeUtc = stat.mtime.toUTCString()
+  } catch (e: unknown) {
+    const ex = e as NodeJS.ErrnoException
+    if (ex.code !== 'ENOENT') throw ex
+  }
+
+  const headers = new Headers()
+  if (mtimeUtc) headers.set('If-Modified-Since', mtimeUtc)
+
+  const imgResp = await fetch(imgUrl, { headers })
+  if (imgResp.status === 304) {
     imgData = await fs.readFile(outUrl)
-  } catch {
-    const imgResp = await fetch(imgUrl)
+  } else if (imgResp.ok) {
     imgData = Buffer.from(await imgResp.arrayBuffer())
     await fs.writeFile(outUrl, imgData)
+  } else {
+    throw new Error(
+      `Could not fetch ${imgUrl}: ${imgResp.status} ${imgResp.statusText}`,
+    )
   }
+
   const sharpInstance = sharp(imgData)
   const sharpFormat = (await sharpInstance.metadata()).format
 
