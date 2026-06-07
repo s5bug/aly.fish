@@ -5,6 +5,7 @@ import type { AstroIntegration } from 'astro'
 import { defineConfig } from 'astro/config'
 import htmlMinifierNext from 'astro-html-minifier-next'
 import browserslist from 'browserslist'
+import { colord } from 'colord'
 import { browserslistToTargets } from 'lightningcss'
 import { Vibrant } from 'node-vibrant/node'
 import sharp from 'sharp'
@@ -20,6 +21,7 @@ const locales: ['en', 'ja'] = ['en', 'ja']
 interface WebringJson {
   '88x31': string
   site: string
+  color?: string
 }
 
 interface DownloadedWebringImage {
@@ -97,7 +99,16 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
     const convert = await sharpInstance.toFormat('png').toBuffer()
     vibrant = new Vibrant(convert)
   }
-  const palette = await vibrant.getPalette()
+  let rgb: [number, number, number]
+  if (entry.color) {
+    const parsed = colord(entry.color)
+    const o = parsed.toRgb()
+    rgb = [o.r, o.g, o.b]
+  } else {
+    const palette = await vibrant.getPalette()
+    // biome-ignore lint/style/noNonNullAssertion: we know the palette generation will succeed here
+    rgb = palette.Vibrant!.rgb
+  }
 
   if (sharpFormat === 'gif') {
     // convert .gifs to lossless .webp
@@ -118,15 +129,13 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
     return {
       localPath: webpUrl,
       site,
-      // biome-ignore lint/style/noNonNullAssertion: we know the palette generation will succeed here
-      vibrantColorRgb: palette.Vibrant!.rgb,
+      vibrantColorRgb: rgb,
     } satisfies DownloadedWebringImage
   } else {
     return {
       localPath: outUrl,
       site,
-      // biome-ignore lint/style/noNonNullAssertion: we know the palette generation will succeed here
-      vibrantColorRgb: palette.Vibrant!.rgb,
+      vibrantColorRgb: rgb,
     } satisfies DownloadedWebringImage
   }
 }

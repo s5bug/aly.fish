@@ -17,11 +17,13 @@
   },
   {
     "88x31": "https://enfys.wales/images/enfys8831.png",
-    "site": "https://enfys.wales/"
+    "site": "https://enfys.wales/",
+    "color": "rgb(95 205 228)"
   },
   {
     "88x31": "https://adryd.com/static/buttons/skip.png",
-    "site": "https://skip.house/"
+    "site": "https://skip.house/",
+    "color": "rgb(204 204 204)"
   },
   {
     "88x31": "https://l4.pm/gifs/88x31v2.gif",
@@ -53,7 +55,8 @@
   },
   {
     "88x31": "https://annsann.eu/annsann.gif",
-    "site": "https://annsann.eu/"
+    "site": "https://annsann.eu/",
+    "color": "rgb(255 105 120)"
   },
   {
     "88x31": "https://notnite.com/buttons/moonlightnow.gif",
