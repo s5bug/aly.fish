@@ -69,7 +69,13 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
   const headers = new Headers()
   if (mtimeUtc) headers.set('If-Modified-Since', mtimeUtc)
 
-  const imgResp = await fetch(imgUrl, { headers })
+  let imgResp: Response
+  try {
+    imgResp = await fetch(imgUrl, { headers })
+  } catch {
+    // if network failure, read from cache
+    imgResp = new Response(undefined, { status: 304 })
+  }
   if (imgResp.status === 304) {
     imgData = await fs.readFile(outUrl)
   } else if (imgResp.ok) {
