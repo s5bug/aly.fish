@@ -1,8 +1,11 @@
 ---
 import { Picture } from 'astro:assets'
 import webringData from 'webring:data'
-import { ColorTranslator } from 'colortranslator'
+import { colord, extend } from 'colord'
+import labPlugin from 'colord/plugins/lab'
 import { TSPSolverNN } from 'tsp-solver-nn'
+
+extend([labPlugin])
 
 let formatAlt: (s: string) => string
 switch (Astro.currentLocale) {
@@ -21,14 +24,14 @@ for (let i = 0; i < distanceMatrix.length; i++) {
 
 for (let i = 0; i < distanceMatrix.length; i++) {
   const rgbI = webringData[i].vibrantColorRgb
-  const labI = new ColorTranslator({ R: rgbI[0], G: rgbI[1], B: rgbI[2] })
+  const labI = colord({ r: rgbI[0], g: rgbI[1], b: rgbI[2] }).toLab()
   for (let j = i + 1; j < distanceMatrix.length; j++) {
     const rgbJ = webringData[j].vibrantColorRgb
-    const labJ = new ColorTranslator({ R: rgbJ[0], G: rgbJ[1], B: rgbJ[2] })
+    const labJ = colord({ r: rgbJ[0], g: rgbJ[1], b: rgbJ[2] }).toLab()
 
-    const dl = labJ.CIEL - labI.CIEL
-    const da = labJ.CIEa - labI.CIEa
-    const db = labJ.CIEb - labI.CIEb
+    const dl = labJ.l - labI.l
+    const da = labJ.a - labI.a
+    const db = labJ.b - labI.b
     const distSq = dl * dl + da * da + db * db
     const dist = Math.sqrt(distSq)
 

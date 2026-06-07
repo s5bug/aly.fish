@@ -32,9 +32,6 @@ importers:
       colord:
         specifier: ^2.9.3
         version: 2.9.3
-      colortranslator:
-        specifier: ^6.1.1
-        version: 6.1.1
       katex:
         specifier: ^0.17.0
         version: 0.17.0
@@ -1283,9 +1280,6 @@ packages:
 
   colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-
-  colortranslator@6.1.1:
-    resolution: {integrity: sha512-SVrXoxIgWm+KZrJgTuV486zKbmjpKX3mt9/mUVL2QV9I5Qw4ItwP0XR6c63EQU2ecHkSgDqJPVPnQSPrzDOteA==}
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
@@ -3753,8 +3747,6 @@ snapshots:
   color-name@1.1.4: {}
 
   colord@2.9.3: {}
-
-  colortranslator@6.1.1: {}
 
   comma-separated-tokens@2.0.3: {}
 
