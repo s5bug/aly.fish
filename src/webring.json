@@ -47,7 +47,8 @@
   },
   {
     "88x31": "https://yummypillow.art/buttons/pillow.png",
-    "site": "https://yummypillow.art/"
+    "site": "https://yummypillow.art/",
+    "color": "rgb(128 116 136)"
   },
   {
     "88x31": "https://camora.dev/badges/camora_dev.gif",
@@ -60,6 +61,7 @@
   },
   {
     "88x31": "https://notnite.com/buttons/moonlightnow.gif",
-    "site": "https://moonlight-mod.github.io/"
+    "site": "https://moonlight-mod.github.io/",
+    "color": "rgb(86 86 148)"
   }
 ]
