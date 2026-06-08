@@ -2,5 +2,7 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+minimumReleaseAgeExclude:
+  - astro@7.0.0-alpha.2
 overrides:
   "astro-html-minifier-next>astro": "$astro"
