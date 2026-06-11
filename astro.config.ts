@@ -93,7 +93,12 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
   const sharpFormat = (await sharpInstance.metadata()).format
 
   let vibrant: Vibrant
-  if (sharpFormat === 'gif' || sharpFormat === 'png' || sharpFormat === 'jpg') {
+  if (
+    sharpFormat === 'gif' ||
+    sharpFormat === 'png' ||
+    sharpFormat === 'jpg' ||
+    sharpFormat === 'jpeg'
+  ) {
     vibrant = new Vibrant(imgData)
   } else {
     const convert = await sharpInstance.toFormat('png').toBuffer()
