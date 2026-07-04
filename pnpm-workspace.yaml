@@ -2,7 +2,9 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+catalog:
+  astro: ^7.0.6
 publicHoistPattern:
   - "sharp"
 overrides:
-  "astro-html-minifier-next>astro": "$astro"
+  "astro-html-minifier-next>astro": "catalog:"
