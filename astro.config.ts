@@ -96,7 +96,6 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
   if (
     sharpFormat === 'gif' ||
     sharpFormat === 'png' ||
-    sharpFormat === 'jpg' ||
     sharpFormat === 'jpeg'
   ) {
     vibrant = new Vibrant(imgData)
