@@ -209,7 +209,7 @@ const calculateWebringData: AstroIntegration = {
   },
 }
 
-const generateCloudflareRoutes: AstroIntegration = {
+const _generateCloudflareRoutes: AstroIntegration = {
   name: 'generate-cloudflare-routes',
   hooks: {
     'astro:build:done': async (result) => {
@@ -296,6 +296,6 @@ export default defineConfig({
       sortClassNames: false,
       useShortDoctype: true,
     }),
-    generateCloudflareRoutes,
+    //    generateCloudflareRoutes,
   ],
 })
