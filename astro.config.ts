@@ -209,35 +209,6 @@ const calculateWebringData: AstroIntegration = {
   },
 }
 
-const generateCloudflareRoutes: AstroIntegration = {
-  name: 'generate-cloudflare-routes',
-  hooks: {
-    'astro:build:done': async (result) => {
-      const noLocalePages: Set<string> = new Set()
-      for (const page of result.pages) {
-        for (const locale of locales) {
-          if (page.pathname.startsWith(locale)) {
-            const pageUrl = page.pathname.slice(locale.length)
-            noLocalePages.add(pageUrl)
-          }
-        }
-      }
-
-      const runWorkerFirst = [...noLocalePages]
-
-      const wranglerJsonPath = new URL('../server/wrangler.json', result.dir)
-      const existingWranglerText = (
-        await fs.readFile(wranglerJsonPath)
-      ).toString()
-      const existingWrangler = JSON.parse(existingWranglerText)
-      // biome-ignore lint/complexity/useLiteralKeys: it's not camelCase lol
-      existingWrangler.assets['run_worker_first'] = runWorkerFirst
-      const newWrangler = JSON.stringify(existingWrangler)
-      await fs.writeFile(wranglerJsonPath, newWrangler)
-    },
-  },
-}
-
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
@@ -245,6 +216,8 @@ export default defineConfig({
     imageService: 'passthrough',
     prerenderEnvironment: 'node',
   }),
+
+  output: 'server',
 
   i18n: {
     locales,
@@ -296,6 +269,5 @@ export default defineConfig({
       sortClassNames: false,
       useShortDoctype: true,
     }),
-    generateCloudflareRoutes,
   ],
 })
