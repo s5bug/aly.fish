@@ -18,7 +18,7 @@
     "browserslist": "^4.28.6",
     "colord": "^2.9.3",
     "katex": "^0.18.1",
-    "lightningcss": "^1.32.0",
+    "lightningcss": "^1.33.0",
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
     "tsp-solver-nn": "^1.0.0",
