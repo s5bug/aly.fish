@@ -10,7 +10,7 @@
     "fmt": "biome check --write"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.10",
     "@astrojs/cloudflare": "^14.1.4",
     "@astrojs/ts-plugin": "^1.10.10",
     "astro": "catalog:",
