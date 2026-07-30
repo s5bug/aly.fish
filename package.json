@@ -10,8 +10,8 @@
     "fmt": "biome check --write"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@astrojs/cloudflare": "^14.1.4",
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/cloudflare": "^14.1.7",
     "@astrojs/ts-plugin": "^1.10.10",
     "astro": "catalog:",
     "astro-html-minifier-next": "^4.0.2",
@@ -25,8 +25,8 @@
     "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.5",
-    "@types/node": "^26.1.1",
-    "wrangler": "^4.115.0"
+    "@biomejs/biome": "2.5.6",
+    "@types/node": "^26.1.2",
+    "wrangler": "^4.116.0"
   }
 }
