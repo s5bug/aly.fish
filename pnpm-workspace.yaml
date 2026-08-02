@@ -10,12 +10,3 @@ overrides:
   "astro-html-minifier-next>astro": "catalog:"
   "@emnapi/core": "^2.0.0-alpha.3"
   "@emnapi/runtime": "^2.0.0-alpha.3"
-minimumReleaseAgeExclude:
-  - '@cloudflare/workerd-darwin-64@1.20260730.1'
-  - '@cloudflare/workerd-darwin-arm64@1.20260730.1'
-  - '@cloudflare/workerd-linux-64@1.20260730.1'
-  - '@cloudflare/workerd-linux-arm64@1.20260730.1'
-  - '@cloudflare/workerd-windows-64@1.20260730.1'
-  - miniflare@4.20260730.0
-  - workerd@1.20260730.1
-  - wrangler@4.116.0
