@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
-    "@astrojs/cloudflare": "^14.1.7",
+    "@astrojs/cloudflare": "^14.2.0",
     "@astrojs/ts-plugin": "^1.10.10",
     "astro": "catalog:",
     "astro-html-minifier-next": "^4.0.2",
-    "browserslist": "^4.28.7",
+    "browserslist": "^4.28.8",
     "colord": "^2.9.3",
-    "katex": "^0.18.1",
+    "katex": "^0.18.2",
     "lightningcss": "^1.33.0",
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.7",
-    "@types/node": "^26.1.2",
-    "wrangler": "^4.119.0"
+    "@types/node": "^26.2.0",
+    "wrangler": "^4.120.0"
   }
 }
