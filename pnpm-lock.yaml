@@ -26,8 +26,8 @@ importers:
         specifier: ^14.2.1
         version: 14.2.1(@types/node@26.2.0)(astro@7.2.2(@emnapi/core@2.0.0-alpha.4)(@emnapi/runtime@2.0.0-alpha.4)(@types/node@26.2.0)(terser@5.50.0)(yaml@2.9.0))(esbuild@0.28.2)(terser@5.50.0)(wrangler@4.123.0)(yaml@2.9.0)
       '@astrojs/ts-plugin':
-        specifier: ^1.10.10
-        version: 1.10.10
+        specifier: ^1.10.11
+        version: 1.10.11
       astro:
         specifier: 'catalog:'
         version: 7.2.2(@emnapi/core@2.0.0-alpha.4)(@emnapi/runtime@2.0.0-alpha.4)(@types/node@26.2.0)(terser@5.50.0)(yaml@2.9.0)
@@ -177,8 +177,8 @@ packages:
     resolution: {integrity: sha512-C1TLn5sPJr0x4vk56piHWKbnqlEB8BKyte5Y45V02U+D7BGO5eMqZDH5aPjnkXQWJggvmsTXxH03QMZ9NgWLzQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/ts-plugin@1.10.10':
-    resolution: {integrity: sha512-US1czRBD43THzzwSyWJwPRX9VDBYbHmJKnpJAsmqT7Uun5UYvcMNNOfDyZxp5bKTNiApvA8HrjwUhYso8CE2Iw==}
+  '@astrojs/ts-plugin@1.10.11':
+    resolution: {integrity: sha512-W7Fmbaw81mcecFgJWgfY8FX7G7nCiooiakgd8ZAVprglEo81W2HzXh2I+okmAorCZLICl4PeEELkpGzrEXze4g==}
 
   '@astrojs/underscore-redirects@1.0.4':
     resolution: {integrity: sha512-sD3bn7i2yC+ocxlhCTshdg3gUM471Nag3wgyHilA+kpmufokvmUu1p5Mw5GT5Xp8SPC1Nlq0BJAgV/lslnWvRw==}
@@ -2795,7 +2795,7 @@ snapshots:
       is-docker: 4.0.0
       package-manager-detector: 1.8.0
 
-  '@astrojs/ts-plugin@1.10.10':
+  '@astrojs/ts-plugin@1.10.11':
     dependencies:
       '@astrojs/compiler': 2.13.1
       '@astrojs/yaml2ts': 0.2.4
