@@ -16,7 +16,7 @@
     "astro": "catalog:",
     "astro-html-minifier-next": "^4.0.2",
     "browserslist": "^4.28.8",
-    "colord": "^2.9.3",
+    "colord": "^2.9.5",
     "katex": "^0.18.4",
     "lightningcss": "^1.33.0",
     "modern-normalize": "^3.0.1",
