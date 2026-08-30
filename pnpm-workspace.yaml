@@ -3,7 +3,7 @@ allowBuilds:
   sharp: true
   workerd: true
 catalog:
-  astro: ^7.2.8
+  astro: ^7.2.9
 publicHoistPattern:
   - "sharp"
 overrides:
