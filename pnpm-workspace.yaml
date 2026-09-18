@@ -2,14 +2,8 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
-catalog:
-  astro: ^7.3.3
 publicHoistPattern:
   - "sharp"
 overrides:
-  "astro-html-minifier-next>astro": "catalog:"
-  "@emnapi/core": "^2.0.0-alpha.3"
-  "@emnapi/runtime": "^2.0.0-alpha.3"
-minimumReleaseAgeExclude:
-  - miniflare@5.20260801.0-alpha
-  - wrangler@4.119.0
+  "@emnapi/core": "^2.0.0-alpha.5"
+  "@emnapi/runtime": "^2.0.0-alpha.5"
