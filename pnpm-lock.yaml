@@ -26,8 +26,8 @@ importers:
         specifier: ^14.3.1
         version: 14.3.1(@types/node@26.6.1)(astro@7.3.2(@emnapi/core@2.0.0-alpha.5)(@emnapi/runtime@2.0.0-alpha.5)(@types/node@26.6.1)(terser@5.51.2)(yaml@2.9.1))(esbuild@0.28.2)(terser@5.51.2)(wrangler@4.132.0(@types/node@26.6.1))(yaml@2.9.1)
       '@astrojs/ts-plugin':
-        specifier: ^1.10.11
-        version: 1.10.11(typescript@6.0.3)
+        specifier: ^1.10.12
+        version: 1.10.12(typescript@6.0.3)
       astro:
         specifier: 'catalog:'
         version: 7.3.2(@emnapi/core@2.0.0-alpha.5)(@emnapi/runtime@2.0.0-alpha.5)(@types/node@26.6.1)(terser@5.51.2)(yaml@2.9.1)
@@ -183,8 +183,8 @@ packages:
     resolution: {integrity: sha512-C1TLn5sPJr0x4vk56piHWKbnqlEB8BKyte5Y45V02U+D7BGO5eMqZDH5aPjnkXQWJggvmsTXxH03QMZ9NgWLzQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/ts-plugin@1.10.11':
-    resolution: {integrity: sha512-W7Fmbaw81mcecFgJWgfY8FX7G7nCiooiakgd8ZAVprglEo81W2HzXh2I+okmAorCZLICl4PeEELkpGzrEXze4g==}
+  '@astrojs/ts-plugin@1.10.12':
+    resolution: {integrity: sha512-EOT4VUYPGJTTHRcbWjAq7ABS79Q8X6sNq9k4a8sWoQmo8cLlrjCoUOO4LTxIbfsssNPmq68HHyk8rmh8+TdJTQ==}
 
   '@astrojs/underscore-redirects@1.0.4':
     resolution: {integrity: sha512-sD3bn7i2yC+ocxlhCTshdg3gUM471Nag3wgyHilA+kpmufokvmUu1p5Mw5GT5Xp8SPC1Nlq0BJAgV/lslnWvRw==}
@@ -2617,14 +2617,13 @@ snapshots:
       is-docker: 4.0.0
       package-manager-detector: 1.8.0
 
-  '@astrojs/ts-plugin@1.10.11(typescript@6.0.3)':
+  '@astrojs/ts-plugin@1.10.12(typescript@6.0.3)':
     dependencies:
       '@astrojs/compiler': 2.13.1
       '@astrojs/yaml2ts': 0.2.4
       '@jridgewell/sourcemap-codec': 1.6.0
       '@volar/language-core': 2.4.28
       '@volar/typescript': 2.4.28(typescript@6.0.3)
-      semver: 7.8.5
       vscode-languageserver-textdocument: 1.0.14
     transitivePeerDependencies:
       - typescript
