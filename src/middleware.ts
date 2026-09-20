@@ -3,7 +3,17 @@ import { middleware } from 'astro:i18n'
 import { defineMiddleware, sequence } from 'astro:middleware'
 import { getRelativeLocaleUrl } from './lib/astro_locale_url_fix.ts'
 
-const pipelineSymbol = Symbol.for('astro.pipeline')
+const astroPages = import.meta.glob('/src/pages/**/*.astro')
+const astroRoutes = new Set(
+  Object.keys(astroPages).map((path) => {
+    // strip the /src/pages prefix and the .astro suffix
+    const route = path.replace('/src/pages', '').replace(/\.astro$/, '')
+    // a page `/en/index.astro` resolves to a route `/en/`
+    if (route.endsWith('/index')) {
+      return route.slice(0, -6)
+    } else return route
+  }),
+)
 
 const extantPagesSet: Set<string> = new Set()
 const missingPagesSet: Set<string> = new Set()
@@ -57,14 +67,12 @@ export const userMiddleware = defineMiddleware(async (ctx, next) => {
     let exists = false
     try {
       if (ctx.isPrerendered) {
-        // biome-ignore lint/suspicious/noExplicitAny: I don't believe I have access to Pipeline type
-        const pipeline: any = Reflect.get(ctx, pipelineSymbol)
+        const urlToCheck =
+          relativeUrl.endsWith('/') && relativeUrl.length > 1
+            ? relativeUrl.slice(0, -1)
+            : relativeUrl
 
-        const { routeData } = await pipeline.tryRewrite(
-          relativeUrl,
-          ctx.request,
-        )
-        if (routeData.prerender) exists = true
+        if (astroRoutes.has(urlToCheck)) exists = true
       } else {
         const { env } = await import('cloudflare:workers')
         const result = await env.ASSETS.fetch(new URL(relativeUrl, ctx.url), {
