@@ -13,11 +13,11 @@
     "@astrojs/check": "^0.9.10",
     "@astrojs/cloudflare": "^14.3.3",
     "@astrojs/ts-plugin": "^1.10.12",
-    "astro": "^7.3.4",
+    "astro": "^7.3.5",
     "astro-html-minifier-next": "^5.1.0",
     "browserslist": "^4.29.0",
     "colord": "^2.10.0",
-    "katex": "^0.18.7",
+    "katex": "^0.18.9",
     "lightningcss": "^1.33.0",
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
@@ -27,6 +27,6 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.14",
     "@types/node": "^26.6.2",
-    "wrangler": "^4.136.3"
+    "wrangler": "^4.138.0"
   }
 }
