@@ -59,5 +59,10 @@
     "88x31": "https://notnite.com/buttons/moonlightnow.gif",
     "site": "https://moonlight-mod.github.io/",
     "color": "rgb(86 86 148)"
+  },
+  {
+    "88x31": "https://avif.now/88x31.avif",
+    "site": "https://avif.now/",
+    "color": "rgb(250 172 47)"
   }
 ]

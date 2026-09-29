@@ -8,7 +8,7 @@ import browserslist from 'browserslist'
 import { colord } from 'colord'
 import { browserslistToTargets } from 'lightningcss'
 import { Vibrant } from 'node-vibrant/node'
-import sharp from 'sharp'
+import sharp, { type FormatEnum, type Sharp } from 'sharp'
 
 const lightningCssOptions = {
   minify: true,
@@ -27,7 +27,7 @@ interface WebringJson {
 interface DownloadedWebringImage {
   localPath: URL
   site: URL
-  vibrantColorRgb: [number, number, number]
+  vibrantColorRgb: readonly [number, number, number]
 }
 
 const generateWebringData = (downloadedImages: DownloadedWebringImage[]) => {
@@ -89,8 +89,26 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
     )
   }
 
-  const sharpInstance = sharp(imgData)
-  const sharpFormat = (await sharpInstance.metadata()).format
+  let sharpInstance: Sharp
+  let sharpFormat: keyof FormatEnum
+  try {
+    sharpInstance = sharp(imgData)
+    sharpFormat = (await sharpInstance.metadata()).format
+  } catch (e) {
+    // if it's an animated AVIF we forward it directly and expect a color
+    if (entry['88x31'].endsWith('.avif') && entry.color !== undefined) {
+      const parsed = colord(entry.color)
+      const o = parsed.toRgb()
+      const rgb = [o.r, o.g, o.b] as const
+      return {
+        localPath: outUrl,
+        site,
+        vibrantColorRgb: rgb,
+      } satisfies DownloadedWebringImage
+    } else {
+      throw e
+    }
+  }
 
   let vibrant: Vibrant
   if (
@@ -123,6 +141,27 @@ const downloadWebringData = async (codegenDir: URL, entry: WebringJson) => {
     } catch {
       const animatedSharp = sharp(imgData, { animated: true })
       const webpResult = animatedSharp.toFormat('webp', {
+        lossless: true,
+        quality: 100,
+        effort: 6,
+      })
+      await webpResult.toFile(fileURLToPath(webpUrl))
+    }
+
+    return {
+      localPath: webpUrl,
+      site,
+      vibrantColorRgb: rgb,
+    } satisfies DownloadedWebringImage
+  } else if (sharpFormat === 'png') {
+    // convert .pngs to lossless .webp
+    const webpUrl = new URL(`webring-${siteId}.webp`, codegenDir)
+
+    try {
+      await fs.access(webpUrl)
+    } catch {
+      // use existing loaded sharp
+      const webpResult = sharpInstance.toFormat('webp', {
         lossless: true,
         quality: 100,
         effort: 6,
@@ -255,15 +294,12 @@ export default defineConfig({
       noNewlinesBeforeTagClose: false,
       preserveLineBreaks: false,
       preventAttributesEscaping: false,
-      processConditionalComments: false,
       removeAttributeQuotes: false,
       removeComments: true,
       removeEmptyAttributes: true,
       removeEmptyElements: false,
       removeOptionalTags: false,
       removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
       removeTagWhitespace: false,
       sortAttributes: false,
       sortClassNames: false,
