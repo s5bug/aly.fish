@@ -17,7 +17,7 @@
     "astro-html-minifier-next": "^5.1.0",
     "browserslist": "^4.29.3",
     "colord": "^2.10.0",
-    "katex": "^0.18.9",
+    "katex": "^0.18.10",
     "lightningcss": "^1.33.0",
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
@@ -27,6 +27,6 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.14",
     "@types/node": "^26.6.3",
-    "wrangler": "^4.143.1"
+    "wrangler": "^4.145.0"
   }
 }
