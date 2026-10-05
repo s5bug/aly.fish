@@ -34,8 +34,8 @@ importers:
         specifier: ^2.10.0
         version: 2.10.0
       katex:
-        specifier: ^0.18.10
-        version: 0.18.10
+        specifier: ^0.19.0
+        version: 0.19.0
       lightningcss:
         specifier: ^1.33.0
         version: 1.33.0
@@ -1736,8 +1736,8 @@ packages:
   html-escaper@3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
 
-  html-minifier-next@8.10.2:
-    resolution: {integrity: sha512-5kG7QRuIzB5kxSxnKGowqDp5HAHXR+Mqtayt/l7IBbATVfpTMLX81k8cJVHgLRYuNmnY7P2Po5f2BLpjTFCb/g==}
+  html-minifier-next@8.10.3:
+    resolution: {integrity: sha512-OWEtcp4uQZ1YsQT8LoiufTj/u72slgThAeSNov6ILTTVkuCUuOb1hXOSriUmEx4vJxfRWybvSSDgiycp6sqHGw==}
     engines: {node: '>=22.13'}
     hasBin: true
     peerDependencies:
@@ -1749,8 +1749,8 @@ packages:
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
 
-  http-cache-semantics@4.2.0:
-    resolution: {integrity: sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==}
+  http-cache-semantics@4.3.0:
+    resolution: {integrity: sha512-M5t5LlJpS1UHMjvwRQVdFHvPISGeLAxNcrWuJkeGh0KxsqCHZ1O3NXZU/8x7cD0BDcGW8kapxMKTvwlqrNkHkA==}
 
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
@@ -1789,8 +1789,8 @@ packages:
   jsonc-parser@3.3.1:
     resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
 
-  katex@0.18.10:
-    resolution: {integrity: sha512-/B6p9eY9DX7aHBfpkHdpirDTZ5QH9xTwL9y837PWuzuv41O5jFdqNQwVQEQsimY0/iVNkwBY4+4hMfhQ7d4Dbw==}
+  katex@0.19.0:
+    resolution: {integrity: sha512-v6Tznz3zJ7u3niRCoDTsumM2+HA2XXcCu+WAacCeHD2z3p9A9Ks987o5FzfTGBN0e8A0vjEgIDvLbICrXpdw/Q==}
     hasBin: true
 
   kleur@4.1.5:
@@ -3735,7 +3735,7 @@ snapshots:
   astro-html-minifier-next@5.1.0(astro@7.3.5(@types/node@26.6.4)(terser@5.51.2)(yaml@2.9.1)):
     dependencies:
       astro: 7.3.5(@types/node@26.6.4)(terser@5.51.2)(yaml@2.9.1)
-      html-minifier-next: 8.10.2
+      html-minifier-next: 8.10.3
     transitivePeerDependencies:
       - '@swc/core'
 
@@ -3766,7 +3766,7 @@ snapshots:
       get-tsconfig: 5.0.0-beta.4
       github-slugger: 2.0.0
       html-escaper: 3.0.3
-      http-cache-semantics: 4.2.0
+      http-cache-semantics: 4.3.0
       js-yaml: 4.3.2
       jsonc-parser: 3.3.1
       magic-string: 1.4.2
@@ -4143,7 +4143,7 @@ snapshots:
 
   html-escaper@3.0.3: {}
 
-  html-minifier-next@8.10.2:
+  html-minifier-next@8.10.3:
     dependencies:
       commander: 15.0.0
       entities: 8.1.0
@@ -4153,7 +4153,7 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  http-cache-semantics@4.2.0: {}
+  http-cache-semantics@4.3.0: {}
 
   ieee754@1.2.1: {}
 
@@ -4186,7 +4186,7 @@ snapshots:
 
   jsonc-parser@3.3.1: {}
 
-  katex@0.18.10:
+  katex@0.19.0:
     dependencies:
       commander: 15.0.0
 
