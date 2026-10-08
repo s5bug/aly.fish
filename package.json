@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
-    "@astrojs/cloudflare": "^14.3.3",
+    "@astrojs/cloudflare": "^14.3.4",
     "@astrojs/ts-plugin": "^1.10.12",
-    "astro": "^7.3.5",
+    "astro": "^7.3.6",
     "astro-html-minifier-next": "^5.1.0",
     "browserslist": "^4.29.3",
     "colord": "^2.10.0",
@@ -27,6 +27,6 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "@types/node": "^26.6.4",
-    "wrangler": "^4.147.0"
+    "wrangler": "^4.148.0"
   }
 }
