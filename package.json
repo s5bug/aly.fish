@@ -13,7 +13,7 @@
     "@astrojs/check": "^0.9.10",
     "@astrojs/cloudflare": "^14.3.4",
     "@astrojs/ts-plugin": "^1.10.12",
-    "astro": "^7.3.6",
+    "astro": "^7.3.7",
     "astro-html-minifier-next": "^5.1.0",
     "browserslist": "^4.29.3",
     "colord": "^2.10.0",
