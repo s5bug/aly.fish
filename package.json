@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "wrangler types && astro dev",
-    "build": "biome check && wrangler types && tsc --noEmit --runExternalCode && astro build",
+    "build": "astro sync && wrangler types && biome check && tsc --noEmit --runExternalCode && astro build",
     "preview": "wrangler types && astro preview",
     "astro": "astro",
     "fmt": "biome check --write"
