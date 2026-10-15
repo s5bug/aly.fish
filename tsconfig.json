@@ -8,5 +8,11 @@
         "name": "@astrojs/ts-plugin"
       }
     ]
-  }
+  },
+  "contentMappers": [
+    {
+      "package": "@astrojs/ts-content-mapper",
+      "extensions": [".astro"]
+    }
+  ]
 }

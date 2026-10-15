@@ -4,14 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "wrangler types && astro dev",
-    "build": "biome check && wrangler types && (echo 'TODO: fix astro check' || astro check) && astro build",
+    "build": "biome check && wrangler types && tsc --noEmit --runExternalCode && astro build",
     "preview": "wrangler types && astro preview",
     "astro": "astro",
     "fmt": "biome check --write"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.10",
     "@astrojs/cloudflare": "^14.3.4",
+    "@astrojs/ts-content-mapper": "^0.2.0",
     "@astrojs/ts-plugin": "^1.10.12",
     "astro": "^7.3.8",
     "astro-html-minifier-next": "^5.1.0",
@@ -22,7 +22,7 @@
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
     "tsp-solver-nn": "^1.0.0",
-    "typescript": "^6.0.3"
+    "typescript": "^7.1.0-dev.20261014.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
