@@ -17,16 +17,16 @@
     "astro-html-minifier-next": "^5.1.0",
     "browserslist": "^4.29.4",
     "colord": "^2.10.0",
-    "katex": "^0.19.0",
+    "katex": "^0.19.1",
     "lightningcss": "^1.33.0",
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
     "tsp-solver-nn": "^1.0.0",
-    "typescript": "^7.1.0-dev.20261021.1"
+    "typescript": "^7.1.0-dev.20261024.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.2",
+    "@biomejs/biome": "2.6.3",
     "@types/node": "^26.6.5",
-    "wrangler": "^4.151.3"
+    "wrangler": "^4.152.0"
   }
 }
