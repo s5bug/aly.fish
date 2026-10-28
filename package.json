@@ -15,7 +15,7 @@
     "@astrojs/ts-plugin": "^1.10.12",
     "astro": "^7.4.2",
     "astro-html-minifier-next": "^5.1.0",
-    "browserslist": "^4.29.4",
+    "browserslist": "^4.29.5",
     "colord": "^2.10.0",
     "katex": "^0.19.1",
     "lightningcss": "^1.33.0",
@@ -27,6 +27,6 @@
   "devDependencies": {
     "@biomejs/biome": "2.6.3",
     "@types/node": "^26.6.5",
-    "wrangler": "^4.152.0"
+    "wrangler": "^4.153.0"
   }
 }
