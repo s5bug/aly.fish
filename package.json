@@ -22,7 +22,7 @@
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
     "tsp-solver-nn": "^1.0.0",
-    "typescript": "^7.1.0-dev.20261026.1"
+    "typescript": "^7.1.0-dev.20261027.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.3",
