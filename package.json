@@ -10,10 +10,10 @@
     "fmt": "biome check --write"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.4.6",
+    "@astrojs/cloudflare": "^14.4.7",
     "@astrojs/ts-content-mapper": "^0.2.0",
     "@astrojs/ts-plugin": "^1.11.0",
-    "astro": "^7.4.8",
+    "astro": "^7.4.10",
     "astro-html-minifier-next": "^5.1.0",
     "browserslist": "^4.29.5",
     "colord": "^2.11.0",
@@ -22,11 +22,11 @@
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
     "tsp-solver-nn": "^1.0.0",
-    "typescript": "^7.1.0-dev.20261109.1"
+    "typescript": "^7.1.0-dev.20261110.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.6",
     "@types/node": "^26.6.6",
-    "wrangler": "^4.159.0"
+    "wrangler": "^4.160.0"
   }
 }
