@@ -15,7 +15,7 @@
     "@astrojs/ts-plugin": "^1.11.0",
     "astro": "^7.4.12",
     "astro-html-minifier-next": "^5.1.0",
-    "browserslist": "^4.29.5",
+    "browserslist": "^4.29.6",
     "colord": "^2.13.0",
     "katex": "^0.19.1",
     "lightningcss": "^1.33.0",
