@@ -10,19 +10,19 @@
     "fmt": "biome check --write"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.4.8",
+    "@astrojs/cloudflare": "^14.4.9",
     "@astrojs/ts-content-mapper": "^0.2.0",
     "@astrojs/ts-plugin": "^1.11.0",
-    "astro": "^7.4.12",
+    "astro": "^7.4.13",
     "astro-html-minifier-next": "^5.1.0",
     "browserslist": "^4.29.6",
-    "colord": "^2.13.0",
+    "colord": "^2.14.0",
     "katex": "^0.19.1",
     "lightningcss": "^1.33.0",
     "modern-normalize": "^3.0.1",
     "node-vibrant": "^4.0.4",
     "tsp-solver-nn": "^1.0.0",
-    "typescript": "^7.1.0-dev.20261117.1"
+    "typescript": "^7.1.0-dev.20261118.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.8",
